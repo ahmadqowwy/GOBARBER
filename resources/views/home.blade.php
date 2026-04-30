@@ -1,0 +1,1 @@
+<x-layout><h3 class="text-xl">Welcome to my Website</h3></x-layout>
