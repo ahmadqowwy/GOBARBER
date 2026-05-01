@@ -1,9 +1,1 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>About</title>
-</head>
-<body>
-    <h1>Halaman About</h1>
-</body>
-</html>
+<x-layout><h4 class="text-nowrap">Hallo juga </h4></x-layout>

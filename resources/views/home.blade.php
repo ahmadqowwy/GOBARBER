@@ -1,1 +1,2 @@
-<x-layout><h3 class="text-xl">Welcome to my Website</h3></x-layout>
+
+<x-layout><h1 class="text-2xl p-4">Ini halaman Home</h1></x-layout>

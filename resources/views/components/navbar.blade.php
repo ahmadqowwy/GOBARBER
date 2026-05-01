@@ -15,7 +15,7 @@
    Blog
 </a>
 
-<a href="{{ url('/about') }}"
+<a href="{{ route('about') }}"
    class="{{ request()->is('about') ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white' }} px-3 py-2 rounded-md">
    About
 </a>
