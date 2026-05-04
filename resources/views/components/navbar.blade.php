@@ -5,20 +5,18 @@
       <div class="flex items-center space-x-4">
         <span class="text-white font-bold">MyApp</span>
 
-       <a href="{{ route('home') }}"
-   class="{{ request()->routeIs('home') ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white' }} px-3 py-2 rounded-md">
-   Home
-</a>
+  <x-nav-link :href="route('home')" :active="request()->routeIs('home')">
+    Home
+</x-nav-link>
 
-<a href="{{ route('blog') }}"
-   class="{{ request()->is('blog') ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white' }} px-3 py-2 rounded-md">
-   Blog
-</a>
+<x-nav-link :href="route('blog')" :active="request()->routeIs('blog')">
+    Blog
+</x-nav-link>
 
-<a href="{{ route('about') }}"
-   class="{{ request()->is('about') ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white' }} px-3 py-2 rounded-md">
-   About
-</a>
+<x-nav-link :href="route('about')" :active="request()->routeIs('about')">
+    About
+</x-nav-link>
+
       </div>
 
       <div class="flex items-center space-x-3">
