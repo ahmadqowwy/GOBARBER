@@ -1,31 +1,35 @@
-<nav class="bg-gray-800">
-  <div class="mx-auto max-w-7xl px-4">
-    <div class="flex h-16 items-center justify-between">
+<nav class="navbar navbar-expand-lg navbar-dark bg-danger">
+  <div class="container">
 
-      <div class="flex items-center space-x-4">
-        <span class="text-white font-bold">MyApp</span>
+    <a class="navbar-brand" href="{{ route('home') }}">GoBarber</a>
 
-       <a href="{{ route('home') }}"
-   class="{{ request()->routeIs('home') ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white' }} px-3 py-2 rounded-md">
-   Home
-</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
 
-<a href="{{ url('/blog') }}"
-   class="{{ request()->is('blog') ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white' }} px-3 py-2 rounded-md">
-   Blog
-</a>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
 
-<a href="{{ url('/about') }}"
-   class="{{ request()->is('about') ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white' }} px-3 py-2 rounded-md">
-   About
-</a>
-      </div>
+        <li class="nav-item">
+          <a class="nav-link {{ request()->routeIs('home') ? 'active' : '' }}" href="{{ route('home') }}">
+            Home
+          </a>
+        </li>
 
-      <div class="flex items-center space-x-3">
-        <span class="text-gray-300">User</span>
-        <img class="h-8 w-8 rounded-full" src="https://i.pravatar.cc/100">
-      </div>
+        <li class="nav-item">
+          <a class="nav-link {{ request()->routeIs('blog') ? 'active' : '' }}" href="{{ route('blog') }}">
+            Blog
+          </a>
+        </li>
 
+        <li class="nav-item">
+          <a class="nav-link {{ request()->routeIs('about') ? 'active' : '' }}" href="{{ route('about') }}">
+            About
+          </a>
+        </li>
+
+      </ul>
     </div>
+
   </div>
 </nav>
