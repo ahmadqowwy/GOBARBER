@@ -3,21 +3,6 @@
 
     <a class="navbar-brand" href="{{ route('home') }}">GoBarber</a>
 
-<<<<<<< HEAD
-  <x-nav-link :href="route('home')" :active="request()->routeIs('home')">
-    Home
-</x-nav-link>
-
-<x-nav-link :href="route('blog')" :active="request()->routeIs('blog')">
-    Blog
-</x-nav-link>
-
-<x-nav-link :href="route('about')" :active="request()->routeIs('about')">
-    About
-</x-nav-link>
-
-      </div>
-=======
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -30,7 +15,6 @@
             Home
           </a>
         </li>
->>>>>>> qowwy
 
         <li class="nav-item">
           <a class="nav-link {{ request()->routeIs('blog') ? 'active' : '' }}" href="{{ route('blog') }}">
