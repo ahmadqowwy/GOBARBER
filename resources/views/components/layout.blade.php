@@ -9,24 +9,21 @@
 
     <!-- Bootstrap CSS -->
    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<!-- CSS custom -->
+<link rel="stylesheet" href="{{ asset('assets/css/style.css') }}">
     <title>{{ $title ?? 'App' }}</title>
 </head>
 <body>
 
     <!-- Navbar -->
     <x-navbar />
-
-    <!-- Header -->
-    <x-header>{{ $title ?? 'Title' }}</x-header>
-
     <!-- Content -->
-    <main class="container py-4">
+    <main class="container p-0 m-0">
         {{ $slot }}
     </main>
 
     <!-- Bootstrap JS (WAJIB di bawah) -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
->>>>>>> qowwy
 
 </body>
 </html>
