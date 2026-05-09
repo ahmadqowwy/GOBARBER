@@ -81,3 +81,44 @@ main {
     object-fit: cover;
     display: block;
 }
+.food_section .box{
+    padding:20px;
+    border-radius:15px;
+    background:#fff;
+    box-shadow:0 0 10px rgba(0,0,0,0.1);
+    text-align:center;
+    height:100%;
+}
+
+.food_section .img-box img{
+    width:100%;
+    max-width:200px;
+    margin:auto;
+    display:block;
+}
+
+.food_section{
+    padding-top:50px;
+}
+.food_section .container{
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.food_section .row{
+    justify-content: center;
+}
+
+.food_section .col-lg-3{
+    display: flex;
+    justify-content: center;
+}
+
+.food_section .box{
+    width: 100%;
+    max-width: 320px;
+}
+.row{
+    margin-left: auto !important;
+    margin-right: auto !important;
+}
