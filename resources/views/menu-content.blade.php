@@ -1,97 +1,9 @@
-<section class="food_section layout_padding-bottom">
-  <div class="container">
+<section class="food_section layout_padding-bottom ">
+ <div class="container-fluid p-0">
 
     <div class="text-center mb-5">
       <h2 class="fw-bold">BarberShop</h2>
     </div>
-<<<<<<< HEAD
-<div class="row">
-<div class="col-auto d-flex justify-content-center">
- <div class="card" style="width: 18rem;">
-  <div class="card-body">
-    <h5 class="card-title">Special title treatment</h5>
-    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-    <a href="#" class="btn btn-primary">Go somewhere</a>
-  </div>
-</div>
-</div>
-<div class="col-auto d-flex justify-content-center">
- <div class="card" style="width: 18rem;">
-  <div class="card-body">
-    <h5 class="card-title">Special title treatment</h5>
-    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-    <a href="#" class="btn btn-primary">Go somewhere</a>
-  </div>
-</div>
-</div>
-<div class="col-auto d-flex justify-content-center">
- <div class="card" style="width: 18rem;">
-  <div class="card-body">
-    <h5 class="card-title">Special title treatment</h5>
-    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-    <a href="#" class="btn btn-primary">Go somewhere</a>
-  </div>
-</div>
-</div>
-<div class="col-auto d-flex justify-content-center">
- <div class="card" style="width: 18rem;">
-  <div class="card-body">
-    <h5 class="card-title">Special title treatment</h5>
-    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-    <a href="#" class="btn btn-primary">Go somewhere</a>
-  </div>
-</div>
-</div>
-<div class="col-auto d-flex justify-content-center">
- <div class="card" style="width: 18rem;">
-  <div class="card-body">
-    <h5 class="card-title">Special title treatment</h5>
-    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-    <a href="#" class="btn btn-primary">Go somewhere</a>
-  </div>
-</div>
-</div>
-<div class="col-auto d-flex justify-content-center">
- <div class="card" style="width: 18rem;">
-  <div class="card-body">
-    <h5 class="card-title">Special title treatment</h5>
-    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-    <a href="#" class="btn btn-primary">Go somewhere</a>
-  </div>
-</div>
-</div>
-<div class="col-auto d-flex justify-content-center">
- <div class="card" style="width: 18rem;">
-  <div class="card-body">
-    <h5 class="card-title">Special title treatment</h5>
-    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-    <a href="#" class="btn btn-primary">Go somewhere</a>
-  </div>
-</div>
-</div>
-<div class="col-auto d-flex justify-content-center">
- <div class="card" style="width: 18rem;">
-  <div class="card-body">
-    <h5 class="card-title">Special title treatment</h5>
-    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-    <a href="#" class="btn btn-primary">Go somewhere</a>
-  </div>
-</div>
-</div>
-<div class="col-auto d-flex justify-content-center">
- <div class="card" style="width: 18rem;">
-  <div class="card-body">
-    <h5 class="card-title">Special title treatment</h5>
-    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-    <a href="#" class="btn btn-primary">Go somewhere</a>
-  </div>
-</div>
-</div>
- 
-    <div class="btn-box">
-      <a href="">
-=======
-
     <div class="card-wrapper" id="cardWrapper">
 
       <!-- CARD 1 -->
@@ -159,23 +71,14 @@
 
     <div class="text-center mt-4">
       <button id="viewMoreBtn" class="btn btn-primary px-4">
->>>>>>> ab0d1500dfbac9f7252f191ffb80aebb2c70d099
         View More
       </button>
     </div>
 
   </div>
-<<<<<<< HEAD
-  </div>
-  
-</section>
-=======
 </section>
 
 <style>
-  body {
-    background: #f5f5f5;
-  }
 
   .card-wrapper {
     display: grid;
@@ -272,4 +175,4 @@
 
   });
 </script>
->>>>>>> ab0d1500dfbac9f7252f191ffb80aebb2c70d099
+

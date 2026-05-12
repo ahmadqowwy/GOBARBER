@@ -53,31 +53,39 @@ article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
     outline:1px solid red;
 }
 html,
+/* body {
+    margin: 0;
+    padding: 0;
+    
+} */
+html,
 body {
     margin: 0;
     padding: 0;
+    width: 100%;
+    background-color: #03001C;
     overflow-x: hidden;
-    background: #03001C;
+    
 }
+
 
 main {
     margin: 0 !important;
     padding: 0 !important;
 }
+.container{
+    max-width: 100% !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+}
 
 .custom-navbar{
     background-color: #120242;
 }
-
-.slider_section{
-    overflow: hidden;
-}
-
 .carousel,
 .carousel-inner,
 .carousel-item{
     width: 100%;
-    height: 100vh;
 }
 
 .carousel-item img{
@@ -85,16 +93,15 @@ main {
     height: 100vh;
     object-fit: cover;
     display: block;
-}.food_section{
-    padding-top: 50px;
-    background: #020024;
+}
+.food_section {
+    width: 100%;
+    padding: 50px 0;
 }
 
-.food_section .container{
-    max-width: 1400px;
-    margin: 0 auto;
-    padding-left: 0;
-    padding-right: 0;
+.food_section .container {
+    max-width: 1400px !important;
+    margin: 0 auto !important;
 }
 
 .food_section .row{
