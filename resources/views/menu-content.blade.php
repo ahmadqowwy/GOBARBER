@@ -8,76 +8,89 @@
         </h2>
       </div>
     </div>
-
-    <div class="filters-content">
-      <div class="row g-4 justify-content-center">
-
-        <!-- CARD 1 -->
-       <div class="col-sm-6 col-md-6 col-lg-4 d-flex justify-content-center mb-4">
-          <div class="box" style="width: 100%; max-width: 350px;">
-            isi card
-          </div>
-        </div>
-
-        <!-- CARD 2 -->
-      <div class="col-sm-6 col-md-6 col-lg-4 d-flex justify-content-center mb-4">
-         <div class="box" style="width: 100%; max-width: 350px;">
-            isi card
-          </div>
-        </div>
-
-        <!-- CARD 3 -->
-      <div class="col-sm-6 col-md-6 col-lg-4 d-flex justify-content-center mb-4">
-         <div class="box" style="width: 100%; max-width: 350px;">
-            isi card
-          </div>
-        </div>
-
-        <!-- CARD 4 -->
-  <div class="col-sm-6 col-md-6 col-lg-4 d-flex justify-content-center mb-4">
-       <div class="box" style="width: 100%; max-width: 350px;">
-            isi card
-          </div>
-        </div>
-
-        <!-- CARD 5 -->
-<div class="col-sm-6 col-md-6 col-lg-4 d-flex justify-content-center mb-4">
-          <div class="box" style="width: 100%; max-width: 350px;">
-            isi card
-          </div>
-        </div>
-
-        <!-- CARD 6 -->
-     <div class="col-sm-6 col-md-6 col-lg-4 d-flex justify-content-center mb-4">
-         <div class="box" style="width: 100%; max-width: 350px;">
-            isi card
-          </div>
-        </div>
-
-        <!-- CARD 7 -->
-   <div class="col-sm-6 col-md-6 col-lg-4 d-flex justify-content-center mb-4">
-       <div class="box" style="width: 100%; max-width: 350px;">
-            isi card
-          </div>
-        </div>
-
-        <!-- CARD 8 -->
-  <div class="col-sm-6 col-md-6 col-lg-4 d-flex justify-content-center mb-4">
-      <div class="box" style="width: 100%; max-width: 350px;">
-            isi card
-          </div>
-        </div>
-
-        <!-- CARD 9 -->
-    <div class="col-sm-6 col-md-6 col-lg-4 d-flex justify-content-center mb-4">
-       <div class="box" style="width: 100%; max-width: 350px;">
-            isi card
-          </div>
-        </div>
-
-      </div>
-    </div>
-
+<div class="row">
+<div class="col-auto d-flex justify-content-center">
+ <div class="card" style="width: 18rem;">
+  <div class="card-body">
+    <h5 class="card-title">Special title treatment</h5>
+    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+    <a href="#" class="btn btn-primary">Go somewhere</a>
+  </div>
+</div>
+</div>
+<div class="col-auto d-flex justify-content-center">
+ <div class="card" style="width: 18rem;">
+  <div class="card-body">
+    <h5 class="card-title">Special title treatment</h5>
+    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+    <a href="#" class="btn btn-primary">Go somewhere</a>
+  </div>
+</div>
+</div>
+<div class="col-auto d-flex justify-content-center">
+ <div class="card" style="width: 18rem;">
+  <div class="card-body">
+    <h5 class="card-title">Special title treatment</h5>
+    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+    <a href="#" class="btn btn-primary">Go somewhere</a>
+  </div>
+</div>
+</div>
+<div class="col-auto d-flex justify-content-center">
+ <div class="card" style="width: 18rem;">
+  <div class="card-body">
+    <h5 class="card-title">Special title treatment</h5>
+    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+    <a href="#" class="btn btn-primary">Go somewhere</a>
+  </div>
+</div>
+</div>
+<div class="col-auto d-flex justify-content-center">
+ <div class="card" style="width: 18rem;">
+  <div class="card-body">
+    <h5 class="card-title">Special title treatment</h5>
+    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+    <a href="#" class="btn btn-primary">Go somewhere</a>
+  </div>
+</div>
+</div>
+<div class="col-auto d-flex justify-content-center">
+ <div class="card" style="width: 18rem;">
+  <div class="card-body">
+    <h5 class="card-title">Special title treatment</h5>
+    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+    <a href="#" class="btn btn-primary">Go somewhere</a>
+  </div>
+</div>
+</div>
+<div class="col-auto d-flex justify-content-center">
+ <div class="card" style="width: 18rem;">
+  <div class="card-body">
+    <h5 class="card-title">Special title treatment</h5>
+    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+    <a href="#" class="btn btn-primary">Go somewhere</a>
+  </div>
+</div>
+</div>
+<div class="col-auto d-flex justify-content-center">
+ <div class="card" style="width: 18rem;">
+  <div class="card-body">
+    <h5 class="card-title">Special title treatment</h5>
+    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+    <a href="#" class="btn btn-primary">Go somewhere</a>
+  </div>
+</div>
+</div>
+<div class="col-auto d-flex justify-content-center">
+ <div class="card" style="width: 18rem;">
+  <div class="card-body">
+    <h5 class="card-title">Special title treatment</h5>
+    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+    <a href="#" class="btn btn-primary">Go somewhere</a>
+  </div>
+</div>
+</div>
+ 
     <div class="btn-box">
       <a href="">
         View More
@@ -85,4 +98,6 @@
     </div>
 
   </div>
+  </div>
+  
 </section>

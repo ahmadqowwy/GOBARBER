@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg navbar-dark bg-danger">
+<nav class="navbar navbar-expand-lg navbar-dark custom-navbar">
   <div class="container">
 
     <a class="navbar-brand" href="{{ route('home') }}">GoBarber</a>
@@ -7,22 +7,22 @@
       <span class="navbar-toggler-icon"></span>
     </button>
 
-    <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav ms-auto">
+    <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+      <ul class="navbar-nav">
 
-        <li class="nav-item">
+        <li class="nav-item mx-3">
           <a class="nav-link {{ request()->routeIs('home') ? 'active' : '' }}" href="{{ route('home') }}">
             Home
           </a>
         </li>
 
-        <li class="nav-item">
+        <li class="nav-item mx-3">
           <a class="nav-link {{ request()->routeIs('blog') ? 'active' : '' }}" href="{{ route('blog') }}">
             Blog
           </a>
         </li>
 
-        <li class="nav-item">
+        <li class="nav-item mx-3">
           <a class="nav-link {{ request()->routeIs('about') ? 'active' : '' }}" href="{{ route('about') }}">
             About
           </a>

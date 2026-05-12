@@ -35,17 +35,16 @@
                     class="d-block w-100"
                     alt="foto1">
 
-                <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center">
+          <div class="position-absolute top-0 start-0 w-100 h-100 d-flex justify-content-center align-items-center text-center">
+                    <div class="container">
 
-                    <div class="container-fluid px-5">
-
-                        <div class="col-lg-6 text-white">
-                            <h1 class="display-3 fw-bold">
-                                Fast Food Restaurant
+                      <div class="col-lg-8 text-white mx-auto">
+                            <h1 class="display-6 fw-bold">
+                                WUJUDKAN STYLE RAMBUT TERBAIKMU DAN TAMPIL PERCAYA DIRI
                             </h1>
 
                             <p>
-                                Doloremque, itaque aperiam facilis rerum.
+                                Smart Online Booking your hair style !
                             </p>
 
                             <a href="" class="btn btn-primary">
@@ -65,18 +64,18 @@
                     class="d-block w-100"
                     alt="foto2">
 
-                <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center">
+              <div class="position-absolute top-0 start-0 w-100 h-100 d-flex justify-content-center align-items-center text-center">
+                    <div class="container">
 
-                    <div class="container-fluid px-5">
-
-                        <div class="col-lg-6 text-white">
-                            <h1 class="display-3 fw-bold">
-                                Slide Kedua
+                        <div class="col-lg-8 text-white mx-auto">
+                           <h1 class="display-6 fw-bold">
+                                WUJUDKAN STYLE RAMBUT TERBAIKMU DAN TAMPIL PERCAYA DIRI
                             </h1>
 
                             <p>
-                                Deskripsi slide kedua.
+                                Smart Online Booking your hair style !
                             </p>
+
 
                             <a href="" class="btn btn-primary">
                                 Order Now
@@ -95,18 +94,18 @@
                     class="d-block w-100"
                     alt="foto3">
 
-                <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center">
+               <div class="position-absolute top-0 start-0 w-100 h-100 d-flex justify-content-center align-items-center text-center">
+                    <div class="container">
 
-                    <div class="container-fluid px-5">
-
-                        <div class="col-lg-6 text-white">
-                            <h1 class="display-3 fw-bold">
-                                Slide Ketiga
+                        <div class="col-lg-8 text-white mx-auto">
+                            <h1 class="display-6 fw-bold">
+                                WUJUDKAN STYLE RAMBUT TERBAIKMU DAN TAMPIL PERCAYA DIRI
                             </h1>
 
                             <p>
-                                Deskripsi slide ketiga.
+                                Smart Online Booking your hair style !
                             </p>
+
 
                             <a href="" class="btn btn-primary">
                                 Order Now

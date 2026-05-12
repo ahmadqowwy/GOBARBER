@@ -49,12 +49,15 @@ article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
   text-align: left;
   background-color: #eeeaea;
 } */
-
+*{
+    outline:1px solid red;
+}
 html,
 body {
     margin: 0;
     padding: 0;
     overflow-x: hidden;
+    background: #03001C;
 }
 
 main {
@@ -62,63 +65,80 @@ main {
     padding: 0 !important;
 }
 
-.slider_section {
-    width: 100vw;
-    margin: 0;
-    padding: 0;
+.custom-navbar{
+    background-color: #120242;
+}
+
+.slider_section{
+    overflow: hidden;
 }
 
 .carousel,
 .carousel-inner,
-.carousel-item {
-    width: 100vw;
+.carousel-item{
+    width: 100%;
     height: 100vh;
 }
 
-.carousel-item img {
-    width: 100vw;
+.carousel-item img{
+    width: 100%;
     height: 100vh;
     object-fit: cover;
     display: block;
+}.food_section{
+    padding-top: 50px;
+    background: #020024;
 }
+
+.food_section .container{
+    max-width: 1400px;
+    margin: 0 auto;
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.food_section .row{
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin: 0;
+}
+
 .food_section .box{
-    padding:20px;
-    border-radius:15px;
-    background:#fff;
-    box-shadow:0 0 10px rgba(0,0,0,0.1);
-    text-align:center;
-    height:100%;
+    width: 320px;
+    padding: 20px;
+    border-radius: 15px;
+    background: #fff;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    text-align: center;
 }
 
 .food_section .img-box img{
-    width:100%;
-    max-width:200px;
-    margin:auto;
-    display:block;
-}
-
-.food_section{
-    padding-top:50px;
+    width: 100%;
+    max-width: 200px;
+    margin: auto;
+    display: block;
 }
 .food_section .container{
     max-width: 1400px;
     margin: 0 auto;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
 }
 
 .food_section .row{
+    display: flex;
     justify-content: center;
+    gap: 30px;
+    margin: 0 auto !important;
 }
 
 .food_section .col-lg-3{
     display: flex;
     justify-content: center;
+    padding: 0;
 }
-
-.food_section .box{
-    width: 100%;
-    max-width: 320px;
-}
-.row{
-    margin-left: auto !important;
-    margin-right: auto !important;
+.food_section .row{
+    margin-left: 0 !important;
+    margin-right: 0 !important;
 }
