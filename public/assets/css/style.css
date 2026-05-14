@@ -49,9 +49,9 @@ article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
   text-align: left;
   background-color: #eeeaea;
 } */
-*{
+/* *{
     outline:1px solid red;
-}
+} */
 html,
 /* body {
     margin: 0;
@@ -63,7 +63,7 @@ body {
     margin: 0;
     padding: 0;
     width: 100%;
-    background-color: #03001C;
+    background-color: #0b044e;
     overflow-x: hidden;
     
 }

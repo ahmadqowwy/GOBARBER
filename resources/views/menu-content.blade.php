@@ -1,59 +1,100 @@
 <section class="food_section layout_padding-bottom ">
  <div class="container-fluid p-0">
 
-    <div class="text-center mb-5">
+    <div class="text-center mb-5 text-white">
       <h2 class="fw-bold">BarberShop</h2>
     </div>
     <div class="card-wrapper" id="cardWrapper">
 
       <!-- CARD 1 -->
       <div class="card-custom">
-        <img src="https://images.unsplash.com/photo-1621605815971-fbc98d665033?q=80&w=800&auto=format&fit=crop" alt="Pomade">
-        <h4>Pomade</h4>
-        <p>Styling rambut premium</p>
-      </div>
+    <img src="{{ asset('assets/images/foto4.jpg') }}" alt="foto4" class="w-100">
+    <div class="d-flex justify-content-between align-items-center px-3 pt-3">
+        <p class="text-success mb-0">Open Now</p>
+        <small class="text-muted color-light">10am – 10pm</small>
+    </div>
+    <h4 class="px-3 pt-2">Gamoen BarberShop</h4>
+    <p class="px-3">Styling rambut premium</p>
+</div>
 
+     <!-- CARD 1 -->
       <div class="card-custom">
-        <img src="https://images.unsplash.com/photo-1517832606299-7ae9b720a186?q=80&w=800&auto=format&fit=crop" alt="Hair Clipper">
-        <h4>Hair Clipper</h4>
-        <p>Mesin cukur profesional</p>
-      </div>
+    <img src="{{ asset('assets/images/foto4.jpg') }}" alt="foto4" class="w-100">
+    <div class="d-flex justify-content-between align-items-center px-3 pt-3">
+        <p class="text-success mb-0">Open Now</p>
+        <small class="text-muted color-light">10am – 10pm</small>
+    </div>
+    <h4 class="px-3 pt-2">Gamoen BarberShop</h4>
+    <p class="px-3">Styling rambut premium</p>
+</div>
 
+     <!-- CARD 1 -->
       <div class="card-custom">
-        <img src="https://images.unsplash.com/photo-1503951458645-643d53bfd90f?q=80&w=800&auto=format&fit=crop" alt="Beard Oil">
-        <h4>Beard Oil</h4>
-        <p>Perawatan jenggot terbaik</p>
-      </div>
+    <img src="{{ asset('assets/images/foto4.jpg') }}" alt="foto4" class="w-100">
+    <div class="d-flex justify-content-between align-items-center px-3 pt-3">
+        <p class="text-success mb-0">Open Now</p>
+        <small class="text-muted color-light">10am – 10pm</small>
+    </div>
+    <h4 class="px-3 pt-2">Gamoen BarberShop</h4>
+    <p class="px-3">Styling rambut premium</p>
+</div>
 
+     <!-- CARD 1 -->
       <div class="card-custom">
-        <img src="https://images.unsplash.com/photo-1521590832167-7bcbfaa6381f?q=80&w=800&auto=format&fit=crop" alt="Hair Dryer">
-        <h4>Hair Dryer</h4>
-        <p>Pengering rambut modern</p>
-      </div>
+    <img src="{{ asset('assets/images/foto4.jpg') }}" alt="foto4" class="w-100">
+    <div class="d-flex justify-content-between align-items-center px-3 pt-3">
+        <p class="text-success mb-0">Open Now</p>
+        <small class="text-muted color-light">10am – 10pm</small>
+    </div>
+    <h4 class="px-3 pt-2">Gamoen BarberShop</h4>
+    <p class="px-3">Styling rambut premium</p>
+</div>
 
+
+     <!-- CARD 1 -->
       <div class="card-custom">
-        <img src="https://images.unsplash.com/photo-1512496015851-a90fb38ba796?q=80&w=800&auto=format&fit=crop" alt="Shaving Kit">
-        <h4>Shaving Kit</h4>
-        <p>Paket cukur lengkap</p>
-      </div>
+    <img src="{{ asset('assets/images/foto4.jpg') }}" alt="foto4" class="w-100">
+    <div class="d-flex justify-content-between align-items-center px-3 pt-3">
+        <p class="text-success mb-0">Open Now</p>
+        <small class="text-muted color-light">10am – 10pm</small>
+    </div>
+    <h4 class="px-3 pt-2">Gamoen BarberShop</h4>
+    <p class="px-3">Styling rambut premium</p>
+</div>
 
-      <div class="card-custom hidden-card">
-        <img src="https://images.unsplash.com/photo-1585747860715-2ba37e788b70?q=80&w=800&auto=format&fit=crop" alt="Hair Wax">
-        <h4>Hair Wax</h4>
-        <p>Wax rambut tahan lama</p>
-      </div>
+      <!-- CARD 1 -->
+      <div class="card-custom">
+    <img src="{{ asset('assets/images/foto4.jpg') }}" alt="foto4" class="w-100">
+    <div class="d-flex justify-content-between align-items-center px-3 pt-3">
+        <p class="text-success mb-0">Open Now</p>
+        <small class="text-muted color-light">10am – 10pm</small>
+    </div>
+    <h4 class="px-3 pt-2">Gamoen BarberShop</h4>
+    <p class="px-3">Styling rambut premium</p>
+</div>
 
-      <div class="card-custom hidden-card">
-        <img src="https://images.unsplash.com/photo-1503951458645-643d53bfd90f?q=80&w=800&auto=format&fit=crop" alt="Beard Oil">
-        <h4>Beard Oil</h4>
-        <p>Perawatan jenggot terbaik</p>
-      </div>
 
-      <div class="card-custom hidden-card">
-        <img src="https://images.unsplash.com/photo-1521590832167-7bcbfaa6381f?q=80&w=800&auto=format&fit=crop" alt="Hair Dryer">
-        <h4>Hair Dryer</h4>
-        <p>Pengering rambut modern</p>
-      </div>
+    <!-- CARD 1 -->
+      <div class="card-custom">
+    <img src="{{ asset('assets/images/foto4.jpg') }}" alt="foto4" class="w-100">
+    <div class="d-flex justify-content-between align-items-center px-3 pt-3">
+        <p class="text-success mb-0">Open Now</p>
+        <small class="text-muted color-light">10am – 10pm</small>
+    </div>
+    <h4 class="px-3 pt-2">Gamoen BarberShop</h4>
+    <p class="px-3">Styling rambut premium</p>
+</div>
+
+     <!-- CARD 1 -->
+      <div class="card-custom">
+    <img src="{{ asset('assets/images/foto4.jpg') }}" alt="foto4" class="w-100">
+    <div class="d-flex justify-content-between align-items-center px-3 pt-3">
+        <p class="text-success mb-0">Open Now</p>
+        <small class="text-muted color-light">10am – 10pm</small>
+    </div>
+    <h4 class="px-3 pt-2">Gamoen BarberShop</h4>
+    <p class="px-3">Styling rambut premium</p>
+</div>
 
       <div class="card-custom hidden-card">
         <img src="https://images.unsplash.com/photo-1512496015851-a90fb38ba796?q=80&w=800&auto=format&fit=crop" alt="Shaving Kit">
@@ -89,8 +130,11 @@
 
   .card-custom {
     width: 320px;
-    background: #fff;
-    border-radius: 18px;
+    background: rgba(255, 255, 255, 0.1); 
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
     overflow: hidden;
     box-shadow: 0 4px 12px rgba(0,0,0,0.08);
     transition: 0.3s;
@@ -108,10 +152,10 @@
     height: 220px;
     object-fit: cover;
   }
-
   .card-custom h4 {
     margin-top: 15px;
     font-weight: bold;
+    color: white;
   }
 
   .card-custom p {
