@@ -1,3 +1,3 @@
 <x-layout :title="$title">>
-       @include('about-content')
+       @include('footer-content')
 </x-layout>

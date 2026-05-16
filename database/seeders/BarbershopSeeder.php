@@ -16,7 +16,7 @@ class BarbershopSeeder extends Seeder
     public function run(): void
     {
         $shop = Barbershop::create([
-            'shop_name' => 'GoBarber Premium',
+            'Shop_name' => 'GoBarber Premium',
             'location' => 'Banyuwangi',
             'description' => 'Barbershop modern terbaik',
             'image' => 'foto1.jpg'

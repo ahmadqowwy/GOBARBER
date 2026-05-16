@@ -2,9 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
+use App\Models\Barber;
+use Illuminate\Http\Request;    
 
-class Shopcontroller extends Controller
+class ShopController extends Controller
 {
-    //
+    
 }

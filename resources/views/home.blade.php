@@ -140,4 +140,6 @@
 
 </section>
     @include('menu-content')
+    @include('about-content')
+    @include('footer-content')
 </x-layout>
