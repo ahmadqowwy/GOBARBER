@@ -8,4 +8,16 @@ use Illuminate\Database\Eloquent\Model;
 class Barber extends Model
 {
     use HasFactory;
+    protected $primaryKey = 'barber_id';
+
+    protected $fillable = [
+        'shop_id',
+        'barber_name',
+        'specialty'
+    ];
+
+    public function shop()
+    {
+        return $this->belongsTo(GoBarberShop::class, 'shop_id');
+    }
 }
