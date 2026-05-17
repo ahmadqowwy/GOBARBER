@@ -1,4 +1,4 @@
-<x-layout navbar="toko">
+<x-layout :title="$title">
 
 <section class="text-white py-5">
 

@@ -24,6 +24,6 @@ Route::get('/blog', function () {
 Route::get('/about', function () {
     return view('about', ['title' => 'About']);
 })->name('about');
-Route::get('/navbar-toko', function () {
-    return view('navbar-toko', ['title' => 'navbar-toko']);
-})->name('navbar-toko');
+Route::get('/detail-toko', function () {
+    return view('detail-toko', ['title' => 'detail-toko']);
+})->name('detail-toko');
