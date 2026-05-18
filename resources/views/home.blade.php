@@ -48,7 +48,7 @@
                             </p>
 
                             <a href="" class="btn btn-primary">
-                                Order Now
+                                Order Sekarang
                             </a>
                         </div>
 
