@@ -27,3 +27,13 @@ Route::get('/about', function () {
 Route::get('/detail-toko', function () {
     return view('detail-toko', ['title' => 'detail-toko']);
 })->name('detail-toko');
+
+
+
+Route::get('/dashboard', function () {
+    return view('pages.admin.dashboard', ['title' => 'dashboard']);
+})->name('admin.dashboard.page');
+
+Route::get('/login', function () {
+    return view('pages.auth.login', ['title' => 'login']);
+})->name('login');

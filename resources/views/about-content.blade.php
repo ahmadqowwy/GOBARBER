@@ -22,9 +22,7 @@
 
                 <div class="col-lg-4 text-center">
 
-                    <img src="{{ asset('assets/images/foto1.jpg') }}"
-                        class="about_img"
-                        alt="foto1">
+                    <img src="{{ asset('assets/images/foto1.jpg') }}" class="about_img" alt="foto1">
 
                 </div>
 
@@ -40,8 +38,7 @@
                         Pernah mencoba mengganti warna rambut? Eksplor sekarang.
                     </p>
 
-                    <a href=""
-                        class="btn btn-light rounded-pill px-4 mt-2">
+                    <a href="" class="btn btn-light rounded-pill px-4 mt-2">
                         Cari Treatment
                     </a>
 
@@ -58,9 +55,7 @@
 
                 <div class="col-lg-4 text-center">
 
-                    <img src="{{ asset('assets/images/foto6.jpg') }}"
-                        class="about_img"
-                        alt="foto66">
+                    <img src="{{ asset('assets/images/foto6.jpg') }}" class="about_img" alt="foto66">
 
                 </div>
 
@@ -75,8 +70,7 @@
                         venue terbaik dengan pelayanan terbaik. Cek sekarang!
                     </p>
 
-                    <a href=""
-                        class="btn btn-dark rounded-pill px-4 mt-2">
+                    <a href="" class="btn btn-dark rounded-pill px-4 mt-2">
                         Cari Venue
                     </a>
 
@@ -91,51 +85,49 @@
 </section>
 
 <style>
-
-.about_section{
-    background:#f5f5f5;
-    padding:80px 60px;
-}
-
-/* BOX */
-.about_box{
-    border-radius:25px;
-    padding:40px;
-    overflow:hidden;
-}
-
-/* DARK */
-.dark_box{
-    background:#14003b;
-}
-
-/* LIGHT */
-.light_box{
-    background:white;
-    box-shadow:0 4px 12px rgba(0,0,0,0.08);
-}
-
-/* IMAGE */
-.about_img{
-    width:220px;
-    height:220px;
-    object-fit:cover;
-    border-radius:50%;
-    border:5px solid white;
-}
-
-/* RESPONSIVE */
-@media(max-width:768px){
-
-    .about_box{
-        text-align:center;
-        padding:30px 20px;
+    .about_section {
+        background: #f5f5f5;
+        padding: 80px 60px;
     }
 
-    .about_img{
-        margin-bottom:20px;
+    /* BOX */
+    .about_box {
+        border-radius: 25px;
+        padding: 40px;
+        overflow: hidden;
     }
 
-}
+    /* DARK */
+    .dark_box {
+        background: #14003b;
+    }
 
+    /* LIGHT */
+    .light_box {
+        background: white;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    }
+
+    /* IMAGE */
+    .about_img {
+        width: 220px;
+        height: 220px;
+        object-fit: cover;
+        border-radius: 50%;
+        border: 5px solid white;
+    }
+
+    /* RESPONSIVE */
+    @media(max-width:768px) {
+
+        .about_box {
+            text-align: center;
+            padding: 30px 20px;
+        }
+
+        .about_img {
+            margin-bottom: 20px;
+        }
+
+    }
 </style>
