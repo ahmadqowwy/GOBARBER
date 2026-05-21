@@ -148,7 +148,7 @@
 
 
                             <a href="" class="btn btn-primary">
-                                Order Now
+                                Order Sekarang
                             </a>
                         </div>
 
@@ -178,7 +178,7 @@
 
 
                             <a  class="btn btn-primary">
-                                Order Now
+                                Order Sekarang
                             </a>
                         </div>
 
