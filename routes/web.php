@@ -37,10 +37,15 @@ Route::get('/produk', function () {
 })->name('produk-toko');
 
 Route::get('/detail-produk/{id}', function ($id) {
-  
+
     return view('detail-toko.detail-produk', ['title' => 'Detail Produk']);
 })->name('detail-produk');
 Route::get('/detail-toko', function () {
     return view('detail-toko.detail-toko', ['title' => 'Detail Toko']);
 })->name('detail-toko');
-
+Route::get('/register', function () {
+    return view('base-client.register', ['title' => 'register']);
+})->name('registes');
+Route::get('/register-admin', function () {
+    return view('base-admin.register-admin', ['title' => 'register']);
+})->name('registes');
