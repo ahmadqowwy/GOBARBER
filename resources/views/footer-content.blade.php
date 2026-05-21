@@ -1,189 +1,244 @@
-
 <footer class="footer_section">
+
+    <div class="footer-top-line"></div>
+
     <div class="container">
-      <div class="row">
-        <div class="col-md-4 footer-col">
-          <div class="footer_contact">
-            <h4>
-              Contact Us
-            </h4>
-            <div class="contact_link_box">
-              <a href="">
-                <i class="fa fa-map-marker" aria-hidden="true"></i>
-                <span>
-                  Location
-                </span>
-              </a>
-              <a href="">
-                <i class="fa fa-phone" aria-hidden="true"></i>
-                <span>
-                  Call +01 1234567890
-                </span>
-              </a>
-              <a href="">
-                <i class="fa fa-envelope" aria-hidden="true"></i>
-                <span>
-                  demo@gmail.com
-                </span>
-              </a>
+
+        <div class="row">
+
+            <!-- Contact -->
+            <div class="col-md-4 footer-col">
+
+                <div class="footer_contact">
+
+                    <h4>Contact Us</h4>
+
+                    <div class="contact_link_box">
+
+                        <a href="#">
+                            <i class="fa fa-map-marker"></i>
+                            <span>Madiun, Indonesia</span>
+                        </a>
+
+                        <a href="#">
+                            <i class="fa fa-phone"></i>
+                            <span>+62 812 3456 7890</span>
+                        </a>
+
+                        <a href="#">
+                            <i class="fa fa-envelope"></i>
+                            <span>gobarber@gmail.com</span>
+                        </a>
+
+                    </div>
+
+                </div>
+
             </div>
-          </div>
+
+            <!-- Logo -->
+            <div class="col-md-4 footer-col">
+
+                <div class="footer_detail">
+
+                    <a href="#" class="footer-logo">
+                        GoBarber
+                    </a>
+
+                    <p>
+                        Solusi booking barber modern dengan pelayanan premium
+                        dan barber profesional terpercaya.
+                    </p>
+
+                    <div class="footer_social">
+                        <!-- Instagram -->
+                        <a href="https://instagram.com/gobarber" target="_blank">
+
+                            <i class="fa-brands fa-instagram"></i>
+
+                        </a>
+
+                        <!-- TikTok -->
+                        <a href="https://tiktok.com/@gobarber" target="_blank">
+
+                            <i class="fa-brands fa-music"></i>
+
+                        </a>
+
+                        <!-- WhatsApp -->
+                        <a href="https://wa.me/6281234567890" target="_blank">
+
+                            <i class="fa-brands fa-whatsapp"></i>
+
+                        </a>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- Opening Hours -->
+            <div class="col-md-4 footer-col">
+
+                <h4>Opening Hours</h4>
+
+                <p>Everyday</p>
+
+                <p>10:00 AM - 10:00 PM</p>
+
+            </div>
+
         </div>
-        <div class="col-md-4 footer-col">
-          <div class="footer_detail">
-            <a href="" class="footer-logo">
-              Feane
-            </a>
+
+        <!-- Bottom -->
+        <div class="footer-info">
+
             <p>
-              Necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with
+                © 2026 GoBarber. All Rights Reserved.
             </p>
-            <div class="footer_social">
-              <a href="">
-                <i class="fa fa-facebook" aria-hidden="true"></i>
-              </a>
-              <a href="">
-                <i class="fa fa-twitter" aria-hidden="true"></i>
-              </a>
-              <a href="">
-                <i class="fa fa-linkedin" aria-hidden="true"></i>
-              </a>
-              <a href="">
-                <i class="fa fa-instagram" aria-hidden="true"></i>
-              </a>
-              <a href="">
-                <i class="fa fa-pinterest" aria-hidden="true"></i>
-              </a>
-            </div>
-          </div>
+
         </div>
-        <div class="col-md-4 footer-col">
-          <h4>
-            Opening Hours
-          </h4>
-          <p>
-            Everyday
-          </p>
-          <p>
-            10.00 Am -10.00 Pm
-          </p>
-        </div>
-      </div>
-      <div class="footer-info">
-        <p>
-          &copy; <span id="displayYear"></span> All Rights Reserved By
-          <a href="https://html.design/">Free Html Templates</a><br><br>
-          &copy; <span id="displayYear"></span> Distributed By
-          <a href="https://themewagon.com/" target="_blank">ThemeWagon</a>
-        </p>
-      </div>
+
     </div>
-  </footer>
-  <style>
-  .footer_section {
-  background-color: #222831;
-  color: #ffffff;
-  padding: 75px 0 40px 0;
-  text-align: center;
-}
 
-.footer_section h4 {
-  font-size: 28px;
-}
+</footer>
+<style>
+    .footer_section {
+        background: #111827;
+        color: white;
+        padding: 80px 0 30px;
+        position: relative;
+        overflow: hidden;
+    }
 
-.footer_section h4,
-.footer_section .footer-logo {
-  font-weight: 600;
-  margin-bottom: 20px;
-  font-family: 'Dancing Script', cursive;
-}
+    /* garis glow atas */
+    .footer-top-line {
+        width: 100%;
+        height: 3px;
+        background: linear-gradient(to right, transparent, #4DA3FF, transparent);
+        margin-bottom: 60px;
+    }
 
-.footer_section p {
-  color: #dbdbdb;
-}
+    .footer_section h4 {
+        font-size: 30px;
+        font-weight: 700;
+        margin-bottom: 25px;
+        color: white;
+    }
 
-.footer_section .footer-col {
-  margin-bottom: 30px;
-}
+    .footer_section p {
+        color: #cbd5e1;
+        line-height: 1.8;
+        font-size: 15px;
+    }
 
-.footer_section .footer_contact .contact_link_box {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-}
+    .footer-col {
+        margin-bottom: 35px;
+    }
 
-.footer_section .footer_contact .contact_link_box a {
-  margin: 5px 0;
-  color: #ffffff;
-}
+    /* logo */
+    .footer-logo {
+        display: inline-block;
+        font-size: 42px;
+        font-weight: 700;
+        color: #4DA3FF;
+        margin-bottom: 20px;
+        text-decoration: none;
+        transition: 0.3s;
+    }
 
-.footer_section .footer_contact .contact_link_box a i {
-  margin-right: 5px;
-}
+    .footer-logo:hover {
+        color: white;
+    }
 
-.footer_section .footer_contact .contact_link_box a:hover {
-  color: #ffbe33;
-}
+    /* contact */
+    .contact_link_box {
+        display: flex;
+        flex-direction: column;
+    }
 
-.footer_section .footer-logo {
-  display: block;
-  font-weight: bold;
-  font-size: 38px;
-  line-height: 1;
-  color: #ffffff;
-}
+    .contact_link_box a {
+        color: #cbd5e1;
+        text-decoration: none;
+        margin: 10px 0;
+        transition: 0.3s;
+        font-size: 15px;
+    }
 
-.footer_section .footer_social {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  margin-top: 20px;
-  margin-bottom: 10px;
-}
+    .contact_link_box a:hover {
+        color: #4DA3FF;
+        transform: translateX(5px);
+    }
 
-.footer_section .footer_social a {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  color: #222831;
-  width: 30px;
-  height: 30px;
-  border-radius: 100%;
-  background-color: #ffffff;
-  border-radius: 100%;
-  margin: 0 2.5px;
-  font-size: 18px;
-}
+    .contact_link_box i {
+        margin-right: 10px;
+        color: #4DA3FF;
+    }
 
-.footer_section .footer_social a:hover {
-  color: #ffbe33;
-}
+    /* social media */
+    .footer_social {
+        display: flex;
+        justify-content: center;
+        gap: 15px;
+        margin-top: 25px;
+        flex-wrap: wrap;
+    }
 
-.footer_section .footer-info {
-  text-align: center;
-  margin-top: 25px;
-}
+    .footer_social a {
+        width: 50px;
+        height: 50px;
+        background: #1E293B;
+        color: white;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-decoration: none;
+        font-size: 20px;
+        transition: 0.35s ease;
+        position: relative;
+        overflow: hidden;
+    }
 
-.footer_section .footer-info p {
-  color: #ffffff;
-  margin: 0;
-}
+    .footer_social a:hover {
+        background: #4DA3FF;
+        transform: translateY(-7px) scale(1.08);
+        box-shadow: 0 0 18px rgba(77, 163, 255, 0.6);
+    }
 
-.footer_section .footer-info p a {
-  color: inherit;
-}
-  </style>
+    /* icon */
+    .footer_social a i {
+        transition: 0.3s;
+    }
 
+    .footer_social a:hover i {
+        transform: rotate(8deg);
+    }
 
+    /* footer bawah */
+    .footer-info {
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+        margin-top: 50px;
+        padding-top: 25px;
+        text-align: center;
+    }
+
+    .footer-info p {
+        margin: 0;
+        color: #94A3B8;
+        font-size: 14px;
+    }
+
+    /* responsive */
+    @media (max-width: 768px) {
+
+        .footer_section {
+            text-align: center;
+        }
+
+        .footer_social {
+            justify-content: center;
+        }
+
+    }
+</style>
