@@ -1,7 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\ShopController;
+use App\Http\Controllers\BarberController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -37,7 +38,6 @@ Route::get('/produk', function () {
 })->name('produk-toko');
 
 Route::get('/detail-produk/{id}', function ($id) {
-
     return view('detail-toko.detail-produk', ['title' => 'Detail Produk']);
 })->name('detail-produk');
 Route::get('/detail-toko', function () {
@@ -49,3 +49,4 @@ Route::get('/register', function () {
 Route::get('/register-admin', function () {
     return view('base-admin.register-admin', ['title' => 'register']);
 })->name('registes');
+Route::get('/detail-toko/data-barber', [BarberController::class, 'index']);

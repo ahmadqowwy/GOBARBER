@@ -112,7 +112,7 @@
 
                     <!-- Bagian Bawah: Tombol Booking -->
                     <div class="mt-4 pt-3">
-                    <a href="/">
+                    <a href="/detail-toko.layanan-barbershop?">
                      <button class="btn btn-primary w-100 py-3 fw-bold rounded-3 shadow-lg">
                             Booking Sekarang
                         </button>
@@ -130,6 +130,7 @@
 
     @include('detail-toko.layanan-toko')
     @include('detail-toko.produk-toko')
+    @include('detail-toko.data-barber')
 
 
 </x-layout>
