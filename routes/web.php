@@ -1,52 +1,88 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\BarberController;
 
 /*
 |--------------------------------------------------------------------------
 | Web Routes
 |--------------------------------------------------------------------------
 |
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider and all of them will
-| be assigned to the "web" middleware group. Make something great!
+| Here is where you can register web routes for your application.
 |
 */
 
 Route::get('/', function () {
-    return view('home', ['title' => 'Home']);
+    return view('home', [
+        'title' => 'Home'
+    ]);
 })->name('home');
 
 Route::get('/blog', function () {
-    return view('blog', ['title' => 'Blog']);
+    return view('blog', [
+        'title' => 'Blog'
+    ]);
 })->name('blog');
 
 Route::get('/about', function () {
-    return view('about', ['title' => 'About']);
+    return view('about', [
+        'title' => 'About'
+    ]);
 })->name('about');
+
+
+
+/*
+|--------------------------------------------------------------------------
+| DETAIL TOKO
+|--------------------------------------------------------------------------
+*/
+
 Route::get('/detail-toko', function () {
-    return view('detail-toko.detail-toko', ['title' => 'detail-toko']);
+    return view('detail-toko.detail-toko', [
+        'title' => 'Detail Toko'
+    ]);
 })->name('detail-toko');
 
 Route::get('/layanan', function () {
-    return view('detail-toko.layanan-toko', ['title' => 'Layanan']);
+    return view('detail-toko.layanan-toko', [
+        'title' => 'Layanan'
+    ]);
 })->name('layanan');
 
 Route::get('/produk', function () {
-    return view('detail-toko.produk-toko', ['title' => 'Produk']);
+    return view('detail-toko.produk-toko', [
+        'title' => 'Produk'
+    ]);
 })->name('produk-toko');
 
+Route::get('/data-barber', function () {
+    return view('detail-toko.data-barber', [
+        'title' => 'Data Barber'
+    ]);
+})->name('data-barber');
+
 Route::get('/detail-produk/{id}', function ($id) {
-    return view('detail-toko.detail-produk', ['title' => 'Detail Produk']);
+    return view('detail-toko.detail-produk', [
+        'title' => 'Detail Produk'
+    ]);
 })->name('detail-produk');
-Route::get('/detail-toko', function () {
-    return view('detail-toko.detail-toko', ['title' => 'Detail Toko']);
-})->name('detail-toko');
+
+
+
+/*
+|--------------------------------------------------------------------------
+| AUTH
+|--------------------------------------------------------------------------
+*/
+
 Route::get('/register', function () {
-    return view('base-client.register', ['title' => 'register']);
-})->name('registes');
+    return view('base-client.register', [
+        'title' => 'Register'
+    ]);
+})->name('register');
+
 Route::get('/register-admin', function () {
-    return view('base-admin.register-admin', ['title' => 'register']);
-})->name('registes');
-Route::get('/detail-toko/data-barber', [BarberController::class, 'index']);
+    return view('base-admin.register-admin', [
+        'title' => 'Register Admin'
+    ]);
+})->name('register-admin');

@@ -131,6 +131,7 @@
     @include('detail-toko.layanan-toko')
     @include('detail-toko.produk-toko')
     @include('detail-toko.data-barber')
+    @include('detail-toko.toko-footer')
 
 
 </x-layout>
