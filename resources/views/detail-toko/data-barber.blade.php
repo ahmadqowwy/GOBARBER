@@ -1,7 +1,3 @@
-@extends('layouts.app')
-
-@section('content')
-
 <style>
     .barber-section {
         background: #111827;
@@ -131,5 +127,3 @@
     </div>
 
 </section>
-
-@endsection
