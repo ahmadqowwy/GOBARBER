@@ -1,7 +1,3 @@
-@extends('layouts.app')
-
-@section('content')
-
 <style>
     .barber-section {
         background: #111827;
@@ -57,7 +53,6 @@
 
             <div class="carousel-inner">
 
-                {{-- Slide 1 --}}
                 <div class="carousel-item active">
                     <div class="row justify-content-center g-4">
 
@@ -76,60 +71,13 @@
                             </div>
                         </div>
 
-                        <div class="col-md-4">
-                            <div class="barber-card">
-                                <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?q=80&w=800"
-                                    class="barber-img">
-
-                                <div class="barber-name">
-                                    Fajar
-                                </div>
-
-                                <div class="barber-skill">
-                                    Pompadour Expert
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-md-4">
-                            <div class="barber-card">
-                                <img src="https://images.unsplash.com/photo-1504257432389-52343af06ae3?q=80&w=800"
-                                    class="barber-img">
-
-                                <div class="barber-name">
-                                    Andi
-                                </div>
-
-                                <div class="barber-skill">
-                                    Beard Stylist
-                                </div>
-                            </div>
-                        </div>
-
                     </div>
                 </div>
 
             </div>
-
-            {{-- Button --}}
-            <button class="carousel-control-prev" type="button"
-                data-bs-target="#barberCarousel" data-bs-slide="prev">
-
-                <span class="carousel-control-prev-icon"></span>
-
-            </button>
-
-            <button class="carousel-control-next" type="button"
-                data-bs-target="#barberCarousel" data-bs-slide="next">
-
-                <span class="carousel-control-next-icon"></span>
-
-            </button>
 
         </div>
 
     </div>
 
 </section>
-
-@endsection

@@ -86,3 +86,24 @@ Route::get('/register-admin', function () {
         'title' => 'Register Admin'
     ]);
 })->name('register-admin');
+// ==========================================
+// ALUR BOOKING (KEBERLANJUTAN)
+// ==========================================
+
+// LANGKAH 1: Pilih Layanan
+Route::get('/booking/layanan', function () {
+    // Perhatikan titik di bawah, itu berarti masuk ke folder
+    return view('booking-barber.layanan', ['title' => 'Booking - Pilih Layanan']);
+})->name('booking.layanan');
+
+// LANGKAH 2: Pilih Jadwal & Barber
+Route::post('/booking/barber-pilih', function () {
+    return view('booking-barber.barber-pilih', ['title' => 'Booking - Pilih Jadwal']);
+})->name('booking.jadwal');
+
+// LANGKAH 3: Konfirmasi
+Route::post('/booking/konfirmasi', function () {
+    return view('booking-barber.step-3-konfirmasi', ['title' => 'Booking - Konfirmasi']);
+})->name('booking.konfirmasi');// ==========================================
+// ALUR BOOKING BARBER
+// ==========================================
