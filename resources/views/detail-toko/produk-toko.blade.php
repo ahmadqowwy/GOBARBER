@@ -232,5 +232,6 @@
     </div>
 
 </section>
+@include('detail-toko.toko-footer')
 
 </x-layout>
