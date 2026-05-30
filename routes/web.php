@@ -86,6 +86,9 @@ Route::get('/register-admin', function () {
         'title' => 'Register Admin'
     ]);
 })->name('register-admin');
+Route::get('/booking-barber/layanan', function () {
+    return view('booking-barber.layanan');
+})->name('layanan');
 // ==========================================
 // ALUR BOOKING (KEBERLANJUTAN)
 // ==========================================

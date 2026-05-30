@@ -165,10 +165,15 @@
                         <div class="step-num">2</div>
                         <span>Pilih Barber</span>
                     </div>
+                    <!-- Step 2: Sedang Berlangsung (Biru) -->
+                    <div class="step-item ">
+                        <div class="step-num">3</div>
+                        <span>Pilih Jadwal</span>
+                    </div>
 
                     <!-- Step 3: Belum aktif (Abu) -->
                     <div class="step-item">
-                        <div class="step-num">3</div>
+                        <div class="step-num">4</div>
                         <span>Konfirmasi</span>
                     </div>
 

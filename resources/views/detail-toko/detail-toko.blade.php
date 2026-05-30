@@ -112,11 +112,11 @@
 
                     <!-- Bagian Bawah: Tombol Booking -->
                     <div class="mt-4 pt-3">
-                    <a href="/detail-toko.layanan-barbershop?">
-                     <button class="btn btn-primary w-100 py-3 fw-bold rounded-3 shadow-lg">
-                            Booking Sekarang
+                   <a href="{{ url('/booking-barber/layanan') }}">
+                         <button class="btn btn-primary w-100 py-3 fw-bold rounded-3 shadow-lg">
+                          Booking Sekarang
                         </button>
-                    </a>
+                  </a>
                        
                     </div>
 
