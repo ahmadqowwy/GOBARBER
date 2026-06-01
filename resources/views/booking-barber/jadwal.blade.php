@@ -165,6 +165,10 @@ input {
 <form method="POST" action="{{ route('booking.konfirmasi') }}">
     @csrf
 
+    <input type="hidden" name="layanan_id" value="{{ request('layanan_id') }}">
+    <input type="hidden" name="barber_id" value="{{ request('barber_id') }}">
+
+
     <h2>Pilih Tanggal dan Jam</h2>
 
     <div class="container">
