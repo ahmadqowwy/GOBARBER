@@ -1,4 +1,7 @@
 <style>
+    body {
+        font-family: 'Poppins', sans-serif;
+    }
 /* gambar carousel */
 .carousel-item{
     height: 100vh;
@@ -64,7 +67,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 2px;
+    gap: 8px;
 }
 </style>
 <x-layout :title="$title">
@@ -117,9 +120,6 @@
                                 Smart Online Booking your hair style !
                             </p>
 
-                            <a href="" class="btn btn-primary">
-                                Order Sekarang
-                            </a>
                         </div>
 
                     </div>
@@ -146,10 +146,6 @@
                                 Smart Online Booking your hair style !
                             </p>
 
-
-                            <a href="" class="btn btn-primary">
-                                Order Sekarang
-                            </a>
                         </div>
 
                     </div>
@@ -176,10 +172,6 @@
                                 Smart Online Booking your hair style !
                             </p>
 
-
-                            <a  class="btn btn-primary">
-                                Order Sekarang
-                            </a>
                         </div>
 
                     </div>
