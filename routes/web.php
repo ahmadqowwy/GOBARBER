@@ -101,12 +101,12 @@ Route::get('/booking/layanan', function () {
 
 // LANGKAH 2: Pilih Jadwal & Barber
 Route::post('/booking/barber-pilih', function () {
-    return view('booking-barber.barber-pilih', ['title' => 'Booking - Pilih Jadwal']);
-})->name('booking.jadwal');
+    return view('booking-barber.pilih-barber', ['title' => 'Booking - Pilih Barber']);
+})->name('booking.barber-pilih');
 
-// LANGKAH 3: Konfirmasi
-Route::post('/booking/konfirmasi', function () {
-    return view('booking-barber.step-3-konfirmasi', ['title' => 'Booking - Konfirmasi']);
-})->name('booking.konfirmasi');// ==========================================
-// ALUR BOOKING BARBER
+//pilih jam
+// LANGKAH 3: PILIH JADWAL (MENERIMA POST DARI LANGKAH 2)
+Route::post('/booking/jadwal', function () {
+    return view('booking-barber.jadwal', ['title' => 'Booking - Pilih Jadwal']);
+})->name('booking.jadwal');// ALUR BOOKING BARBER
 // ==========================================
