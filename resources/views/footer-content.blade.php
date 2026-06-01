@@ -2,12 +2,12 @@
 
     <div class="footer-top-line"></div>
 
-    <div class="container">
+    <div class="container footer-container">
 
-        <div class="row">
+        <div class="row align-items-start justify-content-center gy-5">
 
             <!-- Contact -->
-            <div class="col-md-4 footer-col">
+            <div class="col-lg-3 col-md-6">
 
                 <div class="footer_contact">
 
@@ -16,7 +16,7 @@
                     <div class="contact_link_box">
 
                         <a href="#">
-                            <i class="fa fa-map-marker"></i>
+                            <i class="fa fa-map-marker-alt"></i>
                             <span>Madiun, Indonesia</span>
                         </a>
 
@@ -37,9 +37,9 @@
             </div>
 
             <!-- Logo -->
-            <div class="col-md-4 footer-col">
+            <div class="col-lg-5 col-md-12">
 
-                <div class="footer_detail">
+                <div class="footer_detail text-center">
 
                     <a href="#" class="footer-logo">
                         GoBarber
@@ -50,35 +50,14 @@
                         dan barber profesional terpercaya.
                     </p>
 
-                    <div class="footer_social">
-                        <!-- Instagram -->
-                        <a href="https://instagram.com/gobarber" target="_blank">
-
-                            <i class="fa-brands fa-instagram"></i>
-
-                        </a>
-
-                        <!-- TikTok -->
-                        <a href="https://tiktok.com/@gobarber" target="_blank">
-
-                            <i class="fa-brands fa-music"></i>
-
-                        </a>
-
-                        <!-- WhatsApp -->
-                        <a href="https://wa.me/6281234567890" target="_blank">
-
-                            <i class="fa-brands fa-whatsapp"></i>
-
-                        </a>
-                    </div>
-
                 </div>
 
             </div>
 
             <!-- Opening Hours -->
-            <div class="col-md-4 footer-col">
+            <div class="col-lg-3 col-md-6">
+
+                 <div class="opening_hours">
 
                 <h4>Opening Hours</h4>
 
@@ -104,65 +83,71 @@
 </footer>
 <style>
     .footer_section {
-        background: #111827;
+        background: #0F172A;
         color: white;
-        padding: 80px 0 30px;
+        padding: 90px 0 25px;
         position: relative;
         overflow: hidden;
+    }
+
+    .footer-container {
+        max-width: 1400px;
+        padding-left: 70px;
+        padding-right: 70px;
     }
 
     /* garis glow atas */
     .footer-top-line {
         width: 100%;
-        height: 3px;
+        height: 2px;
         background: linear-gradient(to right, transparent, #4DA3FF, transparent);
-        margin-bottom: 60px;
+        margin-bottom: 75px;
     }
 
     .footer_section h4 {
-        font-size: 30px;
+        font-size: 32px;
         font-weight: 700;
-        margin-bottom: 25px;
+        margin-bottom: 28px;
         color: white;
     }
 
     .footer_section p {
         color: #cbd5e1;
-        line-height: 1.8;
-        font-size: 15px;
-    }
-
-    .footer-col {
-        margin-bottom: 35px;
+        line-height: 1.9;
+        font-size: 16px;
+        margin-bottom: 10px;
     }
 
     /* logo */
     .footer-logo {
         display: inline-block;
-        font-size: 42px;
-        font-weight: 700;
+        font-size: 58px;
+        font-weight: 800;
         color: #4DA3FF;
         margin-bottom: 20px;
         text-decoration: none;
-        transition: 0.3s;
+        transition: 0.3s ease;
     }
 
     .footer-logo:hover {
         color: white;
+        transform: scale(1.03);
     }
 
     /* contact */
     .contact_link_box {
         display: flex;
         flex-direction: column;
+        gap: 18px;
     }
 
     .contact_link_box a {
         color: #cbd5e1;
         text-decoration: none;
-        margin: 10px 0;
-        transition: 0.3s;
-        font-size: 15px;
+        transition: 0.3s ease;
+        font-size: 17px;
+        display: flex;
+        align-items: center;
     }
 
     .contact_link_box a:hover {
@@ -171,54 +156,23 @@
     }
 
     .contact_link_box i {
-        margin-right: 10px;
+        width: 35px;
+        font-size: 18px;
         color: #4DA3FF;
     }
 
-    /* social media */
-    .footer_social {
-        display: flex;
-        justify-content: center;
-        gap: 15px;
-        margin-top: 25px;
-        flex-wrap: wrap;
-    }
-
-    .footer_social a {
-        width: 50px;
-        height: 50px;
-        background: #1E293B;
-        color: white;
-        border-radius: 50%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        text-decoration: none;
-        font-size: 20px;
-        transition: 0.35s ease;
-        position: relative;
-        overflow: hidden;
-    }
-
-    .footer_social a:hover {
-        background: #4DA3FF;
-        transform: translateY(-7px) scale(1.08);
-        box-shadow: 0 0 18px rgba(77, 163, 255, 0.6);
-    }
-
-    /* icon */
-    .footer_social a i {
-        transition: 0.3s;
-    }
-
-    .footer_social a:hover i {
-        transform: rotate(8deg);
-    }
-
     /* footer bawah */
+    .opening_hours {
+        text-align: right;
+    }
+
+    .opening_hours p {
+        margin-bottom: 14px;
+    }
+
     .footer-info {
-        border-top: 1px solid rgba(255, 255, 255, 0.1);
-        margin-top: 50px;
+        border-top: 1px solid rgba(255, 255, 255, 0.08);
+        margin-top: 60px;
         padding-top: 25px;
         text-align: center;
     }
@@ -227,18 +181,57 @@
         margin: 0;
         color: #94A3B8;
         font-size: 14px;
+        letter-spacing: 0.5px;
     }
 
     /* responsive */
-    @media (max-width: 768px) {
+    @media (max-width: 991px) {
 
         .footer_section {
             text-align: center;
+            padding: 70px 0 25px;
         }
 
-        .footer_social {
+        .footer-container {
+            padding-left: 25px;
+            padding-right: 25px;
+        }
+
+        .footer-logo {
+            font-size: 48px;
+        }
+
+        .footer_section h4 {
+            font-size: 28px;
+        }
+
+        .contact_link_box a {
             justify-content: center;
         }
 
+        .opening_hours {
+            text-align: center;
+        }
+
+    }
+    @media (max-width: 576px) {
+
+        .footer-logo {
+            font-size: 40px;
+        }
+
+        .footer_section h4 {
+            font-size: 24px;
+        }
+
+        .footer_section p,
+        .contact_link_box a {
+            font-size: 15px;
+        }
+
+        .footer-container {
+            padding-left: 18px;
+            padding-right: 18px;
+        }
     }
 </style>

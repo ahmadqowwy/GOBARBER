@@ -4,50 +4,29 @@
         <div class="text-center mb-5 text-white">
             <h2 class="fw-bold">BarberShop</h2>
         </div>
+
         <div class="card-wrapper" id="cardWrapper">
 
             <!-- CARD 1 -->
-            <a href="/detail-toko" class="text-decoration-none">
-                <div class="card-custom">
-                    <img src="{{ asset('assets/images/foto4.jpg') }}" alt="foto4">
+            <div class="card-custom">
 
-                    <div class="card-content">
+                <img src="{{ asset('assets/images/foto4.jpg') }}" alt="foto4">
 
-                        <div class="card-info">
-                            <span class="jam">⏰ 10am - 10pm</span>
-                        </div>
+                <div class="card-content">
 
-                        <h4>Gamoen BarberShop</h4>
+                    <div class="card-info">
+                        <span class="jam">⏰ 10am - 10pm</span>
+                    </div>
 
-                        <p>Styling rambut premium dengan barber profesional.</p>
+                    <h4>Gamoen BarberShop</h4>
 
+                    <p>Styling rambut premium dengan barber profesional.</p>
+
+                    <a href="/detail-toko">
                         <button class="booking-btn">
                             Booking Now
                         </button>
-
-                    </div>
-
-                </div>
-            </a>
-
-            <!-- CARD 1 -->
-            <div class="card-custom">
-
-                <img src="{{ asset('assets/images/foto4.jpg') }}" alt="foto4">
-
-                <div class="card-content">
-
-                    <div class="card-info">
-                        <span class="jam">⏰ 10am - 10pm</span>
-                    </div>
-
-                    <h4>Gamoen BarberShop</h4>
-
-                    <p>Styling rambut premium dengan barber profesional.</p>
-
-                    <button class="booking-btn">
-                        Booking Now
-                    </button>
+                    </a>
 
                 </div>
 
@@ -68,9 +47,11 @@
 
                     <p>Styling rambut premium dengan barber profesional.</p>
 
-                    <button class="booking-btn">
-                        Booking Now
-                    </button>
+                    <a href="/detail-toko">
+                        <button class="booking-btn">
+                            Booking Now
+                        </button>
+                    </a>
 
                 </div>
 
@@ -91,9 +72,11 @@
 
                     <p>Styling rambut premium dengan barber profesional.</p>
 
-                    <button class="booking-btn">
-                        Booking Now
-                    </button>
+                    <a href="/detail-toko">
+                        <button class="booking-btn">
+                            Booking Now
+                        </button>
+                    </a>
 
                 </div>
 
@@ -114,9 +97,11 @@
 
                     <p>Styling rambut premium dengan barber profesional.</p>
 
-                    <button class="booking-btn">
-                        Booking Now
-                    </button>
+                    <a href="/detail-toko">
+                        <button class="booking-btn">
+                            Booking Now
+                        </button>
+                    </a>
 
                 </div>
 
@@ -137,9 +122,11 @@
 
                     <p>Styling rambut premium dengan barber profesional.</p>
 
-                    <button class="booking-btn">
-                        Booking Now
-                    </button>
+                    <a href="/detail-toko">
+                        <button class="booking-btn">
+                            Booking Now
+                        </button>
+                    </a>
 
                 </div>
 
@@ -160,9 +147,11 @@
 
                     <p>Styling rambut premium dengan barber profesional.</p>
 
-                    <button class="booking-btn">
-                        Booking Now
-                    </button>
+                    <a href="/detail-toko">
+                        <button class="booking-btn">
+                            Booking Now
+                        </button>
+                    </a>
 
                 </div>
 
@@ -183,9 +172,36 @@
 
                     <p>Styling rambut premium dengan barber profesional.</p>
 
-                    <button class="booking-btn">
-                        Booking Now
-                    </button>
+                    <a href="/detail-toko">
+                        <button class="booking-btn">
+                            Booking Now
+                        </button>
+                    </a>
+
+                </div>
+
+            </div>
+
+            <!-- CARD 1 -->
+            <div class="card-custom">
+
+                <img src="{{ asset('assets/images/foto4.jpg') }}" alt="foto4">
+
+                <div class="card-content">
+
+                    <div class="card-info">
+                        <span class="jam">⏰ 10am - 10pm</span>
+                    </div>
+
+                    <h4>Gamoen BarberShop</h4>
+
+                    <p>Styling rambut premium dengan barber profesional.</p>
+
+                    <a href="/detail-toko">
+                        <button class="booking-btn">
+                            Booking Now
+                        </button>
+                    </a>
 
                 </div>
 
@@ -204,9 +220,11 @@
 
                     <p>Styling rambut premium dengan barber profesional.</p>
 
-                    <button class="booking-btn">
-                        Booking Now
-                    </button>
+                    <a href="/detail-toko">
+                        <button class="booking-btn">
+                            Booking Now
+                        </button>
+                    </a>
 
                 </div>
 
@@ -226,9 +244,11 @@
 
                 <p>Styling rambut premium dengan barber profesional.</p>
 
-                <button class="booking-btn">
-                    Booking Now
-                </button>
+                <a href="/detail-toko">
+                    <button class="booking-btn">
+                        Booking Now
+                    </button>
+                </a>
 
             </div>
 
@@ -237,8 +257,8 @@
 
     </div>
 
-    <div class="text-center mt-4">
-        <button id="viewMoreBtn" class="btn btn-primary px-4">
+    <div class="text-center mt-5">
+        <button id="viewMoreBtn" class="view-more-btn">
             View More
         </button>
     </div>
