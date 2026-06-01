@@ -855,76 +855,7 @@
     </div>
 
     <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            // --- 1. HANDLING ACTIVE NAVIGATION SCROLL ---
-            const sections = document.querySelectorAll('.section-target');
-            const navButtons = document.querySelectorAll('.tab-menu-section .tab-btn');
-
-            navButtons.forEach(button => {
-                button.addEventListener('click', function() {
-                    navButtons.forEach(btn => btn.classList.remove('active'));
-                    this.classList.add('active');
-                });
-            });
-
-            window.addEventListener('scroll', () => {
-                let currentSectionId = "";
-                sections.forEach(section => {
-                    const sectionTop = section.offsetTop;
-                    if (pageYOffset >= (sectionTop - 160)) {
-                        currentSectionId = section.getAttribute('id');
-                    }
-                });
-
-                if (currentSectionId) {
-                    navButtons.forEach(btn => {
-                        btn.classList.remove('active');
-                        if (btn.getAttribute('href') === `#${currentSectionId}`) {
-                            btn.classList.add('active');
-                        }
-                    });
-                }
-            });
-
-            // --- 2. LOGIKA KLIK ELEGAN BIRU NEON (CYBER RIPPLE) ---
-            const cyberElements = document.querySelectorAll('.btn-booking-main, .tab-btn, .fg-btn-fav, .fg-btn-cart, .service-card, .fg-product-card, .barber-card');
-            
-            cyberElements.forEach(element => {
-                element.addEventListener('click', function (e) {
-                    // Blokir trigger ganda jika mengklik tombol aksi kecil di dalam card produk
-                    if (e.target.tagName === 'BUTTON' || e.target.tagName === 'I') {
-                        if (this.classList.contains('fg-product-card')) return;
-                    }
-
-                    // Bersihkan sisa riak gelombang lama
-                    const existingRipple = this.querySelector('.aesthetic-ripple');
-                    if (existingRipple) existingRipple.remove();
-
-                    // Buat elemen gelombang riak baru
-                    const ripple = document.createElement('span');
-                    ripple.classList.add('aesthetic-ripple');
-                    this.appendChild(ripple);
-
-                    // Ambil kalkulasi lebar/tinggi elemen kontainer
-                    const rect = this.getBoundingClientRect();
-                    const size = Math.max(rect.width, rect.height);
-                    
-                    ripple.style.width = ripple.style.height = `${size}px`;
-
-                    // Hitung letak koordinat kursor sentuh relatif terhadap element
-                    const x = e.clientX - rect.left - (size / 2);
-                    const y = e.clientY - rect.top - (size / 2);
-
-                    ripple.style.left = `${x}px`;
-                    ripple.style.top = `${y}px`;
-
-                    // Bersihkan dari DOM agar lancar performanya setelah 600ms
-                    setTimeout(() => {
-                        ripple.remove();
-                    }, 600);
-                });
-            });
-        });
+       
     </script>
     @include('detail-toko.toko-footer')
 
