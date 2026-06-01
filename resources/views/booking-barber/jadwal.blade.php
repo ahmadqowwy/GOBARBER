@@ -1,286 +1,290 @@
-<x-layout :title="$title">
 
 <style>
-    /* Background Deep Blue */
-    .booking-bg {
-        background-color: #0f172a;
-        color: #fff;
-        min-height: 100vh;
-    }
 
-    .container {
-        display: flex;
-        gap: 40px;
-    }
+body{
+    background-color:#0f172a;
+    color:#fff;
+    padding:40px;
+    font-family:Arial,sans-serif;
+}
 
-    .kiri { flex: 2; }
-    .kanan { flex: 1; }
+.container{
+    display:flex;
+    gap:40px;
+}
 
-    h2 {
-        margin-bottom: 30px;
-    }
+.kiri{ flex:2; }
+.kanan{ flex:1; }
 
-    /* TANGGAL */
-    .tanggal {
-        display: flex;
-        gap: 15px;
-        margin-bottom: 30px;
-    }
+h2{
+    margin-bottom:30px;
+}
 
-    .tgl-radio {
-        display: none;
-    }
+/* TANGGAL */
+.tanggal{
+    display:flex;
+    gap:15px;
+    margin-bottom:30px;
+}
 
-    .card-tanggal {
-        width: 90px;
-        background: #1e293b;
-        color: #fff;
-        text-align: center;
-        padding: 15px;
-        border-radius: 12px;
-        cursor: pointer;
-        border: 1px solid #334155;
-        transition: .25s;
-    }
+.tgl-radio,
+.jam-radio{
+    display:none;
+}
 
-    .card-tanggal:hover {
-        transform: translateY(-3px);
-        border-color: #3b82f6;
-    }
+.card-tanggal{
+    width:90px;
+    background:#1e293b;
+    color:#fff;
+    text-align:center;
+    padding:15px;
+    border-radius:12px;
+    cursor:pointer;
+    border:1px solid #334155;
+    transition:.25s;
+}
 
-    /* Jika dipilih, border biru */
-    .tgl-radio:checked + .card-tanggal {
-        background: #253349;
-        border-color: #3b82f6;
-        transform: scale(1.05);
-    }
+.card-tanggal:hover{
+    transform:translateY(-3px);
+    border-color:#3b82f6;
+}
 
-    /* JAM (GRID) */
-    .jam {
-        display: grid;
-        grid-template-columns: repeat(4, 1fr); /* Penting untuk 4 kolom sebaris */
-        gap: 15px;
-    }
+.tgl-radio:checked + .card-tanggal{
+    background:#253349;
+    border-color:#3b82f6;
+    transform:scale(1.05);
+}
 
-    .card-jam {
-        background: #1e293b;
-        color: #e2e8f0;
-        padding: 14px;
-        text-align: center;
-        border-radius: 12px;
-        cursor: pointer;
-        border: 1px solid #334155;
-        transition: .25s;
-    }
+/* JAM (TIDAK DIUBAH SAMA SEKALI) */
+.jam{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:15px;
+}
 
-    .card-jam:hover {
-        transform: translateY(-3px);
-        border-color: #3b82f6;
-    }
+.card-jam{
+    background:#1e293b;
+    color:#e2e8f0;
+    padding:14px;
+    text-align:center;
+    border-radius:12px;
+    cursor:pointer;
+    border:1px solid #334155;
+    transition:.25s;
+}
 
-    .jam-radio:checked + .card-jam {
-        background: #253349;
-        border-color: #3b82f6;
-        transform: scale(1.05);
-    }
+.card-jam:hover{
+    transform:translateY(-3px);
+    border-color:#3b82f6;
+}
 
-    /* STEP PANEL */
-    .step-panel {
-        background-color: #1e293b;
-        border-radius: 16px;
-        padding: 30px;
-    }
+.jam-radio:checked + .card-jam{
+    background:#253349;
+    border-color:#3b82f6;
+    transform:scale(1.05);
+}
 
-    /* STEP INDICATORS */
-    .step-item {
-        display: flex;
-        align-items: center;
-        margin-bottom: 15px;
-        color: #64748b;
-    }
+/* STEP — SAMA PERSIS PUNYAMU */
+.step-panel {
+    background-color: #1e293b;
+    border-radius: 16px;
+    padding: 30px;
+}
 
-    .step-item.active {
-        color: #3b82f6;
-        font-weight: bold;
-    }
+.step-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    color: #64748b; 
+}
 
-    .step-item.done {
-        color: #10b981; /* Hijau */
-    }
+.step-item.active {
+    color: #3b82f6; 
+    font-weight: bold;
+}
 
-    .step-num {
-        width: 30px;
-        height: 30px;
-        border-radius: 50%;
-        border: 2px solid currentColor;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin-right: 12px;
-        font-size: 14px;
-    }
+.step-item.done {
+    color: #10b981;
+}
 
-    .step-item.active .step-num {
-        background-color: #3b82f6;
-        border-color: #3b82f6;
-        color: #fff;
-    }
+.step-num {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 2px solid currentColor;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 12px;
+    font-size: 14px;
+}
 
-    .step-item.done .step-num {
-        background-color: #10b981;
-        border-color: #10b981;
-        color: #fff;
-    }
+.step-item.active .step-num {
+    background-color: #3b82f6;
+    border-color: #3b82f6;
+    color: #fff;
+}
 
-    /* FORM INPUT */
-    .form-title {
-        margin-top: 30px;
-        margin-bottom: 15px;
-        font-size: 18px;
-        font-weight: bold;
-    }
+.step-item.done .step-num {
+    background-color: #10b981;
+    border-color: #10b981;
+    color: #fff;
+}
+/* Memberi jarak atas agar judul tidak menempel dengan elemen di atasnya */
+.form-title {
+    margin-top: 30px; 
+    margin-bottom: 15px; /* Jarak antara judul dan input */
+    font-size: 18px;
+    font-weight: bold;
+}
 
-    input[type="text"] {
-        margin-bottom: 15px;
-        width: 100%;
-        padding: 10px;
-        border-radius: 8px;
-        border: 1px solid #334155;
-        background-color: #1e293b;
-        color: #fff;
-    }
-    input[type="text"]:focus {
-        outline: none;
-        border-color: #3b82f6;
-    }
+/* Memberi jarak antar input agar tidak menempel */
+input {
+    margin-bottom: 15px; 
+    width: 100%;
+    padding: 10px;
+}
+.card-jam small{
+    color:#94a3b8;
+    font-size:12px;
+}
+
 </style>
+</head>
 
-<!-- WRAPPER UTAMA -->
-<div class="booking-bg">
+<body>
 
-    <!-- FORM MENUJU KE LANGKAH 4 (KONFIRMASI) -->
-    <form action="{{ route('booking.konfirmasi') }}" method="POST">
-        @csrf 
+<form method="POST" action="{{ route('booking.konfirmasi') }}">
+    @csrf
 
-        <!-- HIDDEN INPUTS: Membawa data dari Langkah 1 & 2 -->
-        <input type="hidden" name="layanan_id" value="{{ request('layanan_id') }}">
-        <input type="hidden" name="barber_id" value="{{ request('barber_id') }}">
+    <h2>Pilih Tanggal dan Jam</h2>
 
-        <h2>Pilih Tanggal dan Jam</h2>
+    <div class="container">
 
-        <div class="container">
+        <div class="kiri">
 
-            <!-- KIRI: TANGGAL & JAM -->
-            <div class="kiri">
+            <!-- TANGGAL -->
+            <div class="tanggal">
 
-                <!-- TANGGAL (Horizontal List) -->
-                <div class="tanggal">
+    <label>
+        <input type="radio" name="tanggal" value="2026-09-09" class="tgl-radio" required>
+        <div class="card-tanggal">Sen<br>Sep 9</div>
+    </label>
 
-                    <label>
-                        <input type="radio" name="tanggal" class="tgl-radio">
-                        <div class="card-tanggal">Sen<br>Sep 9</div>
-                    </label>
+    <label>
+        <input type="radio" name="tanggal" value="2026-09-10" class="tgl-radio">
+        <div class="card-tanggal">Sel<br>Sep 10</div>
+    </label>
 
-                    <label>
-                        <input type="radio" name="tanggal" class="tgl-radio">
-                        <div class="card-tanggal">Sel<br>Sep 10</div>
-                    </label>
+    <label>
+        <input type="radio" name="tanggal" value="2026-09-11" class="tgl-radio">
+        <div class="card-tanggal">Rab<br>Sep 11</div>
+    </label>
 
-                    <label>
-                        <input type="radio" name="tanggal" class="tgl-radio">
-                        <div class="card-tanggal">Rab<br>Sep 11</div>
-                    </label>
-
-                    <label>
-                        <input type="radio" name="tanggal" class="tgl-radio" id="moreDates">
-                        <div class="card-tanggal" data-bs-toggle="modal" data-bs-target="#dateModal">
-                            More<br>Dates
-                        </div>
-                    </label>
-
-                </div>
-
-                <!-- JAM (GRID 4 KOLOM) -->
-                <div class="jam">
-
-                    <label>
-                        <input type="radio" name="jam" class="jam-radio">
-                        <div class="card-jam">17.00 - 17.45<br><small>Tersedia</small></div>
-                    </label>
-
-                    <label>
-                        <input type="radio" name="jam" class="jam-radio">
-                        <div class="card-jam">18.00 - 18.45<br><small>Tersedia</small></div>
-                    </label>
-
-                    <label>
-                        <input type="radio" name="jam" class="jam-radio">
-                        <div class="card-jam">19.00 - 19.45<br><small>Tersedia</small></div>
-                    </label>
-
-                    <label>
-                        <input type="radio" name="jam" class="jam-radio">
-                        <div class="card-jam">20.00 - 20.45<br><small>Tersedia</small></div>
-                    </label>
-
-                    <label>
-                        <input type="radio" name="jam" class="jam-radio">
-                        <div class="card-jam">21.00 - 22.00<br><small>Tersedia</small></div>
-                    </label>
-                </div>
-
-                <!-- FORM INPUT NAMA & HP -->
-                <h3 class="form-title">Masukkan Data Diri</h3>
-                <input type="text" name="nama_pelanggan" placeholder="Nama lengkap">
-                <input type="text" name="no_hp" placeholder="No HP">
-            </div>
-
-            <!-- KANAN: LANGKAH RESERVASI -->
-            <div class="kanan">
-
-                <div class="step-panel">
-
-                    <h5 class="fw-bold mb-4">Langkah Reservasi</h5>
-
-                    <!-- STEP 1 & 2: SELESAI -->
-                    <div class="step-item done">
-                        <div class="step-num"><i class="bi bi-check"></i></div>
-                        <span>Pilih Layanan</span>
-                    </div>
-
-                    <div class="step-item done">
-                        <div class="step-num"><i class="bi bi-check"></i></div>
-                        <span>Pilih Barber</span>
-                    </div>
-
-                    <!-- STEP 3: SEDANG AKTIF -->
-                    <div class="step-item active">
-                        <div class="step-num">3</div>
-                        <span>Pilih Jadwal</span>
-                    </div>
-
-                    <!-- STEP 4: BELUM AKTIF -->
-                    <div class="step-item">
-                        <div class="step-num">4</div>
-                        <span>Konfirmasi</span>
-                    </div>
-
-                    <hr>
-
-                    <!-- TOMBOL LANJUT -->
-                    <button type="submit" id="btnNext" class="btn btn-primary w-100 py-3 rounded-3 fw-bold shadow-lg" disabled>
-                        Selanjutnya <i class="bi bi-arrow-right ms-2"></i>
-                    </button>
-
-                </div>
-            </div>
-
+    <label>
+        <input type="date" id="customDate" style="display:none;">
+        <input type="radio" name="tanggal" value="" id="moreDates" class="tgl-radio">
+        <div class="card-tanggal" onclick="document.getElementById('customDate').showPicker()">
+            <i class="bi bi-calendar"></i><br>
+            More Dates
         </div>
-    </form>
+    </label>
+
+</div>
+            <!-- JAM -->
+            <div class="jam">
+
+    <label><input type="radio" name="jam" value="12.00 - 12.45" class="jam-radio" required><div class="card-jam">12.00 - 12.45<br><small>Tersedia</small></div></label>
+
+    <label><input type="radio" name="jam" value="13.00 - 13.45" class="jam-radio"><div class="card-jam">13.00 - 13.45<br><small>Tersedia</small></div></label>
+
+    <label><input type="radio" name="jam" value="14.00 - 14.45" class="jam-radio"><div class="card-jam">14.00 - 14.45<br><small>Tersedia</small></div></label>
+
+    <label><input type="radio" name="jam" value="15.00 - 15.45" class="jam-radio"><div class="card-jam">15.00 - 15.45<br><small>Tersedia</small></div></label>
+
+    <label><input type="radio" name="jam" value="16.00 - 16.45" class="jam-radio"><div class="card-jam">16.00 - 16.45<br><small>Tersedia</small></div></label>
+
+    <label><input type="radio" name="jam" value="17.00 - 17.45" class="jam-radio"><div class="card-jam">17.00 - 17.45<br><small>Tersedia</small></div></label>
+
+    <label><input type="radio" name="jam" value="18.00 - 18.45" class="jam-radio"><div class="card-jam">18.00 - 18.45<br><small>Tersedia</small></div></label>
+
+    <label><input type="radio" name="jam" value="19.00 - 19.45" class="jam-radio"><div class="card-jam">19.00 - 19.45<br><small>Tersedia</small></div></label>
+
+    <label><input type="radio" name="jam" value="20.00 - 20.45" class="jam-radio"><div class="card-jam">20.00 - 20.45<br><small>Tersedia</small></div></label>
+
+    <label><input type="radio" name="jam" value="21.00 - 22.00" class="jam-radio"><div class="card-jam">21.00 - 22.00<br><small>Tersedia</small></div></label>
 
 </div>
 
-<!-- MODAL UNTUK TANGAL LAIN -->
+            <h3 class="form-title">Masukkan Data Diri</h3>
+
+            <input
+                type="text"
+                name="nama"
+                class="form-control mb-3"
+                placeholder="Nama Lengkap"
+                required
+            >
+
+            <input
+                type="text"
+                name="no_hp"
+                class="form-control mb-3"
+                placeholder="No HP"
+                required
+            >
+
+        </div>
+
+        <div class="kanan">
+
+            <div class="step-panel">
+
+                <h5 class="fw-bold mb-4">Langkah Reservasi</h5>
+
+                <div class="step-item done">
+                    <div class="step-num">
+                        <i class="bi bi-check"></i>
+                    </div>
+                    <span>Pilih Layanan</span>
+                </div>
+
+                <div class="step-item done">
+                    <div class="step-num">
+                        <i class="bi bi-check"></i>
+                    </div>
+                    <span>Pilih Barber</span>
+                </div>
+
+                <div class="step-item active">
+                    <div class="step-num">3</div>
+                    <span>Pilih Jadwal</span>
+                </div>
+
+                <div class="step-item">
+                    <div class="step-num">4</div>
+                    <span>Konfirmasi</span>
+                </div>
+
+                <hr>
+
+                <button
+                    type="submit"
+                    id="btnNext"
+                    class="btn btn-primary w-100"
+                >
+                    Selanjutnya
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</form>
+
+<!-- MODAL -->
 <div class="modal fade" id="dateModal" tabindex="-1">
   <div class="modal-dialog">
     <div class="modal-content bg-dark text-white">
@@ -301,9 +305,9 @@
     </div>
   </div>
 </div>
-
 <!-- SCRIPT LOGIC (VALIDASI & MODAL) -->
 <script>
+
 const tanggal = document.querySelectorAll('input[name="tanggal"]');
 const jam = document.querySelectorAll('input[name="jam"]');
 const btn = document.getElementById('btnNext');
@@ -311,6 +315,7 @@ const btn = document.getElementById('btnNext');
 function cekForm(){
     let tgl = document.querySelector('input[name="tanggal"]:checked');
     let jm = document.querySelector('input[name="jam"]:checked');
+
     
     // Ambil data Nama & HP
     let nama = document.querySelector('input[name="nama_pelanggan"]').value;
@@ -329,21 +334,35 @@ document.querySelectorAll('input[type="text"]').forEach(i => i.addEventListener(
 document.getElementById('selectDate').addEventListener('click', function(){
 
     let date = document.getElementById('customDate').value;
-    if(!date) return; // Jika kosong, jangan lakukan apa-apa
+    if(!date) return;
 
-    // Uncheck semua tanggal yang ada
     document.querySelectorAll('input[name="tanggal"]').forEach(r => r.checked = false);
 
-    // Check tombol "More Dates" agar terlihat dipilih
     document.getElementById('moreDates').checked = true;
 
-    // Tutup Modal
     let modal = bootstrap.Modal.getInstance(document.getElementById('dateModal'));
     modal.hide();
 
-    // Cek form agar tombol lanjut aktif
     cekForm();
 });
-</script>
 
-</x-layout>
+</script>
+<script>
+
+document.getElementById('customDate').addEventListener('change', function(){
+
+    const date = new Date(this.value);
+
+    const bulan = [
+        'Jan','Feb','Mar','Apr','Mei','Jun',
+        'Jul','Agu','Sep','Okt','Nov','Des'
+    ];
+
+    document.querySelector('#moreDates + .card-tanggal').innerHTML =
+        date.getDate() + '<br>' + bulan[date.getMonth()];
+
+    document.getElementById('moreDates').value = this.value;
+    document.getElementById('moreDates').checked = true;
+});
+
+</script>

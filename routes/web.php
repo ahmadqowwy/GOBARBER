@@ -93,20 +93,41 @@ Route::get('/booking-barber/layanan', function () {
 // ALUR BOOKING (KEBERLANJUTAN)
 // ==========================================
 
-// LANGKAH 1: Pilih Layanan
+// LANGKAH 1 - PILIH LAYANAN
 Route::get('/booking/layanan', function () {
-    // Perhatikan titik di bawah, itu berarti masuk ke folder
-    return view('booking-barber.layanan', ['title' => 'Booking - Pilih Layanan']);
+    return view('booking-barber.layanan', [
+        'title' => 'Booking - Pilih Layanan'
+    ]);
 })->name('booking.layanan');
 
-// LANGKAH 2: Pilih Jadwal & Barber
-Route::post('/booking/barber-pilih', function () {
-    return view('booking-barber.pilih-barber', ['title' => 'Booking - Pilih Barber']);
-})->name('booking.barber-pilih');
 
-//pilih jam
-// LANGKAH 3: PILIH JADWAL (MENERIMA POST DARI LANGKAH 2)
+// LANGKAH 2 - PILIH BARBER
+Route::post('/booking/barber-pilih', function () {
+    return view('booking-barber.barber-pilih', [
+        'title' => 'Booking - Pilih Barber'
+    ]);
+})->name('booking.jadwal');
+
+
+// LANGKAH 3 - PILIH JADWAL
 Route::post('/booking/jadwal', function () {
-    return view('booking-barber.jadwal', ['title' => 'Booking - Pilih Jadwal']);
-})->name('booking.jadwal');// ALUR BOOKING BARBER
-// ==========================================
+    return view('booking-barber.jadwal', [
+        'title' => 'Booking - Pilih Jadwal'
+    ]);
+})->name('booking.step3');
+
+
+// LANGKAH 4 - KONFIRMASI
+Route::post('/booking/konfirmasi', function () {
+    return view('booking-barber.konfirmasi', [
+        'title' => 'Booking - Konfirmasi'
+    ]);
+})->name('booking.konfirmasi');
+
+
+// LANGKAH 5 - SUKSES
+Route::post('/booking/sukses', function () {
+    return view('booking-barber.sukses', [
+        'title' => 'Booking Berhasil'
+    ]);
+})->name('booking.sukses');

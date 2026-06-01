@@ -89,8 +89,8 @@
             <div class="col-lg-8">
                 <h4 class="fw-bold mb-4">Pilih Barber</h4>
 
-                <form action="{{ route('booking.konfirmasi') }}" method="POST">
-                    @csrf 
+                <form id="barberForm" action="{{ route('booking.step3') }}" method="POST">
+    @csrf
                     
                     <!-- MENYIMPAN DATA LAYANAN DARI LANGKAH 1 -->
                     <input type="hidden" name="layanan_id" value="{{ request('layanan_id') }}">
@@ -180,9 +180,11 @@
                     <hr class="my-4 border-secondary">
 
                     <!-- Tombol Lanjut -->
-                    <button type="submit" class="btn btn-primary w-100 py-3 rounded-3 fw-bold shadow-lg" onclick="document.querySelector('form').submit();">
-                        Selanjutnya <i class="bi bi-arrow-right ms-2"></i>
-                    </button>
+                    <button type="submit"
+        form="barberForm"
+        class="btn btn-primary w-100 py-3 rounded-3 fw-bold shadow-lg">
+    Selanjutnya <i class="bi bi-arrow-right ms-2"></i>
+</button>
 
                     <!-- Tombol "Bukan Sekarang" (Sesuai gambar) -->
                     <a href="{{ route('home') }}" class="btn btn-link text-secondary w-100 mt-2 text-decoration-none small">
