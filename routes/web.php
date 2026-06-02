@@ -93,10 +93,6 @@ Route::get('/booking-barber/layanan', function () {
 // ALUR BOOKING (KEBERLANJUTAN)
 // ==========================================
 
-// ==========================================
-// ALUR BOOKING BARBER
-// ==========================================
-
 // LANGKAH 1 - PILIH LAYANAN
 Route::get('/booking/layanan', function () {
     return view('booking-barber.layanan', [
