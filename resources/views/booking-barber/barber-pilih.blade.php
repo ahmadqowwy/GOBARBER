@@ -89,8 +89,11 @@
             <div class="col-lg-8">
                 <h4 class="fw-bold mb-4">Pilih Barber</h4>
 
-                <form id="barberForm" action="{{ route('booking.step3') }}" method="POST">
+               <form id="barberForm" action="{{ route('booking.step3') }}" method="POST">
     @csrf
+
+    <input type="hidden" name="layanan_id" value="{{ request('layanan_id') }}">
+
                     
                     <!-- MENYIMPAN DATA LAYANAN DARI LANGKAH 1 -->
                     <input type="hidden" name="layanan_id" value="{{ request('layanan_id') }}">
