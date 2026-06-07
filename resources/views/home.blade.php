@@ -1,4 +1,8 @@
 <style>
+    body {
+        font-family: 'Poppins', sans-serif;
+    }
+
     /* gambar carousel */
     .carousel-item {
         height: 100vh;
@@ -54,8 +58,10 @@
             font-size: 1.8rem;
         }
 
-        .carousel-item p {
-            font-size: 1rem;
+        .carousel-item img {
+            width: 100%;
+            height: 100vh;
+            object-fit: cover;
         }
 
     }
@@ -65,7 +71,7 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-        gap: 2px;
+        gap: 8px;
     }
 </style>
 <x-layout :title="$title">
@@ -112,9 +118,6 @@
                                 </a>
                             </div>
 
-                            <a href="" class="btn btn-primary">
-                                Order Sekarang
-                            </a>
                         </div>
 
                     </div>
@@ -167,33 +170,27 @@
                                     Smart Online Booking your hair style !
                                 </p>
 
-
-                                <a class="btn btn-primary">
-                                    Order Now
-                                </a>
                             </div>
 
                         </div>
-
                     </div>
+
                 </div>
 
+                <!-- tombol -->
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+                    data-bs-slide="prev">
+
+                    <span class="carousel-control-prev-icon"></span>
+                </button>
+
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+                    data-bs-slide="next">
+
+                    <span class="carousel-control-next-icon"></span>
+                </button>
+
             </div>
-
-            <!-- tombol -->
-            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
-                data-bs-slide="prev">
-
-                <span class="carousel-control-prev-icon"></span>
-            </button>
-
-            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
-                data-bs-slide="next">
-
-                <span class="carousel-control-next-icon"></span>
-            </button>
-
-        </div>
 
         </div>
 

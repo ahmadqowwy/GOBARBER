@@ -1,187 +1,238 @@
 <footer class="footer_section">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-4 footer-col">
+
+    <div class="footer-top-line"></div>
+
+    <div class="container footer-container">
+
+        <div class="row align-items-start justify-content-center gy-5">
+
+            <!-- Contact -->
+            <div class="col-lg-3 col-md-6">
+
                 <div class="footer_contact">
-                    <h4>
-                        Contact Us
-                    </h4>
+
+                    <h4>Contact Us</h4>
+
                     <div class="contact_link_box">
-                        <a href="">
-                            <i class="fa fa-map-marker" aria-hidden="true"></i>
-                            <span>
-                                Location
-                            </span>
+
+                        <a href="#">
+                            <i class="fa fa-map-marker-alt"></i>
+                            <span>Madiun, Indonesia</span>
                         </a>
-                        <a href="">
-                            <i class="fa fa-phone" aria-hidden="true"></i>
-                            <span>
-                                Call +01 1234567890
-                            </span>
+
+                        <a href="#">
+                            <i class="fa fa-phone"></i>
+                            <span>+62 812 3456 7890</span>
                         </a>
-                        <a href="">
-                            <i class="fa fa-envelope" aria-hidden="true"></i>
-                            <span>
-                                demo@gmail.com
-                            </span>
+
+                        <a href="#">
+                            <i class="fa fa-envelope"></i>
+                            <span>gobarber@gmail.com</span>
                         </a>
+
                     </div>
+
                 </div>
+
             </div>
-            <div class="col-md-4 footer-col">
-                <div class="footer_detail">
-                    <a href="" class="footer-logo">
-                        Feane
+
+            <!-- Logo -->
+            <div class="col-lg-5 col-md-12">
+
+                <div class="footer_detail text-center">
+
+                    <a href="#" class="footer-logo">
+                        GoBarber
                     </a>
+
                     <p>
-                        Necessary, making this the first true generator on the Internet. It uses a dictionary of over
-                        200 Latin words, combined with
+                        Solusi booking barber modern dengan pelayanan premium
+                        dan barber profesional terpercaya.
                     </p>
-                    <div class="footer_social">
-                        <a href="">
-                            <i class="fa fa-facebook" aria-hidden="true"></i>
-                        </a>
-                        <a href="">
-                            <i class="fa fa-twitter" aria-hidden="true"></i>
-                        </a>
-                        <a href="">
-                            <i class="fa fa-linkedin" aria-hidden="true"></i>
-                        </a>
-                        <a href="">
-                            <i class="fa fa-instagram" aria-hidden="true"></i>
-                        </a>
-                        <a href="">
-                            <i class="fa fa-pinterest" aria-hidden="true"></i>
-                        </a>
-                    </div>
+
                 </div>
+
             </div>
-            <div class="col-md-4 footer-col">
-                <h4>
-                    Opening Hours
-                </h4>
-                <p>
-                    Everyday
-                </p>
-                <p>
-                    10.00 Am -10.00 Pm
-                </p>
+
+            <!-- Opening Hours -->
+            <div class="col-lg-3 col-md-6">
+
+                <div class="opening_hours">
+
+                    <h4>Opening Hours</h4>
+
+                    <p>Everyday</p>
+
+                    <p>10:00 AM - 10:00 PM</p>
+
+                </div>
+
             </div>
+
+            <!-- Bottom -->
+            <div class="footer-info">
+
+                <p>
+                    © 2026 GoBarber. All Rights Reserved.
+                </p>
+
+            </div>
+
         </div>
-        <div class="footer-info">
-            <p>
-                &copy; <span id="displayYear"></span> All Rights Reserved By
-                <a href="https://html.design/">Free Html Templates</a><br><br>
-                &copy; <span id="displayYear"></span> Distributed By
-                <a href="https://themewagon.com/" target="_blank">ThemeWagon</a>
-            </p>
-        </div>
-    </div>
+
 </footer>
 <style>
     .footer_section {
-        background-color: #222831;
-        color: #ffffff;
-        padding: 75px 0 40px 0;
-        text-align: center;
+        background: #0F172A;
+        color: white;
+        padding: 90px 0 25px;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .footer-container {
+        max-width: 1400px;
+        padding-left: 70px;
+        padding-right: 70px;
+    }
+
+    /* garis glow atas */
+    .footer-top-line {
+        width: 100%;
+        height: 2px;
+        background: linear-gradient(to right, transparent, #4DA3FF, transparent);
+        margin-bottom: 75px;
     }
 
     .footer_section h4 {
-        font-size: 28px;
-    }
-
-    .footer_section h4,
-    .footer_section .footer-logo {
-        font-weight: 600;
-        margin-bottom: 20px;
-        font-family: 'Dancing Script', cursive;
+        font-size: 32px;
+        font-weight: 700;
+        margin-bottom: 28px;
+        color: white;
     }
 
     .footer_section p {
-        color: #dbdbdb;
-    }
-
-    .footer_section .footer-col {
-        margin-bottom: 30px;
-    }
-
-    .footer_section .footer_contact .contact_link_box {
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-        -webkit-box-orient: vertical;
-        -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-        flex-direction: column;
-    }
-
-    .footer_section .footer_contact .contact_link_box a {
-        margin: 5px 0;
-        color: #ffffff;
-    }
-
-    .footer_section .footer_contact .contact_link_box a i {
-        margin-right: 5px;
-    }
-
-    .footer_section .footer_contact .contact_link_box a:hover {
-        color: #ffbe33;
-    }
-
-    .footer_section .footer-logo {
-        display: block;
-        font-weight: bold;
-        font-size: 38px;
-        line-height: 1;
-        color: #ffffff;
-    }
-
-    .footer_section .footer_social {
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-        -webkit-box-pack: center;
-        -ms-flex-pack: center;
-        justify-content: center;
-        margin-top: 20px;
+        color: #cbd5e1;
+        line-height: 1.9;
+        font-size: 16px;
         margin-bottom: 10px;
     }
 
-    .footer_section .footer_social a {
-        display: -webkit-box;
-        display: -ms-flexbox;
+    /* logo */
+    .footer-logo {
+        display: inline-block;
+        font-size: 58px;
+        font-weight: 800;
+        color: #4DA3FF;
+        margin-bottom: 20px;
+        text-decoration: none;
+        transition: 0.3s ease;
+    }
+
+    .footer-logo:hover {
+        color: white;
+        transform: scale(1.03);
+    }
+
+    /* contact */
+    .contact_link_box {
         display: flex;
-        -webkit-box-pack: center;
-        -ms-flex-pack: center;
-        justify-content: center;
-        -webkit-box-align: center;
-        -ms-flex-align: center;
+        flex-direction: column;
+        gap: 18px;
+    }
+
+    .contact_link_box a {
+        color: #cbd5e1;
+        text-decoration: none;
+        transition: 0.3s ease;
+        font-size: 17px;
+        display: flex;
         align-items: center;
-        color: #222831;
-        width: 30px;
-        height: 30px;
-        border-radius: 100%;
-        background-color: #ffffff;
-        border-radius: 100%;
-        margin: 0 2.5px;
+    }
+
+    .contact_link_box a:hover {
+        color: #4DA3FF;
+        transform: translateX(5px);
+    }
+
+    .contact_link_box i {
+        width: 35px;
         font-size: 18px;
+        color: #4DA3FF;
     }
 
-    .footer_section .footer_social a:hover {
-        color: #ffbe33;
+    /* footer bawah */
+    .opening_hours {
+        text-align: right;
     }
 
-    .footer_section .footer-info {
+    .opening_hours p {
+        margin-bottom: 14px;
+    }
+
+    .footer-info {
+        border-top: 1px solid rgba(255, 255, 255, 0.08);
+        margin-top: 60px;
+        padding-top: 25px;
         text-align: center;
-        margin-top: 25px;
     }
 
-    .footer_section .footer-info p {
-        color: #ffffff;
+    .footer-info p {
         margin: 0;
+        color: #94A3B8;
+        font-size: 14px;
+        letter-spacing: 0.5px;
     }
 
-    .footer_section .footer-info p a {
-        color: inherit;
+    /* responsive */
+    @media (max-width: 991px) {
+
+        .footer_section {
+            text-align: center;
+            padding: 70px 0 25px;
+        }
+
+        .footer-container {
+            padding-left: 25px;
+            padding-right: 25px;
+        }
+
+        .footer-logo {
+            font-size: 48px;
+        }
+
+        .footer_section h4 {
+            font-size: 28px;
+        }
+
+        .contact_link_box a {
+            justify-content: center;
+        }
+
+        .opening_hours {
+            text-align: center;
+        }
+
+    }
+
+    @media (max-width: 576px) {
+
+        .footer-logo {
+            font-size: 40px;
+        }
+
+        .footer_section h4 {
+            font-size: 24px;
+        }
+
+        .footer_section p,
+        .contact_link_box a {
+            font-size: 15px;
+        }
+
+        .footer-container {
+            padding-left: 18px;
+            padding-right: 18px;
+        }
     }
 </style>
