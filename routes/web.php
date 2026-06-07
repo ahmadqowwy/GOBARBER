@@ -4,6 +4,12 @@ use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\DataBarberController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\ManajemenUserController;
+use App\Http\Controllers\ShopController;
+use App\Http\Controllers\BarberController;
+use App\Http\Controllers\ServiceController;
+use App\Http\Controllers\CustomerController;
+use App\Http\Controllers\BookingController;
+use App\Http\Controllers\PaymentController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -90,11 +96,15 @@ Route::middleware('auth')->group(function () {
     Route::delete('/user/{id}', [ManajemenUserController::class, 'destroy'])
         ->name('user.delete');
 
-    //route manajemen GoBarberShop
-    Route::get('/manajemen-shop', [DataBarberController::class, 'getBarberShop'])->name('admin.shop.index');
+    // Route Manajemen Toko
+    Route::resource('shop', ShopController::class);
+    Route::resource('barber', BarberController::class);
+    Route::resource('service', ServiceController::class);
 
-    //route manajemen Owner
-    Route::get('/manajemen-owner/{owner_id}', [DataBarberController::class, 'getOwner'])->name('admin.owner.index');
+    // Route Transaksi & Info
+    Route::resource('customer', CustomerController::class)->only(['index', 'show']);
+    Route::resource('booking', BookingController::class)->only(['index', 'show', 'update']);
+    Route::resource('payment', PaymentController::class)->only(['index', 'show']);
 
 });
 Route::get('/data-barber', function () {
