@@ -1,5 +1,9 @@
 <?php
 
+use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\DataBarberController;
+use App\Http\Controllers\LoginController;
+use App\Http\Controllers\ManajemenUserController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ShopController;
 /*
@@ -28,13 +32,6 @@ Route::get('/detail-toko', function () {
     return view('detail-toko.detail-toko', ['title' => 'detail-toko']);
 })->name('detail-toko');
 
-Route::get('/dashboard', function () {
-    return view('pages.admin.dashboard', ['title' => 'dashboard']);
-})->name('admin.dashboard.page');
-
-Route::get('/login', function () {
-    return view('pages.auth.login', ['title' => 'login']);
-})->name('login');
 
 Route::get('/layanan', function () {
     return view('detail-toko.layanan-toko', ['title' => 'Layanan']);
@@ -51,3 +48,33 @@ Route::get('/detail-produk/{id}', function ($id) {
 Route::get('/detail-toko', function () {
     return view('detail-toko.detail-toko', ['title' => 'Detail Toko']);
 })->name('detail-toko');
+
+
+
+// miiddleware untuk user yang belum login
+Route::middleware('guest')->group(function () {
+    //route pannel admin
+    Route::get('/login', [LoginController::class, 'index'])->name('login');
+    Route::post('/auth', [LoginController::class, 'login'])->name('do.login');
+});
+
+
+Route::middleware('auth')->group(function () {
+
+    Route::get('/dashboard', [DashboardController::class, 'index'])
+        ->name('admin.dashboard.page');
+    Route::post('/logout', [LoginController::class, 'logout'])->name('logout');
+
+    //route Manajemen User
+    Route::get('/manajemen-user', [ManajemenUserController::class, 'index'])
+        ->name('admin.manajemen.user.page');
+    Route::delete('/user/{id}', [ManajemenUserController::class, 'destroy'])
+        ->name('user.delete');
+
+    //route manajemen GoBarberShop
+    Route::get('/manajemen-shop', [DataBarberController::class, 'getBarberShop'])->name('admin.shop.index');
+
+    //route manajemen Owner
+    Route::get('/manajemen-owner/{owner_id}', [DataBarberController::class, 'getOwner'])->name('admin.owner.index');
+
+});
