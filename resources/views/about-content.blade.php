@@ -75,10 +75,10 @@
                         venue terbaik dengan pelayanan terbaik. Cek sekarang!
                     </p>
 
-                    <a href=""
+                  <a href="{{ route('menu.content') }}"
                         class="btn btn-dark rounded-pill px-4 mt-2">
-                        Cari Venue
-                    </a>
+                             Cari Venue
+                         </a>
 
                 </div>
 

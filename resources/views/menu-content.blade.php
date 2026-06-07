@@ -229,30 +229,30 @@
                 </div>
 
             </div>
-        </div>
+            <div class="card-custom hidden-card">
+                <img src="https://images.unsplash.com/photo-1512496015851-a90fb38ba796?q=80&w=800&auto=format&fit=crop"
+                    alt="Shaving Kit">
+                <div class="card-content">
 
-        <div class="card-custom hidden-card">
-            <img src="https://images.unsplash.com/photo-1585747860715-2ba37e788b70?q=80&w=800&auto=format&fit=crop"
-                alt="Hair Wax">
-            <div class="card-content">
+                    <div class="card-info">
+                        <span class="jam">⏰ 10am - 10pm</span>
+                    </div>
 
-                <div class="card-info">
-                    <span class="jam">⏰ 10am - 10pm</span>
+                    <h4>Gamoen BarberShop</h4>
+
+                    <p>Styling rambut premium dengan barber profesional.</p>
+
+                    <a href="/detail-toko">
+                        <button class="booking-btn">
+                            Booking Now
+                        </button>
+                    </a>
+
                 </div>
 
-                <h4>Gamoen BarberShop</h4>
-
-                <p>Styling rambut premium dengan barber profesional.</p>
-
-                <a href="/detail-toko">
-                    <button class="booking-btn">
-                        Booking Now
-                    </button>
-                </a>
-
             </div>
-
         </div>
+
     </div>
 
     </div>

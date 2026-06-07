@@ -28,6 +28,9 @@ Route::get('/about', function () {
         'title' => 'About'
     ]);
 })->name('about');
+Route::get('/menu-content', function () {
+    return view('menu-content');
+})->name('menu.content');
 
 
 
