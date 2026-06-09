@@ -101,6 +101,22 @@
         color: #6db4ff;
     }
 
+    @media (max-width: 576px) {
+
+        .search-box {
+            height: 44px;
+        }
+
+        .search-box .form-control {
+            font-size: 0.9rem;
+            padding-left: 15px;
+        }
+
+        .btn-search {
+            padding: 0 15px;
+        }
+    }
+
     /* tombol login */
     .btn-login {
         border: 1.5px solid white;
@@ -119,7 +135,7 @@
 
         .search-form {
             width: 100%;
-            margin: 15px 0;
+            margin: 0 0 15px 0 !important;
         }
 
         .d-flex.align-items-center.gap-3 {
@@ -131,6 +147,44 @@
             width: 100%;
         }
 
+        .custom-navbar {
+            padding: 12px 20px;
+        }
+
+        .navbar-brand {
+            min-width: auto;
+            font-size: 1.3rem;
+        }
+
+        .navbar-collapse {
+            margin-top: 15px;
+            text-align: center;
+        }
+
+        .navbar-nav {
+            gap: 10px;
+        }
+
+        .navbar-actions {
+            min-width: 100%;
+            flex-direction: column;
+            align-items: stretch;
+            margin-top: 15px;
+        }
+
+        .btn-login {
+            width: 100%;
+            text-align: center;
+        }
+    }
+
+    .navbar-toggler {
+        border: none;
+        box-shadow: none !important;
+    }
+
+    .navbar-toggler:focus {
+        box-shadow: none;
     }
 </style>
 <nav class="navbar navbar-expand-lg navbar-dark custom-navbar fixed-top">
