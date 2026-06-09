@@ -14,7 +14,8 @@ return new class extends Migration {
             $table->id('barber_id');
             $table->foreignId('shop_id')->constrained('go_barber_shops', 'shop_id')->onDelete('cascade');
             $table->string('barber_name');
-            $table->string('spesialty');
+            $table->string('specialty');
+            $table->longText('photo')->nullable();
             $table->timestamps();
         });
     }

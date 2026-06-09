@@ -54,7 +54,7 @@
                     <a href="{{ route('produk-toko') }}" class="btn btn-light">Product</a>
                 </li>
                 <li class="nav-item mx-3">
-                    <a href="{{ route('produk-toko') }}" class="btn btn-light">Product</a>
+                    <a href="{{ route('data-barber') }}" class="btn btn-light">Barber</a>
                 </li>
            
               </ul>

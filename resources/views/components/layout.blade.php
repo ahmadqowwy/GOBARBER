@@ -27,8 +27,6 @@
 
     @if ($navbar == 'default')
         <x-navbar />
-    @elseif($navbar == 'toko')
-        <x-navbar-toko />
     @endif
 
     <!-- Content -->

@@ -16,7 +16,7 @@ return new class extends Migration {
             $table->string('shop_name');
             $table->string('location');
             $table->text('description')->nullable();
-            $table->string('photo');
+            $table->longText('photo')->nullable();
             $table->time('open_time');
             $table->time('close_time');
             $table->timestamps();

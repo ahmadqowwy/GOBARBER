@@ -13,7 +13,8 @@ class Barber extends Model
     protected $fillable = [
         'shop_id',
         'barber_name',
-        'specialty'
+        'specialty',
+        'photo'
     ];
 
     public function shop()

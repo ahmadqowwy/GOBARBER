@@ -7,12 +7,19 @@
     .carousel-item {
         height: 100vh;
         position: relative;
+<<<<<<< HEAD
         min-height: 700px;
+=======
+>>>>>>> origin/main
     }
 
     .carousel-item img {
         width: 100%;
+<<<<<<< HEAD
         height: 100%;
+=======
+        height: 100vh;
+>>>>>>> origin/main
         object-fit: cover;
     }
 
@@ -70,6 +77,12 @@
         .carousel-item {
             min-height: 650px;
         }
+
+        .carousel-item img {
+            width: 100%;
+            height: 100vh;
+            object-fit: cover;
+        }
     }
 
         @media (max-width: 576px) {
@@ -113,6 +126,7 @@
                 <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2">
                 </button>
             </div>
+<<<<<<< HEAD
 
             <!-- isi carousel -->
             <div class="carousel-inner">
@@ -156,15 +170,84 @@
                                     WUJUDKAN STYLE RAMBUT TERBAIKMU DAN TAMPIL PERCAYA DIRI
                                 </h1>
 
+=======
+
+            <!-- isi carousel -->
+            <div class="carousel-inner">
+
+                <!-- slide 1 -->
+                <div class="carousel-item active position-relative">
+
+                    <img src="{{ asset('assets/images/gambar3.png') }}" class="d-block w-100" alt="foto1">
+
+                    <div
+                        class="position-absolute top-0 start-0 w-100 h-100 d-flex justify-content-center align-items-center text-center">
+                        <div class="container">
+
+                            <div class="col-lg-8 text-white mx-auto hero-content">
+                                <h1 class="display-6 fw-bold">
+                                    WUJUDKAN STYLE RAMBUT TERBAIKMU DAN TAMPIL PERCAYA DIRI
+                                </h1>
+
+>>>>>>> origin/main
                                 <p>
                                     Smart Online Booking your hair style !
                                 </p>
 
+<<<<<<< HEAD
+=======
+                                <a href="" class="btn btn-primary">
+                                    Order Now
+                                </a>
+>>>>>>> origin/main
                             </div>
 
                         </div>
 
                     </div>
+                </div>
+
+<<<<<<< HEAD
+                <!-- slide 3 -->
+                <div class="carousel-item position-relative">
+
+                    <img src="{{ asset('assets/images/gambar2.png') }}" class="d-block w-100" alt="foto3">
+=======
+                <!-- slide 2 -->
+                <div class="carousel-item position-relative">
+
+                    <img src="{{ asset('assets/images/gambar1.png') }}" class="d-block w-100" alt="foto2">
+>>>>>>> origin/main
+
+                    <div
+                        class="position-absolute top-0 start-0 w-100 h-100 d-flex justify-content-center align-items-center text-center">
+                        <div class="container">
+
+                            <div class="col-lg-8 text-white mx-auto hero-content">
+                                <h1 class="display-6 fw-bold">
+                                    WUJUDKAN STYLE RAMBUT TERBAIKMU DAN TAMPIL PERCAYA DIRI
+                                </h1>
+
+                                <p>
+                                    Smart Online Booking your hair style !
+                                </p>
+
+<<<<<<< HEAD
+=======
+
+                                <a href="" class="btn btn-primary">
+                                    Order Now
+                                </a>
+>>>>>>> origin/main
+                            </div>
+
+                        </div>
+
+                    </div>
+<<<<<<< HEAD
+                </div>
+
+=======
                 </div>
 
                 <!-- slide 3 -->
@@ -188,10 +271,24 @@
                             </div>
 
                         </div>
-
                     </div>
+
                 </div>
 
+                <!-- tombol -->
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+                    data-bs-slide="prev">
+
+                    <span class="carousel-control-prev-icon"></span>
+                </button>
+
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+                    data-bs-slide="next">
+
+                    <span class="carousel-control-next-icon"></span>
+                </button>
+
+>>>>>>> origin/main
             </div>
 
 

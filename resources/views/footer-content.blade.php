@@ -57,28 +57,28 @@
             <!-- Opening Hours -->
             <div class="col-lg-3 col-md-6">
 
-                 <div class="opening_hours">
+                <div class="opening_hours">
 
-                <h4>Opening Hours</h4>
+                    <h4>Opening Hours</h4>
 
-                <p>Everyday</p>
+                    <p>Everyday</p>
 
-                <p>10:00 AM - 10:00 PM</p>
+                    <p>10:00 AM - 10:00 PM</p>
+
+                </div>
+
+            </div>
+
+            <!-- Bottom -->
+            <div class="footer-info">
+
+                <p>
+                    © 2026 GoBarber. All Rights Reserved.
+                </p>
 
             </div>
 
         </div>
-
-        <!-- Bottom -->
-        <div class="footer-info">
-
-            <p>
-                © 2026 GoBarber. All Rights Reserved.
-            </p>
-
-        </div>
-
-    </div>
 
 </footer>
 <style>
@@ -214,6 +214,7 @@
         }
 
     }
+
     @media (max-width: 576px) {
 
         .footer-logo {
