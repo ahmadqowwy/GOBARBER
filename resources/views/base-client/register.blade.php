@@ -225,70 +225,75 @@
                                     Lengkapi data owner barbershop
                                 </p>
 
-                                <form action="" method="POST">
+                                <form action="{{ route('do.register.owner') }}" method="POST" enctype="multipart/form-data">
                                     @csrf
 
-                                    <!-- OWNER NAME -->
-                                    <div class="mb-3">
-                                        <label class="gb-label">
-                                            Nama Owner
-                                        </label>
-
-                                        <input
-                                            type="text"
-                                            name="owner_name"
-                                            class="form-control gb-input"
-                                            placeholder="Masukkan nama owner"
-                                        />
+                                    <!-- AKUN -->
+                                    <h6 class="text-primary mb-3 mt-2 fw-bold">Data Akun & Owner</h6>
+                                    <div class="row">
+                                        <div class="col-md-6 mb-3">
+                                            <label class="gb-label">Username <span class="text-danger">*</span></label>
+                                            <input type="text" name="username" class="form-control gb-input" placeholder="Username" value="{{ old('username') }}" required />
+                                        </div>
+                                        <div class="col-md-6 mb-3">
+                                            <label class="gb-label">Password <span class="text-danger">*</span></label>
+                                            <input type="password" name="password" class="form-control gb-input" placeholder="Password" required />
+                                        </div>
                                     </div>
 
-                                    <!-- EMAIL -->
                                     <div class="mb-3">
-                                        <label class="gb-label">
-                                            Email
-                                        </label>
-
-                                        <input
-                                            type="email"
-                                            name="email"
-                                            class="form-control gb-input"
-                                            placeholder="Masukkan email"
-                                        />
+                                        <label class="gb-label">Nama Owner <span class="text-danger">*</span></label>
+                                        <input type="text" name="owner_name" class="form-control gb-input" placeholder="Masukkan nama lengkap owner" value="{{ old('owner_name') }}" required />
                                     </div>
 
-                                    <!-- PHONE -->
-                                    <div class="mb-3">
-                                        <label class="gb-label">
-                                            Nomor Telepon
-                                        </label>
-
-                                        <input
-                                            type="text"
-                                            name="phone"
-                                            class="form-control gb-input"
-                                            placeholder="Masukkan nomor telepon"
-                                        />
+                                    <div class="row">
+                                        <div class="col-md-6 mb-3">
+                                            <label class="gb-label">Email <span class="text-danger">*</span></label>
+                                            <input type="email" name="email" class="form-control gb-input" placeholder="Masukkan email aktif" value="{{ old('email') }}" required />
+                                        </div>
+                                        <div class="col-md-6 mb-3">
+                                            <label class="gb-label">Nomor Telepon <span class="text-danger">*</span></label>
+                                            <input type="text" name="phone" class="form-control gb-input" placeholder="Nomor WhatsApp/Telepon" value="{{ old('phone') }}" required />
+                                        </div>
                                     </div>
 
-                                    <!-- ADMIN ID -->
-                                    <div class="mb-4">
-                                        <label class="gb-label">
-                                            Admin ID
-                                        </label>
+                                    <hr class="my-4">
 
-                                        <input
-                                            type="number"
-                                            name="admin_id"
-                                            class="form-control gb-input"
-                                            placeholder="Masukkan admin id"
-                                        />
+                                    <!-- DATA TOKO -->
+                                    <h6 class="text-primary mb-3 fw-bold">Data Barbershop</h6>
+                                    <div class="mb-3">
+                                        <label class="gb-label">Nama Barbershop <span class="text-danger">*</span></label>
+                                        <input type="text" name="shop_name" class="form-control gb-input" placeholder="Masukkan nama barbershop" value="{{ old('shop_name') }}" required />
+                                    </div>
+
+                                    <div class="mb-3">
+                                        <label class="gb-label">Lokasi <span class="text-danger">*</span></label>
+                                        <input type="text" name="location" class="form-control gb-input" placeholder="Alamat lengkap barbershop" value="{{ old('location') }}" required />
+                                    </div>
+
+                                    <div class="mb-3">
+                                        <label class="gb-label">Deskripsi Barbershop</label>
+                                        <textarea name="description" class="form-control gb-input" placeholder="Ceritakan sedikit tentang barbershop Anda (opsional)" style="height: auto; padding-top: 15px; padding-bottom: 15px;" rows="3">{{ old('description') }}</textarea>
+                                    </div>
+
+                                    <div class="mb-3">
+                                        <label class="gb-label">Foto Barbershop <span class="text-danger">*</span></label>
+                                        <input type="file" name="photo" class="form-control gb-input" style="padding-top: 15px;" accept="image/*" />
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="col-md-6 mb-4">
+                                            <label class="gb-label">Jam Buka <span class="text-danger">*</span></label>
+                                            <input type="time" name="open_time" class="form-control gb-input" value="{{ old('open_time') }}" required />
+                                        </div>
+                                        <div class="col-md-6 mb-4">
+                                            <label class="gb-label">Jam Tutup <span class="text-danger">*</span></label>
+                                            <input type="time" name="close_time" class="form-control gb-input" value="{{ old('close_time') }}" required />
+                                        </div>
                                     </div>
 
                                     <!-- BUTTON -->
-                                    <button
-                                        type="submit"
-                                        class="btn gb-btn-primary"
-                                    >
+                                    <button type="submit" class="btn gb-btn-primary mt-2">
                                         Daftar Owner
                                     </button>
                                 </form>
@@ -588,4 +593,44 @@
             }
         }
     </style>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            @if (session('success'))
+                Swal.fire({
+                    icon: 'success',
+                    title: 'Berhasil!',
+                    text: '{{ session('success') }}',
+                    confirmButtonColor: '#4dabf7'
+                }).then(() => {
+                    window.location.href = "{{ route('login') }}";
+                });
+            @endif
+
+            @if (session('error'))
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Gagal!',
+                    text: '{{ session('error') }}',
+                    confirmButtonColor: '#d33'
+                });
+            @endif
+
+            @if ($errors->any())
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Terjadi Kesalahan!',
+                    html: `
+                        <ul style="text-align: left; margin-bottom: 0;">
+                            @foreach ($errors->all() as $error)
+                                <li>{{ $error }}</li>
+                            @endforeach
+                        </ul>
+                    `,
+                    confirmButtonColor: '#d33'
+                });
+            @endif
+        });
+    </script>
 </x-layout>

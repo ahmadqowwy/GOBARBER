@@ -10,6 +10,7 @@ use App\Http\Controllers\ServiceController;
 use App\Http\Controllers\CustomerController;
 use App\Http\Controllers\BookingController;
 use App\Http\Controllers\PaymentController;
+use App\Http\Controllers\RegisterController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -39,6 +40,46 @@ Route::get('/about', function () {
     ]);
 })->name('about');
 
+
+// miiddleware untuk user yang belum login
+Route::middleware('guest')->group(function () {
+    //route pannel admin
+    Route::get('/login', [LoginController::class, 'index'])->name('login');
+    Route::post('/auth', [LoginController::class, 'login'])->name('do.login');
+    Route::get('/register', [RegisterController::class, 'index'])->name('register');
+
+    Route::post('/register-owner', [RegisterController::class, 'registerOwner'])->name('do.register.owner');
+});
+
+/*
+|--------------------------------------------------------------------------
+| AUTH
+|--------------------------------------------------------------------------
+*/
+
+Route::middleware('auth')->group(function () {
+
+    Route::get('/dashboard', [DashboardController::class, 'index'])
+        ->name('admin.dashboard.page');
+    Route::post('/logout', [LoginController::class, 'logout'])->name('logout');
+
+    //route Manajemen User
+    Route::get('/manajemen-user', [ManajemenUserController::class, 'index'])
+        ->name('admin.manajemen.user.page');
+    Route::delete('/user/{id}', [ManajemenUserController::class, 'destroy'])
+        ->name('user.delete');
+
+    // Route Manajemen Toko
+    Route::resource('shop', ShopController::class);
+    Route::resource('barber', BarberController::class);
+    Route::resource('service', ServiceController::class);
+
+    // Route Transaksi & Info
+    Route::resource('customer', CustomerController::class)->only(['index', 'show']);
+    Route::resource('booking', BookingController::class)->only(['index', 'show', 'update']);
+    Route::resource('payment', PaymentController::class)->only(['index', 'show']);
+
+});
 
 
 /*
@@ -75,38 +116,6 @@ Route::get('/detail-toko', function () {
 })->name('detail-toko');
 
 
-
-// miiddleware untuk user yang belum login
-Route::middleware('guest')->group(function () {
-    //route pannel admin
-    Route::get('/login', [LoginController::class, 'index'])->name('login');
-    Route::post('/auth', [LoginController::class, 'login'])->name('do.login');
-});
-
-
-Route::middleware('auth')->group(function () {
-
-    Route::get('/dashboard', [DashboardController::class, 'index'])
-        ->name('admin.dashboard.page');
-    Route::post('/logout', [LoginController::class, 'logout'])->name('logout');
-
-    //route Manajemen User
-    Route::get('/manajemen-user', [ManajemenUserController::class, 'index'])
-        ->name('admin.manajemen.user.page');
-    Route::delete('/user/{id}', [ManajemenUserController::class, 'destroy'])
-        ->name('user.delete');
-
-    // Route Manajemen Toko
-    Route::resource('shop', ShopController::class);
-    Route::resource('barber', BarberController::class);
-    Route::resource('service', ServiceController::class);
-
-    // Route Transaksi & Info
-    Route::resource('customer', CustomerController::class)->only(['index', 'show']);
-    Route::resource('booking', BookingController::class)->only(['index', 'show', 'update']);
-    Route::resource('payment', PaymentController::class)->only(['index', 'show']);
-
-});
 Route::get('/data-barber', function () {
     return view('detail-toko.data-barber', [
         'title' => 'Data Barber'
@@ -119,19 +128,6 @@ Route::get('/detail-produk/{id}', function ($id) {
     ]);
 })->name('detail-produk');
 
-
-
-/*
-|--------------------------------------------------------------------------
-| AUTH
-|--------------------------------------------------------------------------
-*/
-
-Route::get('/register', function () {
-    return view('base-client.register', [
-        'title' => 'Register'
-    ]);
-})->name('register');
 
 Route::get('/register-admin', function () {
     return view('base-admin.register-admin', [
