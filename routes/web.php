@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\DataBarberController;
+use App\Http\Controllers\LandingPageController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\ManajemenUserController;
 use App\Http\Controllers\ShopController;
@@ -21,18 +22,13 @@ use Illuminate\Support\Facades\Route;
 | Here is where you can register web routes for your application.
 |
 */
+// Route::get('/blog', function () {
+//     return view('blog', [
+//         'title' => 'Blog'
+//     ]);
+// })->name('blog');
 
-Route::get('/', function () {
-    return view('home', [
-        'title' => 'Home'
-    ]);
-})->name('home');
 
-Route::get('/blog', function () {
-    return view('blog', [
-        'title' => 'Blog'
-    ]);
-})->name('blog');
 
 Route::get('/about', function () {
     return view('about', [
@@ -43,6 +39,11 @@ Route::get('/about', function () {
 
 // miiddleware untuk user yang belum login
 Route::middleware('guest')->group(function () {
+    Route::get('/', [LandingPageController::class, 'index'])->name('home');
+    Route::get('/blog', [LandingPageController::class, 'menu'])->name('blog');
+    Route::get('/detail-toko/{shop_id}', [LandingPageController::class, 'detailShop'])->name('detail.shop');
+
+
     //route pannel admin
     Route::get('/login', [LoginController::class, 'index'])->name('login');
     Route::post('/auth', [LoginController::class, 'login'])->name('do.login');

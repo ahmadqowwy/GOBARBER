@@ -18,6 +18,7 @@ class RegisterController extends Controller
         $data = ['title' => 'Register Owner'];
         return view('base-client.register', $data);
     }
+
     public function registerOwner(Request $request)
     {
         $request->validate([

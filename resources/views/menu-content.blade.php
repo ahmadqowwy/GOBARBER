@@ -8,31 +8,32 @@
         <div class="card-wrapper" id="cardWrapper">
 
             <!-- CARD 1 -->
-            <div class="card-custom">
-
-                <img src="{{ asset('assets/images/foto4.jpg') }}" alt="foto4">
-
-                <div class="card-content">
-
-                    <div class="card-info">
-                        <span class="jam">⏰ 10am - 10pm</span>
+            @foreach ($barber_shop as $barber)
+                <div class="card-custom">
+                    {{-- <img src="{{ asset('assets/images/foto4.jpg') }}" alt="foto4"> --}}
+                    @if ($barber->photo)
+                        <img src="{{ $barber->photo }}" alt="Foto Barber">
+                    @else
+                        <span class="text-muted">Tidak ada foto</span>
+                    @endif
+                    <div class="card-content">
+                        <div class="card-info">
+                            <span class="jam">⏰ {{ $barber->open_time }} - {{ $barber->close_time }}</span>
+                            {{-- <span class="jam">⏰ 10am - 10pm</span> --}}
+                        </div>
+                        <h4>{{ $barber->shop_name }}</h4>
+                        <p>{{ $barber->location }}</p>
+                        <a href="{{ route('detail.shop', $barber->shop_id) }}">
+                            <button class="booking-btn">
+                                Booking Now
+                            </button>
+                        </a>
                     </div>
 
-                    <h4>Gamoen BarberShop</h4>
-
-                    <p>Styling rambut premium dengan barber profesional.</p>
-
-                    <a href="/detail-toko">
-                        <button class="booking-btn">
-                            Booking Now
-                        </button>
-                    </a>
-
                 </div>
+            @endforeach
 
-            </div>
-
-            <!-- CARD 1 -->
+            {{-- <!-- CARD 1 -->
             <div class="card-custom">
 
                 <img src="{{ asset('assets/images/foto4.jpg') }}" alt="foto4">
@@ -228,7 +229,7 @@
 
                 </div>
 
-            </div>
+            </div> --}}
         </div>
 
         <div class="card-custom hidden-card">
