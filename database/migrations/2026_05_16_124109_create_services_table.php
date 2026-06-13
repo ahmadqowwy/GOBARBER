@@ -14,7 +14,7 @@ return new class extends Migration {
             $table->id('service_id');
             $table->foreignId('shop_id')->constrained('go_barber_shops', 'shop_id')->onDelete('cascade');
             $table->string('service_name');
-            $table->string('photo');
+            $table->longText('photo')->nullable();
             $table->decimal('price', 10, 2);
             $table->integer('duration');
             $table->timestamps();

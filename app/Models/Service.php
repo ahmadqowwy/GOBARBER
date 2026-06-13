@@ -14,7 +14,8 @@ class Service extends Model
         'shop_id',
         'service_name',
         'price',
-        'duration'
+        'duration',
+        'photo'
     ];
 
     public function shop()

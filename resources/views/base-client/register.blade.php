@@ -8,139 +8,45 @@
 
                         <!-- LEFT CONTENT -->
                         <div
-                            class="col-lg-6 d-none d-lg-flex flex-column justify-content-center position-relative gb-left-panel"
-                        >
+                            class="col-lg-6 d-none d-lg-flex flex-column justify-content-center position-relative gb-left-panel">
                             {{-- Background Pattern --}}
                             <div class="gb-left-bg"></div>
 
                             {{-- SVG ART --}}
                             <div class="gb-left-art">
-                                <svg
-                                    width="340"
-                                    height="500"
-                                    viewBox="0 0 340 500"
-                                    fill="none"
-                                    xmlns="http://www.w3.org/2000/svg"
-                                >
-                                    <circle
-                                        cx="170"
-                                        cy="170"
-                                        r="130"
-                                        stroke="white"
-                                        stroke-width="1"
-                                        stroke-dasharray="8 6"
-                                    />
-                                    <circle
-                                        cx="170"
-                                        cy="170"
-                                        r="85"
-                                        stroke="white"
-                                        stroke-width="0.5"
-                                    />
-                                    <path
-                                        d="M125 105 L215 105 L215 235 Q215 278 170 278 Q125 278 125 235 Z"
-                                        stroke="white"
-                                        stroke-width="1"
-                                        fill="none"
-                                    />
-                                    <path
-                                        d="M140 138 Q140 120 170 120 Q200 120 200 138"
-                                        stroke="white"
-                                        stroke-width="1"
-                                        fill="none"
-                                    />
-                                    <line
-                                        x1="170"
-                                        y1="120"
-                                        x2="170"
-                                        y2="94"
-                                        stroke="white"
-                                        stroke-width="1"
-                                    />
-                                    <circle
-                                        cx="170"
-                                        cy="88"
-                                        r="7"
-                                        stroke="white"
-                                        stroke-width="1"
-                                        fill="none"
-                                    />
-                                    <path
-                                        d="M136 155 L158 155"
-                                        stroke="white"
-                                        stroke-width="2.5"
-                                        stroke-linecap="round"
-                                    />
-                                    <path
-                                        d="M182 155 L204 155"
-                                        stroke="white"
-                                        stroke-width="2.5"
-                                        stroke-linecap="round"
-                                    />
-                                    <path
-                                        d="M152 186 Q170 198 188 186"
-                                        stroke="white"
-                                        stroke-width="1.5"
-                                        stroke-linecap="round"
-                                        fill="none"
-                                    />
-                                    <path
-                                        d="M105 315 L148 315 L170 358 L192 315 L235 315"
-                                        stroke="white"
-                                        stroke-width="1"
-                                        stroke-linecap="round"
-                                        fill="none"
-                                    />
-                                    <rect
-                                        x="153"
-                                        y="376"
-                                        width="34"
-                                        height="76"
-                                        rx="5"
-                                        stroke="white"
-                                        stroke-width="1"
-                                        fill="none"
-                                    />
-                                    <line
-                                        x1="153"
-                                        y1="395"
-                                        x2="187"
-                                        y2="395"
-                                        stroke="white"
-                                        stroke-width="0.5"
-                                    />
-                                    <line
-                                        x1="153"
-                                        y1="412"
-                                        x2="187"
-                                        y2="412"
-                                        stroke="white"
-                                        stroke-width="0.5"
-                                    />
-                                    <line
-                                        x1="153"
-                                        y1="430"
-                                        x2="187"
-                                        y2="430"
-                                        stroke="white"
-                                        stroke-width="0.5"
-                                    />
-                                    <circle
-                                        cx="55"
-                                        cy="440"
-                                        r="28"
-                                        stroke="white"
-                                        stroke-width="0.5"
-                                        fill="none"
-                                    />
-                                    <circle
-                                        cx="285"
-                                        cy="440"
-                                        r="28"
-                                        stroke="white"
-                                        stroke-width="0.5"
-                                        fill="none"
-                                    />
+                                <svg width="340" height="500" viewBox="0 0 340 500" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <circle cx="170" cy="170" r="130" stroke="white" stroke-width="1"
+                                        stroke-dasharray="8 6" />
+                                    <circle cx="170" cy="170" r="85" stroke="white" stroke-width="0.5" />
+                                    <path d="M125 105 L215 105 L215 235 Q215 278 170 278 Q125 278 125 235 Z"
+                                        stroke="white" stroke-width="1" fill="none" />
+                                    <path d="M140 138 Q140 120 170 120 Q200 120 200 138" stroke="white" stroke-width="1"
+                                        fill="none" />
+                                    <line x1="170" y1="120" x2="170" y2="94" stroke="white"
+                                        stroke-width="1" />
+                                    <circle cx="170" cy="88" r="7" stroke="white" stroke-width="1"
+                                        fill="none" />
+                                    <path d="M136 155 L158 155" stroke="white" stroke-width="2.5"
+                                        stroke-linecap="round" />
+                                    <path d="M182 155 L204 155" stroke="white" stroke-width="2.5"
+                                        stroke-linecap="round" />
+                                    <path d="M152 186 Q170 198 188 186" stroke="white" stroke-width="1.5"
+                                        stroke-linecap="round" fill="none" />
+                                    <path d="M105 315 L148 315 L170 358 L192 315 L235 315" stroke="white"
+                                        stroke-width="1" stroke-linecap="round" fill="none" />
+                                    <rect x="153" y="376" width="34" height="76" rx="5" stroke="white"
+                                        stroke-width="1" fill="none" />
+                                    <line x1="153" y1="395" x2="187" y2="395" stroke="white"
+                                        stroke-width="0.5" />
+                                    <line x1="153" y1="412" x2="187" y2="412" stroke="white"
+                                        stroke-width="0.5" />
+                                    <line x1="153" y1="430" x2="187" y2="430" stroke="white"
+                                        stroke-width="0.5" />
+                                    <circle cx="55" cy="440" r="28" stroke="white" stroke-width="0.5"
+                                        fill="none" />
+                                    <circle cx="285" cy="440" r="28" stroke="white" stroke-width="0.5"
+                                        fill="none" />
                                 </svg>
                             </div>
 
@@ -225,70 +131,100 @@
                                     Lengkapi data owner barbershop
                                 </p>
 
-                                <form action="" method="POST">
+                                <form action="{{ route('do.register.owner') }}" method="POST"
+                                    enctype="multipart/form-data">
                                     @csrf
 
-                                    <!-- OWNER NAME -->
-                                    <div class="mb-3">
-                                        <label class="gb-label">
-                                            Nama Owner
-                                        </label>
-
-                                        <input
-                                            type="text"
-                                            name="owner_name"
-                                            class="form-control gb-input"
-                                            placeholder="Masukkan nama owner"
-                                        />
+                                    <!-- AKUN -->
+                                    <h6 class="text-primary mb-3 mt-2 fw-bold">Data Akun & Owner</h6>
+                                    <div class="row">
+                                        <div class="col-md-6 mb-3">
+                                            <label class="gb-label">Username <span
+                                                    class="text-danger">*</span></label>
+                                            <input type="text" name="username" class="form-control gb-input"
+                                                placeholder="Username" value="{{ old('username') }}" required />
+                                        </div>
+                                        <div class="col-md-6 mb-3">
+                                            <label class="gb-label">Password <span
+                                                    class="text-danger">*</span></label>
+                                            <input type="password" name="password" class="form-control gb-input"
+                                                placeholder="Password" required />
+                                        </div>
                                     </div>
 
-                                    <!-- EMAIL -->
                                     <div class="mb-3">
-                                        <label class="gb-label">
-                                            Email
-                                        </label>
-
-                                        <input
-                                            type="email"
-                                            name="email"
-                                            class="form-control gb-input"
-                                            placeholder="Masukkan email"
-                                        />
+                                        <label class="gb-label">Nama Owner <span class="text-danger">*</span></label>
+                                        <input type="text" name="owner_name" class="form-control gb-input"
+                                            placeholder="Masukkan nama lengkap owner" value="{{ old('owner_name') }}"
+                                            required />
                                     </div>
 
-                                    <!-- PHONE -->
-                                    <div class="mb-3">
-                                        <label class="gb-label">
-                                            Nomor Telepon
-                                        </label>
-
-                                        <input
-                                            type="text"
-                                            name="phone"
-                                            class="form-control gb-input"
-                                            placeholder="Masukkan nomor telepon"
-                                        />
+                                    <div class="row">
+                                        <div class="col-md-6 mb-3">
+                                            <label class="gb-label">Email <span class="text-danger">*</span></label>
+                                            <input type="email" name="email" class="form-control gb-input"
+                                                placeholder="Masukkan email aktif" value="{{ old('email') }}"
+                                                required />
+                                        </div>
+                                        <div class="col-md-6 mb-3">
+                                            <label class="gb-label">Nomor Telepon <span
+                                                    class="text-danger">*</span></label>
+                                            <input type="text" name="phone" class="form-control gb-input"
+                                                placeholder="Nomor WhatsApp/Telepon" value="{{ old('phone') }}"
+                                                required />
+                                        </div>
                                     </div>
 
-                                    <!-- ADMIN ID -->
-                                    <div class="mb-4">
-                                        <label class="gb-label">
-                                            Admin ID
-                                        </label>
+                                    <hr class="my-4">
 
-                                        <input
-                                            type="number"
-                                            name="admin_id"
-                                            class="form-control gb-input"
-                                            placeholder="Masukkan admin id"
-                                        />
+                                    <!-- DATA TOKO -->
+                                    <h6 class="text-primary mb-3 fw-bold">Data Barbershop</h6>
+                                    <div class="mb-3">
+                                        <label class="gb-label">Nama Barbershop <span
+                                                class="text-danger">*</span></label>
+                                        <input type="text" name="shop_name" class="form-control gb-input"
+                                            placeholder="Masukkan nama barbershop" value="{{ old('shop_name') }}"
+                                            required />
+                                    </div>
+
+                                    <div class="mb-3">
+                                        <label class="gb-label">Lokasi <span class="text-danger">*</span></label>
+                                        <input type="text" name="location" class="form-control gb-input"
+                                            placeholder="Alamat lengkap barbershop" value="{{ old('location') }}"
+                                            required />
+                                    </div>
+
+                                    <div class="mb-3">
+                                        <label class="gb-label">Deskripsi Barbershop</label>
+                                        <textarea name="description" class="form-control gb-input"
+                                            placeholder="Ceritakan sedikit tentang barbershop Anda (opsional)"
+                                            style="height: auto; padding-top: 15px; padding-bottom: 15px;" rows="3">{{ old('description') }}</textarea>
+                                    </div>
+
+                                    <div class="mb-3">
+                                        <label class="gb-label">Foto Barbershop <span
+                                                class="text-danger">*</span></label>
+                                        <input type="file" name="photo" class="form-control gb-input"
+                                            style="padding-top: 15px;" accept="image/*" />
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="col-md-6 mb-4">
+                                            <label class="gb-label">Jam Buka <span
+                                                    class="text-danger">*</span></label>
+                                            <input type="time" name="open_time" class="form-control gb-input"
+                                                value="{{ old('open_time') }}" required />
+                                        </div>
+                                        <div class="col-md-6 mb-4">
+                                            <label class="gb-label">Jam Tutup <span
+                                                    class="text-danger">*</span></label>
+                                            <input type="time" name="close_time" class="form-control gb-input"
+                                                value="{{ old('close_time') }}" required />
+                                        </div>
                                     </div>
 
                                     <!-- BUTTON -->
-                                    <button
-                                        type="submit"
-                                        class="btn gb-btn-primary"
-                                    >
+                                    <button type="submit" class="btn gb-btn-primary mt-2">
                                         Daftar Owner
                                     </button>
                                 </form>
@@ -332,21 +268,15 @@
             z-index: 0;
 
             background:
-                radial-gradient(
-                    circle at top left,
+                radial-gradient(circle at top left,
                     rgba(77, 171, 247, 0.12),
-                    transparent 35%
-                ),
-                radial-gradient(
-                    circle at bottom right,
+                    transparent 35%),
+                radial-gradient(circle at bottom right,
                     rgba(77, 171, 247, 0.08),
-                    transparent 30%
-                ),
-                linear-gradient(
-                    180deg,
+                    transparent 30%),
+                linear-gradient(180deg,
                     #050505 0%,
-                    #0d1117 100%
-                );
+                    #0d1117 100%);
         }
 
         .gb-left-bg::before {
@@ -355,15 +285,11 @@
             inset: 0;
 
             background-image:
-                linear-gradient(
-                    rgba(255,255,255,0.03) 1px,
-                    transparent 1px
-                ),
-                linear-gradient(
-                    90deg,
-                    rgba(255,255,255,0.03) 1px,
-                    transparent 1px
-                );
+                linear-gradient(rgba(255, 255, 255, 0.03) 1px,
+                    transparent 1px),
+                linear-gradient(90deg,
+                    rgba(255, 255, 255, 0.03) 1px,
+                    transparent 1px);
 
             background-size: 35px 35px;
         }
@@ -393,17 +319,15 @@
             width: 55px;
             height: 55px;
             border-radius: 16px;
-            background: linear-gradient(
-                135deg,
-                #4dabf7,
-                #228be6
-            );
+            background: linear-gradient(135deg,
+                    #4dabf7,
+                    #228be6);
 
             display: flex;
             align-items: center;
             justify-content: center;
 
-            box-shadow: 0 0 35px rgba(77,171,247,.4);
+            box-shadow: 0 0 35px rgba(77, 171, 247, .4);
         }
 
         .gb-logo-name {
@@ -421,8 +345,8 @@
             align-items: center;
             gap: 7px;
 
-            background: rgba(77,171,247,.1);
-            border: 1px solid rgba(77,171,247,.2);
+            background: rgba(77, 171, 247, .1);
+            border: 1px solid rgba(77, 171, 247, .2);
 
             color: #74c0fc;
 
@@ -450,12 +374,12 @@
             max-width: 420px;
             font-size: 17px;
             line-height: 1.9;
-            color: rgba(255,255,255,.58);
+            color: rgba(255, 255, 255, .58);
         }
 
         /* STATS */
         .gb-stat {
-            border-left: 2px solid rgba(77,171,247,.3);
+            border-left: 2px solid rgba(77, 171, 247, .3);
             padding-left: 16px;
         }
 
@@ -469,7 +393,7 @@
             font-size: 12px;
             text-transform: uppercase;
             letter-spacing: 1px;
-            color: rgba(255,255,255,.4);
+            color: rgba(255, 255, 255, .4);
         }
 
         /* RIGHT FORM */
@@ -486,11 +410,9 @@
             height: 70px;
             border-radius: 22px;
 
-            background: linear-gradient(
-                135deg,
-                #4dabf7,
-                #228be6
-            );
+            background: linear-gradient(135deg,
+                    #4dabf7,
+                    #228be6);
 
             color: #fff;
             font-size: 30px;
@@ -501,7 +423,7 @@
 
             margin: 0 auto 28px;
 
-            box-shadow: 0 15px 40px rgba(77,171,247,.35);
+            box-shadow: 0 15px 40px rgba(77, 171, 247, .35);
         }
 
         .gb-form-title {
@@ -543,7 +465,7 @@
 
         .gb-input:focus {
             border-color: #4dabf7;
-            box-shadow: 0 0 0 4px rgba(77,171,247,.12) !important;
+            box-shadow: 0 0 0 4px rgba(77, 171, 247, .12) !important;
         }
 
         /* BUTTON */
@@ -553,11 +475,9 @@
             border: none;
             border-radius: 18px;
 
-            background: linear-gradient(
-                135deg,
-                #4dabf7,
-                #228be6
-            );
+            background: linear-gradient(135deg,
+                    #4dabf7,
+                    #228be6);
 
             color: #fff;
             font-weight: 700;
@@ -568,7 +488,7 @@
 
         .gb-btn-primary:hover {
             transform: translateY(-2px);
-            box-shadow: 0 15px 30px rgba(77,171,247,.3);
+            box-shadow: 0 15px 30px rgba(77, 171, 247, .3);
         }
 
         /* RESPONSIVE */
@@ -588,4 +508,44 @@
             }
         }
     </style>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            @if (session('success'))
+                Swal.fire({
+                    icon: 'success',
+                    title: 'Berhasil!',
+                    text: '{{ session('success') }}',
+                    confirmButtonColor: '#4dabf7'
+                }).then(() => {
+                    window.location.href = "{{ route('login') }}";
+                });
+            @endif
+
+            @if (session('error'))
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Gagal!',
+                    text: '{{ session('error') }}',
+                    confirmButtonColor: '#d33'
+                });
+            @endif
+
+            @if ($errors->any())
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Terjadi Kesalahan!',
+                    html: `
+                        <ul style="text-align: left; margin-bottom: 0;">
+                            @foreach ($errors->all() as $error)
+                                <li>{{ $error }}</li>
+                            @endforeach
+                        </ul>
+                    `,
+                    confirmButtonColor: '#d33'
+                });
+            @endif
+        });
+    </script>
 </x-layout>

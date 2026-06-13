@@ -182,7 +182,7 @@
                     </div>
                 </form>
 
-                <a href="" class="btn btn-login">
+                <a href="{{ route('login') }}" class="btn btn-login">
                     Login
                 </a>
 

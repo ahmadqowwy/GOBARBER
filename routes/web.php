@@ -1,5 +1,17 @@
 <?php
 
+use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\DataBarberController;
+use App\Http\Controllers\LandingPageController;
+use App\Http\Controllers\LoginController;
+use App\Http\Controllers\ManajemenUserController;
+use App\Http\Controllers\ShopController;
+use App\Http\Controllers\BarberController;
+use App\Http\Controllers\ServiceController;
+use App\Http\Controllers\CustomerController;
+use App\Http\Controllers\BookingController;
+use App\Http\Controllers\PaymentController;
+use App\Http\Controllers\RegisterController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -10,18 +22,13 @@ use Illuminate\Support\Facades\Route;
 | Here is where you can register web routes for your application.
 |
 */
+// Route::get('/blog', function () {
+//     return view('blog', [
+//         'title' => 'Blog'
+//     ]);
+// })->name('blog');
 
-Route::get('/', function () {
-    return view('home', [
-        'title' => 'Home'
-    ]);
-})->name('home');
 
-Route::get('/blog', function () {
-    return view('blog', [
-        'title' => 'Blog'
-    ]);
-})->name('blog');
 
 Route::get('/about', function () {
     return view('about', [
@@ -31,7 +38,53 @@ Route::get('/about', function () {
 Route::get('/menu-content', function () {
     return view('menu-content');
 })->name('menu.content');
+Route::get('/home', [LandingPageController::class, 'index']);
 
+
+// miiddleware untuk user yang belum login
+Route::middleware('guest')->group(function () {
+    Route::get('/', [LandingPageController::class, 'index'])->name('home');
+    Route::get('/blog', [LandingPageController::class, 'menu'])->name('blog');
+    Route::get('/detail-toko/{shop_id}', [LandingPageController::class, 'detailShop'])->name('detail.shop');
+
+
+    //route pannel admin
+    Route::get('/login', [LoginController::class, 'index'])->name('login');
+    Route::post('/auth', [LoginController::class, 'login'])->name('do.login');
+    Route::get('/register', [RegisterController::class, 'index'])->name('register');
+
+    Route::post('/register-owner', [RegisterController::class, 'registerOwner'])->name('do.register.owner');
+});
+
+/*
+|--------------------------------------------------------------------------
+| AUTH
+|--------------------------------------------------------------------------
+*/
+
+Route::middleware('auth')->group(function () {
+
+    Route::get('/dashboard', [DashboardController::class, 'index'])
+        ->name('admin.dashboard.page');
+    Route::post('/logout', [LoginController::class, 'logout'])->name('logout');
+
+    //route Manajemen User
+    Route::get('/manajemen-user', [ManajemenUserController::class, 'index'])
+        ->name('admin.manajemen.user.page');
+    Route::delete('/user/{id}', [ManajemenUserController::class, 'destroy'])
+        ->name('user.delete');
+
+    // Route Manajemen Toko
+    Route::resource('shop', ShopController::class);
+    Route::resource('barber', BarberController::class);
+    Route::resource('service', ServiceController::class);
+
+    // Route Transaksi & Info
+    Route::resource('customer', CustomerController::class)->only(['index', 'show']);
+    Route::resource('booking', BookingController::class)->only(['index', 'show', 'update']);
+    Route::resource('payment', PaymentController::class)->only(['index', 'show']);
+
+});
 
 
 /*
@@ -46,6 +99,7 @@ Route::get('/detail-toko', function () {
     ]);
 })->name('detail-toko');
 
+
 Route::get('/layanan', function () {
     return view('detail-toko.layanan-toko', [
         'title' => 'Layanan'
@@ -57,6 +111,15 @@ Route::get('/produk', function () {
         'title' => 'Produk'
     ]);
 })->name('produk-toko');
+
+Route::get('/detail-produk/{id}', function ($id) {
+
+    return view('detail-toko.detail-produk', ['title' => 'Detail Produk']);
+})->name('detail-produk');
+Route::get('/detail-toko', function () {
+    return view('detail-toko.detail-toko', ['title' => 'Detail Toko']);
+})->name('detail-toko');
+
 
 Route::get('/data-barber', function () {
     return view('detail-toko.data-barber', [
@@ -70,19 +133,6 @@ Route::get('/detail-produk/{id}', function ($id) {
     ]);
 })->name('detail-produk');
 
-
-
-/*
-|--------------------------------------------------------------------------
-| AUTH
-|--------------------------------------------------------------------------
-*/
-
-Route::get('/register', function () {
-    return view('base-client.register', [
-        'title' => 'Register'
-    ]);
-})->name('register');
 
 Route::get('/register-admin', function () {
     return view('base-admin.register-admin', [
