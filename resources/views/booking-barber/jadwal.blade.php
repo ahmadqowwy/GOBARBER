@@ -170,21 +170,26 @@
                 <!-- TANGGAL -->
                 <div class="tanggal">
  
-                    <label>
-                        <input type="radio" name="tanggal" value="2026-09-09" class="tgl-radio" required>
-                        <div class="card-tanggal">Sen<br>Sep 9</div>
-                    </label>
- 
-                    <label>
-                        <input type="radio" name="tanggal" value="2026-09-10" class="tgl-radio">
-                        <div class="card-tanggal">Sel<br>Sep 10</div>
-                    </label>
- 
-                    <label>
-                        <input type="radio" name="tanggal" value="2026-09-11" class="tgl-radio">
-                        <div class="card-tanggal">Rab<br>Sep 11</div>
-                    </label>
- 
+                    @php
+                        $hariId = ['Min','Sen','Sel','Rab','Kam','Jum','Sab'];
+                        $bulanId = ['','Jan','Feb','Mar','Apr','Mei','Jun','Jul','Agu','Sep','Okt','Nov','Des'];
+                    @endphp
+
+                    @for ($i = 0; $i < 7; $i++)
+                        @php
+                            $tgl      = now()->addDays($i);
+                            $namaHari = $hariId[$tgl->dayOfWeek];
+                            $tanggal  = $tgl->day;
+                            $bulan    = $bulanId[(int)$tgl->month];
+                            $value    = $tgl->format('Y-m-d');
+                        @endphp
+                        <label>
+                            <input type="radio" name="tanggal" value="{{ $value }}"
+                                   class="tgl-radio" {{ $i === 0 ? 'required' : '' }}>
+                            <div class="card-tanggal">{{ $namaHari }}<br>{{ $bulan }} {{ $tanggal }}</div>
+                        </label>
+                    @endfor
+
                     {{-- Kartu "More Dates" — value diisi JS setelah user pilih dari datepicker --}}
                     <label>
                         <input type="radio" name="tanggal" value="" id="moreDates" class="tgl-radio">
