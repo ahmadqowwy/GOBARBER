@@ -5,7 +5,7 @@
         background-color: #0f172a;
         color: #fff;
         min-height: 100vh;
-        padding: 40px;
+        padding: 100px 40px 40px 40px;
         font-family: Arial, sans-serif;
     }
  
@@ -136,6 +136,18 @@
     }
     .input-diri:focus { border-color: #3b82f6; }
     .input-diri::placeholder { color: #64748b; }
+
+    /* RESPONSIVE */
+    @media (max-width: 991px) {
+        .container { flex-direction: column; gap: 20px; }
+        .kiri, .kanan { flex: 1; width: 100%; }
+        .step-panel { position: static !important; }
+        .jam { grid-template-columns: repeat(3, 1fr); }
+    }
+    @media (max-width: 576px) {
+        .jam { grid-template-columns: repeat(2, 1fr); }
+        .booking-bg { padding: 100px 15px 20px 15px; }
+    }
 </style>
  
 <section class="booking-bg">
@@ -144,6 +156,7 @@
         @csrf
  
         {{-- Bawa data dari langkah sebelumnya --}}
+        <input type="hidden" name="shop_id" value="{{ request('shop_id') }}">
         <input type="hidden" name="layanan_id" value="{{ request('layanan_id') }}">
         <input type="hidden" name="barber_id"  value="{{ request('barber_id') }}">
  
@@ -201,6 +214,8 @@
                 <h3 class="form-title">Masukkan Data Diri</h3>
                 <input type="text" name="nama_pelanggan" class="input-diri"
                        placeholder="Nama lengkap" required autocomplete="off">
+                <input type="email" name="email" class="input-diri"
+                       placeholder="Email aktif" required autocomplete="off">
                 <input type="text" name="no_hp" class="input-diri"
                        placeholder="No HP (contoh: 08123456789)" required autocomplete="off">
  
@@ -241,7 +256,7 @@
  
                     {{-- Pesan validasi kecil --}}
                     <p id="msgValidasi" class="text-warning mt-3 mb-0" style="font-size:13px; display:none;">
-                        Lengkapi tanggal, jam, nama, dan no HP terlebih dahulu.
+                        Lengkapi tanggal, jam, nama, email, dan no HP terlebih dahulu.
                     </p>
  
                 </div>
@@ -290,12 +305,13 @@
         const tgl  = document.querySelector('input[name="tanggal"]:checked');
         const jm   = document.querySelector('input[name="jam"]:checked');
         const nama = document.querySelector('input[name="nama_pelanggan"]').value.trim();
+        const email = document.querySelector('input[name="email"]').value.trim();
         const hp   = document.querySelector('input[name="no_hp"]').value.trim();
  
         // Tanggal valid: radio terceklis DAN valuenya tidak kosong
         const tglValid = tgl && tgl.value !== '';
  
-        const allFilled = tglValid && jm && nama && hp;
+        const allFilled = tglValid && jm && nama && email && hp;
  
         btn.disabled = !allFilled;
         msgVal.style.display = allFilled ? 'none' : 'block';
@@ -313,6 +329,7 @@
  
     /* ---- Listener Input Teks ---- */
     document.querySelector('input[name="nama_pelanggan"]').addEventListener('input', cekForm);
+    document.querySelector('input[name="email"]').addEventListener('input', cekForm);
     document.querySelector('input[name="no_hp"]').addEventListener('input', cekForm);
  
     /* ---- Tombol "Pilih Tanggal" di Modal ---- */

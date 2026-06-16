@@ -35,6 +35,10 @@ Route::get('/about', function () {
         'title' => 'About'
     ]);
 })->name('about');
+Route::get('/menu-content', function () {
+    return view('menu-content');
+})->name('menu.content');
+Route::get('/home', [LandingPageController::class, 'index']);
 
 
 // miiddleware untuk user yang belum login
@@ -143,41 +147,18 @@ Route::get('/register-admin', function () {
 // ALUR BOOKING (KEBERLANJUTAN)
 // ==========================================
 
-// LANGKAH 1 - PILIH LAYANAN
-Route::get('/booking/layanan', function () {
-    return view('booking-barber.layanan', [
-        'title' => 'Booking - Pilih Layanan'
-    ]);
-})->name('booking.layanan');
-
+// LANGKAH 1 - PILIH LAYANAN (Ini sudah ada di middleware guest di atas)
+// Route::get('/booking-barber/layanan/{shop_id}', [LandingPageController::class, 'layanan'])->name('booking.barber');
 
 // LANGKAH 2 - PILIH BARBER
-Route::post('/booking/barber-pilih', function () {
-    return view('booking-barber.barber-pilih', [
-        'title' => 'Booking - Pilih Barber'
-    ]);
-})->name('booking.jadwal');
-
+Route::post('/booking-barber/barber-pilih', [LandingPageController::class, 'pilihBarber'])->name('booking.barber-pilih');
 
 // LANGKAH 3 - PILIH JADWAL
-Route::post('/booking/jadwal', function () {
-    return view('booking-barber.jadwal', [
-        'title' => 'Booking - Pilih Jadwal'
-    ]);
-})->name('booking.step3');
-
+Route::post('/booking-barber/jadwal', [LandingPageController::class, 'jadwal'])->name('booking.jadwal');
 
 // LANGKAH 4 - KONFIRMASI
-Route::post('/booking/konfirmasi', function () {
-    return view('booking-barber.konfirmasi', [
-        'title' => 'Booking - Konfirmasi'
-    ]);
-})->name('booking.konfirmasi');
+Route::post('/booking-barber/konfirmasi', [LandingPageController::class, 'konfirmasi'])->name('booking.konfirmasi');
 
-
-// LANGKAH 5 - SUKSES
-Route::post('/booking/sukses', function () {
-    return view('booking-barber.sukses', [
-        'title' => 'Booking Berhasil'
-    ]);
-})->name('booking.sukses');
+// LANGKAH 5 - PROSES & SUKSES
+Route::post('/booking-barber/proses', [LandingPageController::class, 'prosesBooking'])->name('booking.proses');
+Route::get('/booking-barber/sukses/{booking_id}', [LandingPageController::class, 'sukses'])->name('booking.sukses');

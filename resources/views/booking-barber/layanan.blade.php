@@ -139,7 +139,7 @@
         }
     </style>
 
-    <section class="booking-bg">
+    <section class="booking-bg px-5">
         <div class="container">
 
             <div class="row g-4">
@@ -151,9 +151,10 @@
                         Pilih Layanan {{ $shop->shop_name }}
                     </h3>
 
-                    <form id="bookingForm" action="{{ route('booking.jadwal') }}" method="POST">
+                    <form id="bookingForm" action="{{ route('booking.barber-pilih') }}" method="POST">
 
                         @csrf
+                        <input type="hidden" name="shop_id" value="{{ $shop->shop_id }}">
 
                         @foreach ($service as $data)
                             <label class="service-option">

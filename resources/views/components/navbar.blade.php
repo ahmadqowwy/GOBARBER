@@ -116,21 +116,26 @@
     }
 
     @media (max-width: 991px) {
+        .custom-navbar {
+            padding: 15px 20px;
+        }
+
+        .navbar-actions {
+            flex-direction: column;
+            align-items: stretch !important;
+            min-width: 100%;
+            margin-top: 10px;
+        }
 
         .search-form {
             width: 100%;
-            margin: 15px 0;
+            margin: 10px 0 !important;
         }
 
-        .d-flex.align-items-center.gap-3 {
-            flex-direction: column;
-            align-items: stretch !important;
-        }
-
-        .btn-outline-light {
+        .btn-login {
             width: 100%;
+            text-align: center;
         }
-
     }
 </style>
 <nav class="navbar navbar-expand-lg navbar-dark custom-navbar fixed-top">
