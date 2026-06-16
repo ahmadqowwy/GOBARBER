@@ -143,7 +143,7 @@
                             <label class="form-check-label">Cash di Tempat</label>
                         </div>
 
-                        <div class="form-check mb-2">
+                        {{-- <div class="form-check mb-2">
                             <input class="form-check-input" type="radio" name="pembayaran" value="QRIS" />
                             <label class="form-check-label">QRIS</label>
                         </div>
@@ -151,7 +151,7 @@
                         <div class="form-check mb-3">
                             <input class="form-check-input" type="radio" name="pembayaran" value="Transfer Bank" />
                             <label class="form-check-label">Transfer Bank</label>
-                        </div>
+                        </div> --}}
 
                         <div class="payment-box">
                             <h5 class="mb-3">Detail Pembayaran</h5>

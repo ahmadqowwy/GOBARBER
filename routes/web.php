@@ -44,6 +44,7 @@ Route::get('/home', [LandingPageController::class, 'index']);
 // miiddleware untuk user yang belum login
 Route::middleware('guest')->group(function () {
     Route::get('/', [LandingPageController::class, 'index'])->name('home');
+    Route::get('/search', [LandingPageController::class, 'search'])->name('search');
     Route::get('/blog', [LandingPageController::class, 'menu'])->name('blog');
     Route::get('/detail-toko/{shop_id}', [LandingPageController::class, 'detailShop'])->name('detail.shop');
     Route::get('/booking-barber/layanan/{shop_id}', [LandingPageController::class, 'layanan'])->name('booking.barber');
@@ -55,6 +56,18 @@ Route::middleware('guest')->group(function () {
     Route::get('/register', [RegisterController::class, 'index'])->name('register');
 
     Route::post('/register-owner', [RegisterController::class, 'registerOwner'])->name('do.register.owner');
+    // LANGKAH 2 - PILIH BARBER
+    Route::post('/booking-barber/barber-pilih', [LandingPageController::class, 'pilihBarber'])->name('booking.barber-pilih');
+
+    // LANGKAH 3 - PILIH JADWAL
+    Route::post('/booking-barber/jadwal', [LandingPageController::class, 'jadwal'])->name('booking.jadwal');
+
+    // LANGKAH 4 - KONFIRMASI
+    Route::post('/booking-barber/konfirmasi', [LandingPageController::class, 'konfirmasi'])->name('booking.konfirmasi');
+
+    // LANGKAH 5 - PROSES & SUKSES
+    Route::post('/booking-barber/proses', [LandingPageController::class, 'prosesBooking'])->name('booking.proses');
+    Route::get('/booking-barber/sukses/{booking_id}', [LandingPageController::class, 'sukses'])->name('booking.sukses');
 });
 
 /*
@@ -149,16 +162,3 @@ Route::get('/register-admin', function () {
 
 // LANGKAH 1 - PILIH LAYANAN (Ini sudah ada di middleware guest di atas)
 // Route::get('/booking-barber/layanan/{shop_id}', [LandingPageController::class, 'layanan'])->name('booking.barber');
-
-// LANGKAH 2 - PILIH BARBER
-Route::post('/booking-barber/barber-pilih', [LandingPageController::class, 'pilihBarber'])->name('booking.barber-pilih');
-
-// LANGKAH 3 - PILIH JADWAL
-Route::post('/booking-barber/jadwal', [LandingPageController::class, 'jadwal'])->name('booking.jadwal');
-
-// LANGKAH 4 - KONFIRMASI
-Route::post('/booking-barber/konfirmasi', [LandingPageController::class, 'konfirmasi'])->name('booking.konfirmasi');
-
-// LANGKAH 5 - PROSES & SUKSES
-Route::post('/booking-barber/proses', [LandingPageController::class, 'prosesBooking'])->name('booking.proses');
-Route::get('/booking-barber/sukses/{booking_id}', [LandingPageController::class, 'sukses'])->name('booking.sukses');

@@ -81,7 +81,7 @@ class LandingPageController extends Controller
         $shop = GoBarberShop::where('shop_id', $request->shop_id)->first();
         $service = Service::where('service_id', $request->layanan_id)->first();
         $barber = Barber::where('barber_id', $request->barber_id)->first();
-        
+
         $total = $service ? $service->price : 0;
 
         $data = [
@@ -120,12 +120,13 @@ class LandingPageController extends Controller
         // 3. Buat Payment
         $service = Service::where('service_id', $request->layanan_id)->first();
         $amount = $service ? (float) $service->price : 0;
+
         // Tambahan admin fee 2000
         $total_amount = $amount + 2000;
 
         Payment::create([
-            'booking_id'     => $booking->booking_id,
-            'amount'         => $total_amount,
+            'booking_id' => $booking->booking_id,
+            'amount' => $total_amount,
             'payment_method' => $request->pembayaran,
             'payment_status' => 'pending'
         ]);
@@ -143,5 +144,35 @@ class LandingPageController extends Controller
         ];
 
         return view('booking-barber.sukses', $data);
+    }
+    public function search(Request $request)
+    {
+        $keyword = $request->input('keyword');
+
+        // Jika keyword kosong, kembalikan ke home atau tampilkan hasil kosong
+        if (empty($keyword)) {
+            return redirect()->route('home');
+        }
+
+        // Cari Barbershop
+        $shops = GoBarberShop::where('shop_name', 'like', "%{$keyword}%")
+            ->orWhere('location', 'like', "%{$keyword}%")
+            ->get();
+
+        // Cari Service
+        $services = Service::where('service_name', 'like', "%{$keyword}%")->get();
+
+        // Cari Barber
+        $barbers = Barber::where('barber_name', 'like', "%{$keyword}%")->get();
+
+        $data = [
+            'title'    => 'Hasil Pencarian: ' . $keyword,
+            'keyword'  => $keyword,
+            'shops'    => $shops,
+            'services' => $services,
+            'barbers'  => $barbers
+        ];
+
+        return view('search', $data);
     }
 }

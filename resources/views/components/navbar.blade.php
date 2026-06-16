@@ -175,7 +175,7 @@
             <!-- Search + Login -->
             <div class="d-flex align-items-center navbar-actions">
 
-                <form action="#" method="GET" class="search-form me-3">
+                <form action="{{ route('search') }}" method="GET" class="search-form me-3">
                     <div class="search-box">
 
                         <input type="text" class="form-control" name="keyword" placeholder="Cari Barbershop...">

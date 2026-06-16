@@ -607,7 +607,7 @@
                 {{-- <img src="{{ asset('assets/images/foto1.jpg') }}" alt="Gamoen Logo"> --}}
                 <div style="font-size: 20px; font-weight: 800; color: #fff; margin-top: 10px; letter-spacing: 0.5px;">
                     {{ $shop->shop_name }}</div>
-                <div class="logo-text-sub">.CO BARBERSHOP BWX</div>
+                <div class="logo-text-sub">.CO BARBERSHOP </div>
             </div>
 
             <div class="info-content">
@@ -639,7 +639,7 @@
                     and makeup to keep you looking your best.
                 </p>
                 <a href="{{ route('booking.barber', $shop->shop_id) }}">
-                    <button class="btn btn-primary w-100 py-3 fw-bold rounded-3 shadow-lg">
+                    <button class="btn btn-danger w-100 py-3 fw-bold rounded-3 shadow-lg">
                         Booking Sekarang
                     </button>
                 </a>
