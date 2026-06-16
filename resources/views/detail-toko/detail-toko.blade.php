@@ -599,9 +599,14 @@
     <div class="hero-banner">
         <div class="profile-container">
             <div class="profile-logo-box">
-                <img src="{{ asset('assets/images/foto1.jpg') }}" alt="Gamoen Logo">
+                @if ($shop->photo)
+                    <img src="{{ $shop->photo }}" alt="Foto Barber" class="service-img">
+                @else
+                    <span class="text-muted">Tidak ada foto</span>
+                @endif
+                {{-- <img src="{{ asset('assets/images/foto1.jpg') }}" alt="Gamoen Logo"> --}}
                 <div style="font-size: 20px; font-weight: 800; color: #fff; margin-top: 10px; letter-spacing: 0.5px;">
-                    GAMOEN</div>
+                    {{ $shop->shop_name }}</div>
                 <div class="logo-text-sub">.CO BARBERSHOP BWX</div>
             </div>
 
@@ -633,7 +638,7 @@
                     Hair Avenue provides expert haircuts, styling, along with services like facials, cleanups, skincare
                     and makeup to keep you looking your best.
                 </p>
-                <a href="{{ url('/booking-barber/layanan') }}">
+                <a href="{{ route('booking.barber', $shop->shop_id) }}">
                     <button class="btn btn-primary w-100 py-3 fw-bold rounded-3 shadow-lg">
                         Booking Sekarang
                     </button>
@@ -672,127 +677,15 @@
                         @endif
                         <div class="service-detail">
                             <h3>{{ $serviceShop->service_name }}</h3>
-                            <p>Potong dan styling rambut sesuai request, free konsultasi model</p>
+                            <p>{{ $serviceShop->description }}</p>
                         </div>
                     </div>
                     <div class="service-right">
-                        <span class="service-price">IDR 20,000</span>
-                        <span class="service-duration">35 menit</span>
+                        <span class="service-price">IDR {{ $serviceShop->price }}</span>
+                        <span class="service-duration">{{ $serviceShop->duration }} Menit</span>
                     </div>
                 </div>
             @endforeach
-
-            {{-- <div class="service-card">
-                <div class="service-left">
-                    <img src="{{ asset('assets/images/foto1.jpg') }}" class="service-img" alt="Shaving">
-                    <div class="service-detail">
-                        <h3>Saving</h3>
-                        <p>Cukur kumis & jenggot bersih dengan handuk hangat</p>
-                    </div>
-                </div>
-                <div class="service-right">
-                    <span class="service-price">IDR 5,000</span>
-                    <span class="service-duration">5 menit</span>
-                </div>
-            </div>
-
-            <div class="service-card">
-                <div class="service-left">
-                    <img src="{{ asset('assets/images/foto1.jpg') }}" class="service-img" alt="Hair Wash">
-                    <div class="service-detail">
-                        <h3>Hair Wash</h3>
-                        <p>Cuci rambut bersih dengan sampo premium + pijat kepala rileks</p>
-                    </div>
-                </div>
-                <div class="service-right">
-                    <span class="service-price">IDR 5,000</span>
-                    <span class="service-duration">5 menit</span>
-                </div>
-            </div>
-
-            <div class="service-card">
-                <div class="service-left">
-                    <img src="{{ asset('assets/images/foto1.jpg') }}" class="service-img" alt="Massage">
-                    <div class="service-detail">
-                        <h3>Message</h3>
-                        <p>Pijat rileks pada area kepala, leher, dan pundak setelah potong rambut</p>
-                    </div>
-                </div>
-                <div class="service-right">
-                    <span class="service-price">IDR 10,000</span>
-                    <span class="service-duration">10 menit</span>
-                </div>
-            </div>
-
-            <div class="service-card">
-                <div class="service-left">
-                    <img src="{{ asset('assets/images/foto1.jpg') }}" class="service-img" alt="Hair Keratin">
-                    <div class="service-detail">
-                        <h3>Hair Keratin</h3>
-                        <p>Perawatan protein untuk memperbaiki rambut rusak agar lebih sehat dan berkilau</p>
-                    </div>
-                </div>
-                <div class="service-right">
-                    <span class="service-price">IDR 250,000</span>
-                    <span class="service-duration">45 menit</span>
-                </div>
-            </div>
-
-            <div class="service-card">
-                <div class="service-left">
-                    <img src="{{ asset('assets/images/foto1.jpg') }}" class="service-img" alt="Cold Perm">
-                    <div class="service-detail">
-                        <h3>Cold Perm</h3>
-                        <p>Teknik keriting rambut modern untuk memberikan volume alami pada rambut</p>
-                    </div>
-                </div>
-                <div class="service-right">
-                    <span class="service-price">IDR 150,000</span>
-                    <span class="service-duration">45 menit</span>
-                </div>
-            </div>
-
-            <div class="service-card">
-                <div class="service-left">
-                    <img src="{{ asset('assets/images/foto1.jpg') }}" class="service-img" alt="Down Perm">
-                    <div class="service-detail">
-                        <h3>Down Perm</h3>
-                        <p>Menjinakkan rambut samping yang jabrik/mengembang agar rapi turun ke bawah</p>
-                    </div>
-                </div>
-                <div class="service-right">
-                    <span class="service-price">IDR 150,000</span>
-                    <span class="service-duration">45 menit</span>
-                </div>
-            </div>
-
-            <div class="service-card">
-                <div class="service-left">
-                    <img src="{{ asset('assets/images/foto1.jpg') }}" class="service-img" alt="Down Colour">
-                    <div class="service-detail">
-                        <h3>Down Colour</h3>
-                        <p>Pewarnaan rambut untuk menutupi uban atau mengubah warna rambut</p>
-                    </div>
-                </div>
-                <div class="service-right">
-                    <span class="service-price">IDR 5,000</span>
-                    <span class="service-duration">45 menit</span>
-                </div>
-            </div>
-
-            <div class="service-card">
-                <div class="service-left">
-                    <img src="{{ asset('assets/images/foto1.jpg') }}" class="service-img" alt="Semir Hitam">
-                    <div class="service-detail">
-                        <h3>Semir Hitam</h3>
-                        <p>Pewarnaan rambut menjadi hitam berkilau</p>
-                    </div>
-                </div>
-                <div class="service-right">
-                    <span class="service-price">IDR 150,000</span>
-                    <span class="service-duration">45 menit</span>
-                </div>
-            </div> --}}
         </div>
     </div>
 
@@ -911,29 +804,20 @@
             </div>
 
             <div class="barber-grid">
-                <div class="barber-card">
-                    <img src="{{ asset('assets/images/foto1.jpg') }}" alt="Barber 1">
-                    <div class="barber-info-overlay">
-                        <h3 class="barber-name">Alexandre Christie</h3>
-                        <p class="barber-role">Senior Stylist</p>
+                @foreach ($barberman as $data)
+                    <div class="barber-card">
+                        @if ($data->photo)
+                            <img src="{{ $data->photo }}" alt="Foto Barberman">
+                        @else
+                            <span class="text-muted">Tidak ada foto</span>
+                        @endif
+                        <div class="barber-info-overlay">
+                            <h3 class="barber-name">{{ $data->barber_name }}</h3>
+                            <p class="barber-role">{{ $data->specialty }}</p>
+                        </div>
                     </div>
-                </div>
+                @endforeach
 
-                <div class="barber-card">
-                    <img src="{{ asset('assets/images/foto1.jpg') }}" alt="Barber 2">
-                    <div class="barber-info-overlay">
-                        <h3 class="barber-name">John Doe</h3>
-                        <p class="barber-role">Hair Designer</p>
-                    </div>
-                </div>
-
-                <div class="barber-card">
-                    <img src="{{ asset('assets/images/foto1.jpg') }}" alt="Barber 3">
-                    <div class="barber-info-overlay">
-                        <h3 class="barber-name">Reynaldi</h3>
-                        <p class="barber-role">Shaving Expert</p>
-                    </div>
-                </div>
             </div>
         </div>
     </div>

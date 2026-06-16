@@ -42,6 +42,7 @@ Route::middleware('guest')->group(function () {
     Route::get('/', [LandingPageController::class, 'index'])->name('home');
     Route::get('/blog', [LandingPageController::class, 'menu'])->name('blog');
     Route::get('/detail-toko/{shop_id}', [LandingPageController::class, 'detailShop'])->name('detail.shop');
+    Route::get('/booking-barber/layanan/{shop_id}', [LandingPageController::class, 'layanan'])->name('booking.barber');
 
 
     //route pannel admin
@@ -135,9 +136,9 @@ Route::get('/register-admin', function () {
         'title' => 'Register Admin'
     ]);
 })->name('register-admin');
-Route::get('/booking-barber/layanan', function () {
-    return view('booking-barber.layanan');
-})->name('layanan');
+// Route::get('/booking-barber/layanan', function () {
+//     return view('booking-barber.layanan');
+// })->name('layanan');
 // ==========================================
 // ALUR BOOKING (KEBERLANJUTAN)
 // ==========================================

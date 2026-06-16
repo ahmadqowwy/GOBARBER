@@ -5,8 +5,10 @@
             background-color: #0f172a;
             color: #fff;
             min-height: 100vh;
+            padding-top: 100px;
         }
 
+        /* CARD LAYANAN */
         .service-option {
             display: block;
             margin-bottom: 15px;
@@ -22,10 +24,11 @@
             border: 1px solid #334155;
             border-radius: 14px;
             padding: 18px 20px;
-            transition: 0.3s ease;
+            transition: .3s ease;
             display: flex;
             justify-content: space-between;
             align-items: center;
+            gap: 15px;
         }
 
         .service-card:hover {
@@ -33,12 +36,13 @@
             background-color: #253349;
         }
 
-        .service-option input:checked + .service-card {
+        .service-option input:checked+.service-card {
             border-color: #3b82f6;
             background-color: #253349;
             box-shadow: 0 0 0 2px #3b82f6;
         }
 
+        /* SIDEBAR */
         .step-panel {
             background-color: #1e293b;
             border-radius: 18px;
@@ -54,12 +58,13 @@
 
         .step-item.active {
             color: #3b82f6;
-            font-weight: bold;
+            font-weight: 600;
         }
 
         .step-num {
             width: 32px;
             height: 32px;
+            min-width: 32px;
             border-radius: 50%;
             border: 2px solid currentColor;
             display: flex;
@@ -72,161 +77,126 @@
         .step-item.active .step-num {
             background-color: #3b82f6;
             border-color: #3b82f6;
-            color: #fff;
+            color: white;
+        }
+
+        /* TABLET */
+        @media (max-width: 991px) {
+
+            .booking-bg {
+                padding-top: 85px;
+            }
+
+            .step-panel {
+                position: static !important;
+                margin-top: 20px;
+                padding: 20px;
+            }
+
+            .service-card {
+                padding: 15px;
+            }
+
+            .service-card h6 {
+                font-size: 15px;
+            }
+
+            .service-card small {
+                font-size: 12px;
+            }
+
+            .service-card span {
+                font-size: 14px;
+                white-space: nowrap;
+            }
+        }
+
+        /* MOBILE */
+        @media (max-width: 576px) {
+
+            .booking-bg {
+                padding-top: 75px;
+            }
+
+            .container {
+                padding-left: 15px;
+                padding-right: 15px;
+            }
+
+            .service-card {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .service-card span {
+                margin-top: 10px;
+                font-size: 16px;
+            }
+
+            h3 {
+                font-size: 22px;
+            }
         }
     </style>
 
-    <section class="booking-bg py-5">
+    <section class="booking-bg">
         <div class="container">
+
             <div class="row g-4">
 
                 <!-- KOLOM KIRI -->
                 <div class="col-lg-8">
-                    <h3 class="fw-bold mb-4">Pilih Layanan</h3>
 
-                    <form
-                        id="bookingForm"
-                        action="{{ route('booking.jadwal') }}"
-                        method="POST"
-                    >
+                    <h3 class="fw-bold mb-4">
+                        Pilih Layanan {{ $shop->shop_name }}
+                    </h3>
+
+                    <form id="bookingForm" action="{{ route('booking.jadwal') }}" method="POST">
+
                         @csrf
 
-                        <!-- Hair Cut -->
-                        <label class="service-option">
-                            <input
-                                type="radio"
-                                name="layanan_id"
-                                value="1"
-                                required
-                            >
+                        @foreach ($service as $data)
+                            <label class="service-option">
 
-                            <div class="service-card">
-                                <div>
-                                    <h6 class="mb-1">Hair Cut</h6>
+                                <input type="radio" name="layanan_id" value="{{ $data->service_id }}" required>
 
-                                    <small class="text-secondary">
-                                        Potong rambut standar dengan styling
-                                    </small>
+                                <div class="service-card">
+
+                                    <div>
+                                        <h6 class="mb-1 fw-bold">
+                                            {{ $data->service_name }}
+                                        </h6>
+
+                                        <small class="text-secondary">
+                                            {{ $data->description }}
+                                        </small>
+                                    </div>
+
+                                    <span class="fw-bold text-info">
+                                        Rp {{ $data->price }}
+                                    </span>
+
                                 </div>
 
-                                <span class="fw-bold text-info">
-                                    Rp 50.000
-                                </span>
-                            </div>
-                        </label>
+                            </label>
+                        @endforeach
 
-                        <!-- Shaving -->
-                        <label class="service-option">
-                            <input
-                                type="radio"
-                                name="layanan_id"
-                                value="2"
-                            >
+                        <!-- TOMBOL MOBILE -->
+                        <button type="submit" class="btn btn-primary w-100 py-3 rounded-3 fw-bold mt-3 d-lg-none">
 
-                            <div class="service-card">
-                                <div>
-                                    <h6 class="mb-1">Shaving</h6>
-
-                                    <small class="text-secondary">
-                                        Cukur jenggot bersih & handuk hangat
-                                    </small>
-                                </div>
-
-                                <span class="fw-bold text-info">
-                                    Rp 35.000
-                                </span>
-                            </div>
-                        </label>
-
-                        <!-- Hair Wash -->
-                        <label class="service-option">
-                            <input
-                                type="radio"
-                                name="layanan_id"
-                                value="3"
-                            >
-
-                            <div class="service-card">
-                                <div>
-                                    <h6 class="mb-1">Hair Wash</h6>
-
-                                    <small class="text-secondary">
-                                        Keramas dan pijat kepala ringan
-                                    </small>
-                                </div>
-
-                                <span class="fw-bold text-info">
-                                    Rp 30.000
-                                </span>
-                            </div>
-                        </label>
-
-                        <!-- Hair Coloring -->
-                        <label class="service-option">
-                            <input
-                                type="radio"
-                                name="layanan_id"
-                                value="4"
-                            >
-
-                            <div class="service-card">
-                                <div>
-                                    <h6 class="mb-1">Hair Coloring</h6>
-
-                                    <small class="text-secondary">
-                                        Pewarnaan rambut premium
-                                    </small>
-                                </div>
-
-                                <span class="fw-bold text-info">
-                                    Rp 150.000
-                                </span>
-                            </div>
-                        </label>
-
-                        <!-- Creambath -->
-                        <label class="service-option">
-                            <input
-                                type="radio"
-                                name="layanan_id"
-                                value="5"
-                            >
-
-                            <div class="service-card">
-                                <div>
-                                    <h6 class="mb-1">
-                                        Creambath & Massage
-                                    </h6>
-
-                                    <small class="text-secondary">
-                                        Perawatan rambut dan relaksasi tubuh
-                                    </small>
-                                </div>
-
-                                <span class="fw-bold text-info">
-                                    Rp 85.000
-                                </span>
-                            </div>
-                        </label>
-
-                        <!-- Tombol Mobile -->
-                        <button
-                            type="submit"
-                            class="btn btn-primary w-100 py-3 rounded-3 fw-bold mt-3 d-lg-none"
-                        >
                             Selanjutnya
                             <i class="bi bi-arrow-right ms-2"></i>
+
                         </button>
 
                     </form>
+
                 </div>
 
                 <!-- KOLOM KANAN -->
                 <div class="col-lg-4">
-                    <div
-                        class="step-panel position-sticky"
-                        style="top: 20px;"
-                    >
+
+                    <div class="step-panel position-sticky d-none d-lg-block" style="top: 100px;">
 
                         <h5 class="fw-bold mb-4">
                             Langkah Reservasi
@@ -256,24 +226,22 @@
 
                         <p class="text-secondary small">
                             Pilih salah satu layanan yang Anda inginkan,
-                            lalu klik tombol selanjutnya untuk melanjutkan
-                            proses booking.
+                            lalu klik tombol selanjutnya untuk melanjutkan proses booking.
                         </p>
 
-                        <!-- Tombol Desktop -->
-                        <button
-                            type="submit"
-                            form="bookingForm"
-                            class="btn btn-primary w-100 py-3 rounded-3 fw-bold shadow-lg"
-                        >
+                        <button type="submit" form="bookingForm"
+                            class="btn btn-primary w-100 py-3 rounded-3 fw-bold shadow">
                             Selanjutnya
                             <i class="bi bi-arrow-right ms-2"></i>
+
                         </button>
 
                     </div>
+
                 </div>
 
             </div>
+
         </div>
     </section>
 
