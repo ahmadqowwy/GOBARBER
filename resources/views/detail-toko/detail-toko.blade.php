@@ -113,6 +113,138 @@
             margin: 120px auto 20px auto;
         }
 
+        @media (max-width: 768px) {
+
+    .hero-banner {
+        padding: 0 15px;
+    }
+
+    .profile-container {
+        flex-direction: column;
+        text-align: center;
+        padding: 20px;
+        gap: 20px;
+        margin-top: 80px;
+    }
+
+    .profile-logo-box {
+        width: 160px;
+        height: auto;
+        padding: 15px;
+    }
+
+    .profile-logo-box img {
+        width: 80px;
+        height: 80px;
+    }
+
+    .shop-name {
+        font-size: 24px;
+    }
+
+    .info-item {
+        justify-content: center;
+    }
+
+    .tab-menu-section {
+        width: calc(100% - 20px);
+        max-width: none;
+        gap: 5px;
+        padding: 8px;
+        overflow-x: auto;
+        justify-content: flex-start;
+    }
+
+    .tab-btn {
+        padding: 10px 14px;
+        font-size: 12px;
+        white-space: nowrap;
+    }
+
+    .section-header-text h2 {
+        font-size: 24px;
+    }
+
+    /* SERVICE */
+    .service-card {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+
+    .service-left {
+        flex-direction: column;
+        align-items: flex-start;
+        width: 100%;
+    }
+
+    .service-img {
+        width: 100%;
+        height: 180px;
+    }
+
+    .service-detail p {
+        max-width: 100%;
+    }
+
+    .service-right {
+        text-align: left;
+        width: 100%;
+        padding-right: 0;
+    }
+
+    /* SHOP */
+    .figma-shop-section {
+        grid-template-columns: 1fr;
+    }
+
+    .figma-shop-header h2 {
+        font-size: 30px;
+    }
+
+    .figma-left-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .fg-product-card {
+        width: 100%;
+    }
+
+    /* BARBER */
+    .barber-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .barber-card {
+        height: 280px;
+    }
+}
+
+/* EXTRA SMALL DEVICE */
+@media (max-width: 480px) {
+
+    .shop-name {
+        font-size: 20px;
+    }
+
+    .profile-logo-box {
+        width: 140px;
+    }
+
+    .section-header-text h2 {
+        font-size: 20px;
+    }
+
+    .service-img {
+        height: 150px;
+    }
+
+    .btn-booking-main,
+    .btn-danger {
+        width: 100%;
+        font-size: 14px;
+    }
+}
         .profile-logo-box {
             background-color: #000000;
             width: 220px;
