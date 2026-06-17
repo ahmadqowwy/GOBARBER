@@ -92,6 +92,9 @@ Route::middleware('auth')->group(function () {
     Route::resource('shop', ShopController::class);
     Route::resource('barber', BarberController::class);
     Route::resource('service', ServiceController::class);
+    Route::resource('manage-produk', \App\Http\Controllers\ProdukController::class)->parameters([
+        'manage-produk' => 'produk'
+    ]);
 
     // Route Transaksi & Info
     Route::resource('customer', CustomerController::class)->only(['index', 'show']);

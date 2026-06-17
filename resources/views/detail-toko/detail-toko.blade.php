@@ -702,93 +702,29 @@
                 </div>
 
                 <div class="figma-left-grid">
-                    <div class="fg-product-card">
-                        <div class="fg-img-box">
-                            <img src="{{ asset('assets/images/foto6.jpg') }}" alt="Hair Powder">
-                        </div>
-                        <div class="fg-info-box">
-                            <h4 class="fg-name">Hair Powder</h4>
-                            <p class="fg-price">Rp 25.000</p>
-                            <div class="fg-btn-group">
-                                <button class="fg-btn-fav"><i class="fa-regular fa-heart"></i></button>
-                                <button class="fg-btn-cart"><i class="fa-solid fa-cart-shopping"></i></button>
+                    @forelse ($produk as $item)
+                        <div class="fg-product-card">
+                            <div class="fg-img-box">
+                                @if ($item->photo)
+                                    <img src="{{ $item->photo }}" alt="Foto Produk" class="service-img">
+                                @else
+                                    <span class="text-muted">Tidak ada foto</span>
+                                @endif
+                            </div>
+                            <div class="fg-info-box">
+                                <h4 class="fg-name">{{ $item->name_product }}</h4>
+                                <p class="fg-price">Rp {{ number_format($item->price, 0, ',', '.') }}</p>
+                                <div class="fg-btn-group">
+                                    <button class="fg-btn-fav"><i class="fa-regular fa-heart"></i></button>
+                                    <button class="fg-btn-cart"><i class="fa-solid fa-cart-shopping"></i></button>
+                                </div>
                             </div>
                         </div>
-                    </div>
-
-
-                    <div class="fg-product-card">
-                        <div class="fg-img-box">
-                            <img src="{{ asset('assets/images/foto6.jpg') }}" alt="Hair Pomade">
+                    @empty
+                        <div class="text-center py-4">
+                            <h2>Produk tidak tersedia.</h2>
                         </div>
-                        <div class="fg-info-box">
-                            <h4 class="fg-name">Hair Pomade</h4>
-                            <p class="fg-price">Rp 20.000</p>
-                            <div class="fg-btn-group">
-                                <button class="fg-btn-fav"><i class="fa-regular fa-heart"></i></button>
-                                <button class="fg-btn-cart"><i class="fa-solid fa-cart-shopping"></i></button>
-                            </div>
-                        </div>
-
-                    </div>
-
-                    <div class="fg-product-card">
-                        <div class="fg-img-box">
-                            <img src="{{ asset('assets/images/foto6.jpg') }}" alt="Hair Tonic">
-                        </div>
-                        <div class="fg-info-box">
-                            <h4 class="fg-name">Hair Tonic</h4>
-                            <p class="fg-price">Rp 20.000</p>
-                            <div class="fg-btn-group">
-                                <button class="fg-btn-fav"><i class="fa-regular fa-heart"></i></button>
-                                <button class="fg-btn-cart"><i class="fa-solid fa-cart-shopping"></i></button>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="fg-product-card">
-                        <div class="fg-img-box">
-                            <img src="{{ asset('assets/images/foto6.jpg') }}" alt="Hair Serum">
-                        </div>
-                        <div class="fg-info-box">
-                            <h4 class="fg-name">Hair Serum</h4>
-                            <p class="fg-price">Rp 20.000</p>
-                            <div class="fg-btn-group">
-                                <button class="fg-btn-fav"><i class="fa-regular fa-heart"></i></button>
-                                <button class="fg-btn-cart"><i class="fa-solid fa-cart-shopping"></i></button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="shop-right-side">
-                <div class="fg-product-card">
-                    <div class="fg-img-box-large">
-                        <img src="{{ asset('assets/images/foto6.jpg') }}" alt="Hair Moist">
-                    </div>
-                    <div class="fg-info-box">
-                        <h4 class="fg-name">Hair Moist</h4>
-                        <p class="fg-price">Rp 20.000</p>
-                        <div class="fg-btn-group">
-                            <button class="fg-btn-fav"><i class="fa-regular fa-heart"></i></button>
-                            <button class="fg-btn-cart"><i class="fa-solid fa-cart-shopping"></i></button>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="fg-product-card">
-                    <div class="fg-img-box-large">
-                        <img src="{{ asset('assets/images/foto6.jpg') }}" alt="Shampo Selsun">
-                    </div>
-                    <div class="fg-info-box">
-                        <h4 class="fg-name">Shampo Selsun</h4>
-                        <p class="fg-price">Rp 25.000</p>
-                        <div class="fg-btn-group">
-                            <button class="fg-btn-fav"><i class="fa-regular fa-heart"></i></button>
-                            <button class="fg-btn-cart"><i class="fa-solid fa-cart-shopping"></i></button>
-                        </div>
-                    </div>
+                    @endforelse
                 </div>
             </div>
 

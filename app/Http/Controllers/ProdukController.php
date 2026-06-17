@@ -2,13 +2,13 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Service;
+use App\Models\Produk;
 use App\Models\GoBarberShop;
 use App\Models\Owner;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
-class ServiceController extends Controller
+class ProdukController extends Controller
 {
     private function getAccessibleShopIds($admin)
     {
@@ -28,9 +28,9 @@ class ServiceController extends Controller
         $admin = Auth::user()->admin;
         $shopIds = $this->getAccessibleShopIds($admin);
 
-        $services = Service::with('shop')->whereIn('shop_id', $shopIds)->get();
+        $produks = Produk::with('shop')->whereIn('shop_id', $shopIds)->get();
 
-        return view('pages.admin.service.index', compact('services'));
+        return view('pages.admin.produk.index', compact('produks'));
     }
 
     public function create()
@@ -39,16 +39,15 @@ class ServiceController extends Controller
         $shopIds = $this->getAccessibleShopIds($admin);
         $shops = GoBarberShop::whereIn('shop_id', $shopIds)->get();
 
-        return view('pages.admin.service.create', compact('shops'));
+        return view('pages.admin.produk.create', compact('shops'));
     }
 
     public function store(Request $request)
     {
         $request->validate([
             'shop_id' => 'required|exists:go_barber_shops,shop_id',
-            'service_name' => 'required|string|max:255',
+            'name_product' => 'required|string|max:255',
             'price' => 'required|numeric',
-            'duration' => 'required|integer', // in minutes usually
             'photo' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:2048',
             'description' => 'nullable|string',
         ]);
@@ -68,32 +67,31 @@ class ServiceController extends Controller
             $data['photo'] = 'data:' . $mimeType . ';base64,' . $base64Image;
         }
 
-        Service::create($data);
+        Produk::create($data);
 
-        return redirect()->route('service.index')->with('success', 'Service berhasil ditambahkan.');
+        return redirect()->route('manage-produk.index')->with('success', 'Produk berhasil ditambahkan.');
     }
 
-    public function edit(Service $service)
+    public function edit(Produk $produk)
     {
         $admin = Auth::user()->admin;
         $shopIds = $this->getAccessibleShopIds($admin);
 
-        if (!in_array($service->shop_id, $shopIds)) {
+        if (!in_array($produk->shop_id, $shopIds)) {
             return redirect()->back()->with('error', 'Unauthorized action.');
         }
 
         $shops = GoBarberShop::whereIn('shop_id', $shopIds)->get();
 
-        return view('pages.admin.service.edit', compact('service', 'shops'));
+        return view('pages.admin.produk.edit', compact('produk', 'shops'));
     }
 
-    public function update(Request $request, Service $service)
+    public function update(Request $request, Produk $produk)
     {
         $request->validate([
             'shop_id' => 'required|exists:go_barber_shops,shop_id',
-            'service_name' => 'required|string|max:255',
+            'name_product' => 'required|string|max:255',
             'price' => 'required|numeric',
-            'duration' => 'required|integer',
             'photo' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:2048',
             'description' => 'nullable|string',
         ]);
@@ -101,7 +99,7 @@ class ServiceController extends Controller
         $admin = Auth::user()->admin;
         $shopIds = $this->getAccessibleShopIds($admin);
 
-        if (!in_array($request->shop_id, $shopIds) || !in_array($service->shop_id, $shopIds)) {
+        if (!in_array($request->shop_id, $shopIds) || !in_array($produk->shop_id, $shopIds)) {
             return redirect()->back()->with('error', 'Unauthorized action.');
         }
 
@@ -113,21 +111,21 @@ class ServiceController extends Controller
             $data['photo'] = 'data:' . $mimeType . ';base64,' . $base64Image;
         }
 
-        $service->update($data);
+        $produk->update($data);
 
-        return redirect()->route('service.index')->with('success', 'Service berhasil diupdate.');
+        return redirect()->route('manage-produk.index')->with('success', 'Produk berhasil diupdate.');
     }
 
-    public function destroy(Service $service)
+    public function destroy(Produk $produk)
     {
         $admin = Auth::user()->admin;
         $shopIds = $this->getAccessibleShopIds($admin);
 
-        if (!in_array($service->shop_id, $shopIds)) {
+        if (!in_array($produk->shop_id, $shopIds)) {
             return redirect()->back()->with('error', 'Unauthorized action.');
         }
 
-        $service->delete();
-        return redirect()->route('service.index')->with('success', 'Service berhasil dihapus.');
+        $produk->delete();
+        return redirect()->route('manage-produk.index')->with('success', 'Produk berhasil dihapus.');
     }
 }
