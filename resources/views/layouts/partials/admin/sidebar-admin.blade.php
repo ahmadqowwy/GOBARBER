@@ -19,6 +19,7 @@
                      <li class="nav-item"> <a class="nav-link" href="{{ route('shop.index') }}">Data Toko</a></li>
                      <li class="nav-item"> <a class="nav-link" href="{{ route('barber.index') }}">Barberman</a></li>
                      <li class="nav-item"> <a class="nav-link" href="{{ route('service.index') }}">Service</a></li>
+                     <li class="nav-item"> <a class="nav-link" href="{{ route('manage-produk.index') }}">Produk</a></li>
                  </ul>
              </div>
          </li>

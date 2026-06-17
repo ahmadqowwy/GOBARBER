@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Barber;
 use App\Models\GoBarberShop;
+use App\Models\Produk;
 use App\Models\Service;
 use App\Models\Customer;
 use App\Models\Booking;
@@ -38,7 +39,8 @@ class LandingPageController extends Controller
             'title' => 'Detail Toko ',
             'shop' => GoBarberShop::where('shop_id', $shop_id)->first(),
             'service' => Service::where('shop_id', $shop_id)->get(),
-            'barberman' => Barber::where('shop_id', $shop_id)->get()
+            'barberman' => Barber::where('shop_id', $shop_id)->get(),
+            'produk' => Produk::where('shop_id', $shop_id)->get()
         ];
 
         return view('detail-toko.detail-toko', $data);
@@ -166,11 +168,11 @@ class LandingPageController extends Controller
         $barbers = Barber::where('barber_name', 'like', "%{$keyword}%")->get();
 
         $data = [
-            'title'    => 'Hasil Pencarian: ' . $keyword,
-            'keyword'  => $keyword,
-            'shops'    => $shops,
+            'title' => 'Hasil Pencarian: ' . $keyword,
+            'keyword' => $keyword,
+            'shops' => $shops,
             'services' => $services,
-            'barbers'  => $barbers
+            'barbers' => $barbers
         ];
 
         return view('search', $data);
