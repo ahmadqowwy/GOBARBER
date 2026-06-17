@@ -15,7 +15,12 @@ class Service extends Model
         'service_name',
         'price',
         'duration',
+        'description',
         'photo'
+    ];
+
+    protected $casts = [
+        'price' => 'decimal:2',
     ];
 
     public function shop()

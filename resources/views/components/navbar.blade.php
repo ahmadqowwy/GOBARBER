@@ -132,19 +132,25 @@
     }
 
     @media (max-width: 991px) {
+        .custom-navbar {
+            padding: 15px 20px;
+        }
+
+        .navbar-actions {
+            flex-direction: column;
+            align-items: stretch !important;
+            min-width: 100%;
+            margin-top: 10px;
+        }
 
         .search-form {
             width: 100%;
             margin: 0 0 15px 0 !important;
         }
 
-        .d-flex.align-items-center.gap-3 {
-            flex-direction: column;
-            align-items: stretch !important;
-        }
-
-        .btn-outline-light {
+        .btn-login {
             width: 100%;
+            text-align: center;
         }
 
         .custom-navbar {
@@ -176,7 +182,6 @@
             width: 100%;
             text-align: center;
         }
-    }
 
     .navbar-toggler {
         border: none;
@@ -186,6 +191,7 @@
     .navbar-toggler:focus {
         box-shadow: none;
     }
+}
 </style>
 <nav class="navbar navbar-expand-lg navbar-dark custom-navbar fixed-top">
     <div class="container-fluid px-4">
@@ -224,7 +230,7 @@
             <!-- Search + Login -->
             <div class="d-flex align-items-center navbar-actions">
 
-                <form action="#" method="GET" class="search-form me-3">
+                <form action="{{ route('search') }}" method="GET" class="search-form me-3">
                     <div class="search-box">
 
                         <input type="text" class="form-control" name="keyword" placeholder="Cari Barbershop...">

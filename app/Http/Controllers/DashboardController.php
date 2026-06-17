@@ -40,7 +40,7 @@ class DashboardController extends Controller
 
                 // Ambil shop
                 $shop = GoBarberShop::where('owner_id', $owner->owner_id)->first();
-                
+
                 if ($shop) {
                     $services_count = Service::where('shop_id', $shop->shop_id)->count();
                     $barbers_count = Barber::where('shop_id', $shop->shop_id)->count();
