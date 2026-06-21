@@ -5,9 +5,9 @@
 
     /* mengatur ukuran carousel */
     .carousel-item {
-        height: 100vh;
         position: relative;
-        min-height: 700px;
+        height:85vh;
+        min-height:600px;
     }
 
     /* Mengatur Gambar Carousel */
