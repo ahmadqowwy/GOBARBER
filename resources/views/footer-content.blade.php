@@ -1,9 +1,12 @@
+<!-- section utama -->
 <footer class="footer_section">
 
+    <!-- garis biru-->
     <div class="footer-top-line"></div>
 
     <div class="container footer-container">
 
+        <!-- Membagi footer menjadi 3 kolom -->
         <div class="row align-items-start justify-content-center gy-5">
 
             <!-- Contact -->
@@ -17,7 +20,7 @@
 
                         <a href="#">
                             <i class="fa fa-map-marker-alt"></i>
-                            <span>Madiun, Indonesia</span>
+                            <span>Banyuwangi, Indonesia</span>
                         </a>
 
                         <a href="#">
@@ -69,7 +72,7 @@
 
             </div>
 
-            <!-- Bottom -->
+            <!-- copyright -->
             <div class="footer-info">
 
                 <p>
@@ -82,6 +85,7 @@
 
 </footer>
 <style>
+    /* Background Footer */
     .footer_section {
         background: #0F172A;
         color: white;
@@ -96,7 +100,7 @@
         padding-right: 70px;
     }
 
-    /* garis glow atas */
+    /* garis biru atas */
     .footer-top-line {
         width: 100%;
         height: 2px;
@@ -104,6 +108,7 @@
         margin-bottom: 75px;
     }
 
+    /* judul kontak */
     .footer_section h4 {
         font-size: 32px;
         font-weight: 700;
@@ -118,7 +123,7 @@
         margin-bottom: 10px;
     }
 
-    /* logo */
+    /* judul logo */
     .footer-logo {
         display: inline-block;
         font-size: 58px;
@@ -134,13 +139,14 @@
         transform: scale(1.03);
     }
 
-    /* contact */
+    /* setiap kontak tersusun ke bawah */
     .contact_link_box {
         display: flex;
         flex-direction: column;
         gap: 18px;
     }
 
+    /* ikon dan tulisan berada dalam satu baris */
     .contact_link_box a {
         color: #cbd5e1;
         text-decoration: none;
@@ -155,13 +161,14 @@
         transform: translateX(5px);
     }
 
+    /* ikon menjadi biru */
     .contact_link_box i {
         width: 35px;
         font-size: 18px;
         color: #4DA3FF;
     }
 
-    /* footer bawah */
+    /* isi kolom berada di sebelah kanan */
     .opening_hours {
         text-align: right;
     }
@@ -170,6 +177,7 @@
         margin-bottom: 14px;
     }
 
+    /* copyright */
     .footer-info {
         border-top: 1px solid rgba(255, 255, 255, 0.08);
         margin-top: 60px;
@@ -184,7 +192,7 @@
         letter-spacing: 0.5px;
     }
 
-    /* responsive */
+    /* responsive tablet */
     @media (max-width: 991px) {
 
         .footer_section {
@@ -215,6 +223,7 @@
 
     }
 
+    /* responsive hp */
     @media (max-width: 576px) {
 
         .footer-logo {

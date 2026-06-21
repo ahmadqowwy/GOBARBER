@@ -1,8 +1,9 @@
+<!-- Section Utama -->
 <section class="about_section py-5">
 
     <div class="container">
 
-        <!-- TITLE -->
+        <!-- judul halaman -->
         <div class="text-center mb-5">
 
             <small class="text-uppercase text-danger fw-bold">
@@ -18,14 +19,17 @@
         <!-- CARD 1 -->
         <div class="about_box dark_box mb-5">
 
+            <!-- membagi isi menjadi gambar dan teks -->
             <div class="row align-items-center">
 
+                <!-- kolom gambar -->
                 <div class="col-lg-4 text-center">
 
                     <img src="{{ asset('assets/images/foto1.jpg') }}" class="about_img" alt="foto1">
 
                 </div>
 
+                <!-- kolom teks -->
                 <div class="col-lg-8 text-white">
 
                     <h3 class="fw-bold mb-3">
@@ -85,30 +89,30 @@
 </section>
 
 <style>
+    /* section utama */
     .about_section {
         background: #f5f5f5;
         padding: 80px 60px;
     }
 
-    /* BOX */
+    /* card 1 */
     .about_box {
         border-radius: 25px;
         padding: 40px;
         overflow: hidden;
     }
 
-    /* DARK */
     .dark_box {
         background: #14003b;
     }
 
-    /* LIGHT */
+    /* card 2 */
     .light_box {
         background: white;
         box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
     }
 
-    /* IMAGE */
+    /* mengatur gambar */
     .about_img {
         width: 220px;
         height: 220px;

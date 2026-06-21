@@ -12,6 +12,7 @@
         align-items: center;
     }
 
+    /* search + login */
     .navbar-actions {
         display: flex;
         align-items: center;
@@ -19,7 +20,7 @@
         justify-content: flex-end;
     }
 
-    /* Logo */
+    /* Logo GoBarber */
     .navbar-brand {
         min-width: 220px;
     }
@@ -29,7 +30,7 @@
         align-items: center;
     }
 
-    /* menu navbar */
+    /* menu tengah navbar */
     .navbar-nav .nav-link {
         color: white !important;
         font-size: 1.05rem;
@@ -67,6 +68,7 @@
         align-items: center;
     }
 
+    /* input search */
     .search-box .form-control {
         height: 100%;
         border: none;
@@ -86,6 +88,7 @@
         box-shadow: none;
     }
 
+    /* ikon search */
     .btn-search {
         height: 100%;
         border: none;
@@ -131,6 +134,7 @@
         color: #17044a;
     }
 
+    /* tamplan hp/tablet */
     @media (max-width: 991px) {
         .custom-navbar {
             padding: 15px 20px;
@@ -183,21 +187,26 @@
             text-align: center;
         }
 
-    .navbar-toggler {
-        border: none;
-        box-shadow: none !important;
-    }
+        /* tombol hamburger */
+        .navbar-toggler {
+            border: none;
+            box-shadow: none !important;
+        }
 
-    .navbar-toggler:focus {
-        box-shadow: none;
+        .navbar-toggler:focus {
+            box-shadow: none;
+        }
     }
-}
 </style>
+<!-- Background Ungu Transparan Pada Navbar -->
 <nav class="navbar navbar-expand-lg navbar-dark custom-navbar fixed-top">
+
+    <!-- Container Navbar -->
     <div class="container-fluid px-4">
 
         <a class="navbar-brand" href="{{ route('home') }}">GoBarber</a>
 
+        <!-- Tombol Hamburger -->
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -230,11 +239,15 @@
             <!-- Search + Login -->
             <div class="d-flex align-items-center navbar-actions">
 
+                <!-- Search Form -->
                 <form action="{{ route('search') }}" method="GET" class="search-form me-3">
+
+                    <!-- search box -->
                     <div class="search-box">
 
+                        <!-- input search -->
                         <input type="text" class="form-control" name="keyword" placeholder="Cari Barbershop...">
-
+                        <!-- ikon search -->
                         <button class="btn-search" type="submit">
                             <i class="fa-solid fa-magnifying-glass"></i>
                         </button>
@@ -242,6 +255,7 @@
                     </div>
                 </form>
 
+                <!-- tombol login -->
                 <a href="{{ route('login') }}" class="btn btn-login">
                     Login
                 </a>
